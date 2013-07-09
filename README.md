@@ -1,4 +1,4 @@
-freshcity
-=========
+Fresh City Farms
+================
 
-Customized eCommerce silution for Fresh City Farms using LemonStand
+Customized eCommerce solution for Fresh City Farms using LemonStand.
