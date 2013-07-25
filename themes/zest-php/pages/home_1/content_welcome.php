@@ -1,2 +1,0 @@
-<h2>Develop custom online stores. Without compromise.</h2>
-<p>LemonStand is a powerful PHP eCommerce platform that's flexible and developer friendly in every way. Full of amazing features, an easy to use interface, strong developer community plus a&nbsp;<a href="http://lemonstand.com/marketplace/">Marketplace</a>&nbsp;to purchase and sell add-ons.</p>
