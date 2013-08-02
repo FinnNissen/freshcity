@@ -1,1 +1,0 @@
-<p>We just sent you a confirmation email message with your password.</p>
