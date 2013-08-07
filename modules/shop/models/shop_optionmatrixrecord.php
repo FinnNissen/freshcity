@@ -32,6 +32,7 @@
 		
 		protected static $record_cache = array();
 		protected static $supported_field_cache = array();
+		protected static $option_graph = array();
 
 		public $has_many = array(
 			'images'=>array('class_name'=>'Db_File', 'foreign_key'=>'master_object_id', 'conditions'=>"master_object_class='Shop_OptionMatrixRecord' and field='images'", 'order'=>'sort_order, id', 'delete'=>true),
@@ -744,6 +745,200 @@
 			$count = Db_DbHelper::scalar('select count(*) from shop_order_items, shop_orders where option_matrix_record_id is not null and option_matrix_record_id=:id and shop_orders.id = shop_order_items.shop_order_id', $bind);
 			if ($count)
 				throw new Phpr_ApplicationException('Cannot delete product because there are orders referring to it.');
+		}
+		
+		/**
+		 * Returns a list of available values for a specific option.
+		 * The option values are determined basing on the available enabled Option Matrix records.
+		 * @param Shop_Product $product Product object
+		 * @param Shop_CustomAttribute $option Product option object.
+		 * @param array $posted_options An array of option values.
+		 */
+		public static function get_available_option_values($product, $option, $posted_options)
+		{
+			/*
+			 * Create the options graph for the product
+			 */
+			
+			$graph = self::get_option_graph($product);
+			
+			/*
+			 * If the graph is empty, return all options
+			 */
+			
+			if (!$graph)
+				return $option->list_values(false);
+				
+			/*
+			 * Find the posted options in the graph and return available values
+			 */
+			
+			$requested_level = 0;
+			foreach ($product->options as $index=>$product_option) 
+			{
+				if ($option->id == $product_option->id)
+				{
+					$requested_level = $index;
+					break;
+				}
+			}
+
+			return self::find_graph_level($graph, $posted_options, 0, $requested_level);
+		}
+		
+		/**
+		 * Returns first available value set.
+		 * @param Shop_Product $product Product object
+		 * @param array $posted_options An array of option values.
+		 * @return array Returns an array of option keys and values
+		 */
+		public static function get_first_available_value_set($product, $option, $posted_options)
+		{
+			$requested_level = 0;
+			foreach ($product->options as $index=>$product_option) 
+			{
+				if ($option->id == $product_option->id)
+				{
+					$requested_level = $index;
+					break;
+				}
+			}
+
+			$graph = self::get_option_graph($product);
+
+			$result = array();
+			for ($i = $requested_level; $i < $product->options->count; $i++)
+			{
+				$values = self::find_graph_level($graph, $posted_options, 0, $i);
+				$option_key = $product->options[$i]->option_key;
+				if (!isset($posted_options[$option_key]) || !in_array($posted_options[$option_key], $values))
+				{
+					$option_value = $result[$option_key] = count($values) ? $values[0] : null;
+					$posted_options[$option_key] = $option_value;
+				} else
+					$result[$option_key] = $posted_options[$option_key];
+			}
+			
+			return $result;
+		}
+		
+		protected static function get_option_graph($product)
+		{
+			if (array_key_exists($product->id, self::$option_graph))
+				return self::$option_graph[$product->id];
+				
+			$cache_key = 'om-graph-'.$product->id;
+
+			if ($cached_graph = self::get_cached_option_graph($product, $cache_key))
+				return $cached_graph;
+
+			/*
+			 * Load a list of available Option Matrix records with option identifiers and corresponding values
+			 */
+			
+			$records = Db_DbHelper::scalarArray("
+				select 
+					(select group_concat(concat('--', option_id, ':', option_value, '--') separator '') from shop_option_matrix_options where  matrix_record_id=shop_option_matrix_records.id) as options
+				from
+					shop_option_matrix_records
+				where 
+					shop_option_matrix_records.product_id=:product_id
+					and (disabled is null or disabled = 0)", array('product_id'=>$product->id));
+
+			$graph = array();
+			
+			$options = $product->options;
+			if ($options->count) 
+			{
+				$options_array = $product->options->as_array();
+				$graph = self::build_graph_level($records, $product, $options_array);
+			}
+
+			self::$option_graph[$product->id] = $graph;
+
+			$product_update_time = $product->updated_at ? $product->updated_at : $product->created_at;
+			if ($product_update_time)
+			{
+				$cache = Core_CacheBase::create();
+				$cache->set($cache_key, array('mtime'=>$product_update_time->getInteger(), 'data'=>$graph), 3600);
+			}
+
+			return $graph;
+		}
+		
+		protected static function get_cached_option_graph($product, $cache_key)
+		{
+			$cache = Core_CacheBase::create();
+			$cache_item = $cache->get($cache_key);
+			if (!$cache_item)
+				return false;
+			
+			if (!is_array($cache_item) || !array_key_exists('mtime', $cache_item))
+				return false;
+			
+			$product_update_time = $product->updated_at ? $product->updated_at : $product->created_at;
+			if (!$product_update_time)
+				return false;
+
+			if ($cache_item['mtime'] != $product_update_time->getInteger())
+				return false;
+				
+			return $cache_item['data'];
+		}
+		
+		protected static function find_graph_level(&$graph, &$posted_options, $level, $requested_level)
+		{
+			if ($level == $requested_level)
+				return array_keys($graph['options']);
+
+			if (!array_key_exists($graph['key'], $posted_options))
+				return array();
+				
+			$requested_option_value = $posted_options[$graph['key']];
+
+			if (!array_key_exists($requested_option_value, $graph['options']))
+				return array();
+
+			$level_graph = $graph['options'][$requested_option_value];
+			return self::find_graph_level($level_graph, $posted_options, $level+1, $requested_level);
+		}
+		
+		protected static function build_graph_level(&$records, $product, &$options, $level = 0, $filters = array())
+		{
+			$result = array();
+			
+			if (count($options) < ($level+1))
+				return $result;
+			
+			$current_option = $options[$level];
+			$option_values = $current_option->list_values(false);
+
+			$result['key'] = $current_option->option_key;
+			$result['options'] = array();
+			
+			foreach ($option_values as $option_value)
+			{
+				foreach ($records as $record_info)
+				{
+					$record_found = true;
+					$filters_updated = $filters;
+					$filters_updated[] = '--'.$current_option->id.':'.$option_value.'--';
+					
+					foreach ($filters_updated as $filter)
+					{
+						if (strpos($record_info, $filter) === false)
+						{
+							$record_found = false;
+							break;
+						}
+					}
+					
+					if ($record_found)
+						$result['options'][$option_value] = self::build_graph_level($records, $product, $options, $level+1, $filters_updated);
+				}
+			}
+			
+			return $result;
 		}
 		
 		/**

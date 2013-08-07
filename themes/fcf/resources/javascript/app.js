@@ -1,6 +1,4 @@
-//
-// Zurb Foundation stuff
-//
+/*! Zurb Foundation stuff */
 ;(function ($, window, undefined) {
   'use strict';
 

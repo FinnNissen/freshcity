@@ -1,0 +1,961 @@
+* {
+	-webkit-box-sizing: border-box;
+	 -khtml-box-sizing: border-box;
+	  -icab-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, header, nav, aside, footer, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, figure, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, figcaption, tbody, tfoot, thead, tr, th, td {border:0 none;margin:0;padding:0;vertical-align:baseline;}
+
+h1, h2, h3, h4, header, .wrapper, #logo, .genbox, .gallery-icon, .thumbnail, .img-centre, .img-centre-w, .img-centre-h, li.gallery-item, fieldset, .fieldrow, label, .multiple label + span, .file-row label + span, input, select, button, .btn, button span, .btn span, footer, p, p + img, ul ul, ul ol, ol ol, ol ul, dl.section-list dt, dl.section-list dt.selected a, .custom, figure, img, iframe, embed, video {position: relative;}
+
+dl.section-list dt, nav ul, .content, aside, .gallery-icon, .thumbnail, .img-centre, .img-centre-w, .img-centre-h, form, .fieldrow, footer, footer div, footer ul {overflow: hidden;}
+
+
+/* HTML5 display definitions
+-------------------------------------------------------------- */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary { /* Corrects block display not defined in IE6/7/8/9 & FF3 */
+    display: block;
+    overflow: hidden;
+}
+
+audio,
+canvas,
+video { /* Corrects inline-block display not defined in IE6/7/8/9 & FF3 */
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+audio:not([controls]) { /* Prevents modern browsers from displaying 'audio' without controls; Remove excess height in iOS5 devices */
+    display: none;
+    height: 0;
+}
+
+[hidden] { /* Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4; no IE6 support */
+    display: none;
+}
+
+
+/* Base
+-------------------------------------------------------------- */
+
+html {
+    font-size: 100%; /* 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units */
+    -webkit-text-size-adjust: 100%; /* 2. Prevents iOS text size adjust after orientation change, without disabling user zoom */
+    -ms-text-size-adjust: 100%; /* 2. Prevents iOS text size adjust after orientation change, without disabling user zoom */
+}
+
+html,
+body,
+button, button *,
+input,
+select,
+textarea { /* Addresses font-family inconsistency between 'textarea' and other form elements. */
+    font-family: Georgia,serif;
+    font-size: 1em; /* 16px */
+    line-height: 1.5em; /* 24px */
+	color: #444444;
+}
+
+html, body { /* Addresses margins handled incorrectly in IE6/7 */
+    margin: 0;
+    height: 100%;
+}
+
+
+/* Links
+-------------------------------------------------------------- */
+
+a:focus { /* Addresses outline displayed oddly in Chrome */
+    outline: thin dotted;
+}
+
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers */
+    outline: 0;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+    color: inherit;
+}
+
+
+/* Typography
+-------------------------------------------------------------- */
+
+::selection,
+::-moz-selection {}
+
+h1,
+h2,
+h3,
+h4 {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: normal;
+    margin: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    padding: 0.5em 0;
+	color: #000000;
+}
+
+abbr[title] { /* Addresses styling not present in IE7/8/9, S5, Chrome */
+    border-bottom: 1px dotted;
+}
+
+b,
+strong { /* Addresses style set to 'bolder' in FF3+, S4/5, Chrome */
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+
+dfn { /* Addresses styling not present in S5, Chrome */
+    font-style: italic;
+}
+
+mark { /* Addresses styling not present in IE6/7/8/9 */
+    background: #ff0;
+    color: #000000;
+}
+
+a {
+	color: #8dae7c;
+}
+
+p,
+pre { /* Addresses margins set differently in IE6/7 */
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+pre,
+code,
+kbd,
+samp { /* Corrects font family set oddly in IE6, S4/5, Chrome */
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+pre { /* Improves readability of pre-formatted text in all browsers */
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+q { /* 1. Addresses CSS quotes not supported in IE6/7 */
+    quotes: none;
+}
+
+q:before,
+q:after { /* 2. Addresses quote property not supported in S4 */
+    content: '';
+    content: none;
+}
+
+hr {
+    border-style: none none dashed;
+    border-width: 0 0 1px;
+    border-color: gray;
+}
+
+p.small,
+ul.small li,
+small {
+    font-size: 0.8125em;
+    line-height: 1.23077em;
+    position: relative;
+}
+
+sub,
+sup { /* Prevents sub and sup affecting line-height in all browsers */
+    font-size: 0.75em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+.all-caps {
+    text-transform: uppercase;
+}
+
+
+/* TypeKit
+-------------------------------------------------------------- */
+
+.wf-active p {
+    overflow: hidden;
+}
+
+.tk-league-gothic.p-name {
+    color: #000000;
+    font-size: 3.5em;
+    line-height: 1em;
+    padding-bottom: 0.142857em;
+    padding-top: 0.142857em;
+    top: 2px;
+}
+
+.tk-league-gothic.p-name.all-caps {
+    padding-bottom: 0;
+}
+
+small.tk-museo-sans {
+    color: #999999;
+    display: block;
+    font-weight: 300;
+    top: -3px;
+}
+
+.p-heading {
+    color: #000000;
+    font-size: 1.4375em;
+    font-style: italic;
+    line-height: 1.3913em;
+    padding: 0.521739em 0 0;
+    text-decoration: underline;
+    top: 6px;
+}
+
+.tk-museo-sans.note {
+    background: none repeat scroll 0 0 #333333;
+    -webkit-border-radius: 16px 16px 16px 16px;
+     -khtml-border-radius: 16px 16px 16px 16px;
+      -icab-border-radius: 16px 16px 16px 16px;
+       -moz-border-radius: 16px 16px 16px 16px;
+         -o-border-radius: 16px 16px 16px 16px;
+    border-radius: 16px 16px 16px 16px;
+    color: #FFFFFF;
+    font-weight: 100;
+    overflow: visible;
+    padding: 11px 16px 13px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 #000000;
+/*     top: 1px; */
+    z-index: 10;
+    -webkit-animation:noteInit 2s;
+     -khtml-animation:noteInit 2s;
+      -icab-animation:noteInit 2s;
+       -moz-animation:noteInit 2s;
+         -o-animation:noteInit 2s;
+    animation:noteInit 2s;
+}
+
+@-webkit-keyframes noteInit {
+	from {top: 20px;opacity: 0;}
+	to {top: 1px;opacity: 1;}
+}
+
+@-khtml-keyframes noteInit {
+	from {top: 20px;opacity: 0;}
+	to {top: 1px;opacity: 1;}
+}
+
+@-icab-keyframes noteInit {
+	from {top: 20px;opacity: 0;}
+	to {top: 1px;opacity: 1;}
+}
+
+@-moz-keyframes noteInit {
+	from {top: 20px;opacity: 0;}
+	to {top: 1px;opacity: 1;}
+}
+
+@-o-keyframes noteInit {
+	from {top: 20px;opacity: 0;}
+	to {top: 1px;opacity: 1;}
+}
+
+@keyframes noteInit {
+	from {top: 20px;opacity: 0;}
+	to {top: 1px;opacity: 1;}
+}
+
+
+/* Lists
+-------------------------------------------------------------- */
+
+dl,
+menu,
+ol,
+ul { /* Addresses margins set differently in IE6/7 */
+    margin: 0;
+    list-style:outside disc;
+    padding-left: 1.5em;
+    padding-bottom: 0.5em;
+}
+
+li {
+    padding-top: 0.5em;
+}
+
+ul ul,
+ol ul {
+    list-style:circle outside none;
+    padding-bottom: 0;
+}
+
+ul ol,
+ol ol {
+    list-style:lower-alpha outside none;
+    padding-bottom: 0;
+}
+
+dt {
+    float: left;
+}
+
+dd {
+    margin: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+menu,
+ol,
+ul { /* Addresses paddings set differently in IE6/7 */
+    padding: 0 0 0 2em;
+}
+
+nav ul,
+nav ol { /* Corrects list images handled incorrectly in IE7 */
+    list-style: none;
+    list-style-image: none;
+    padding-left: 0;
+}
+
+nav li, #wp_page_numbers li {
+    display: inline;
+    float: left;
+    padding: 0px;
+}
+
+blockquote {
+    border-left: 0.5em solid gray;
+}
+
+blockquote p {
+}
+
+blockquote p.author {
+    font-style: italic;
+    text-align: right;
+}
+
+blockquote p.author:before {
+    content: "— ";
+}
+
+
+/* Images, Figures & Embedded content
+-------------------------------------------------------------- */
+
+img,
+iframe,
+embed,
+video {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    max-width: 96.5812%;
+}
+
+iframe,
+embed,
+video {
+    min-width: 54%;
+}
+
+img {
+    border: 0; /* 1. Removes border when inside 'a' element in IE6/7/8/9, FF3 */
+    -ms-interpolation-mode: bicubic; /* 2. Improves image quality when scaled in IE7 */
+    height: auto;
+}
+
+figcaption {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    display: none;
+    padding: 0.75em 0 0.75em 0.625em;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+figure > a.caption {
+    background: none repeat scroll 0 0 #000000;
+    border: 3px solid #FFFFFF;
+    border-radius: 1.13333333em;
+    color: #FFFFFF;
+    font-size: 0.9375em;
+    font-style: italic;
+    height: 1.6em;
+    line-height: 1.6em;
+    opacity: 0.3;
+    outline: medium none;
+    position: absolute;
+    right: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    top: 0.5em;
+    width: 1.6em;
+}
+
+figure > a:hover.caption {
+    opacity: 1;
+}
+
+figure { /* Addresses margin not present in IE6/7/8/9, S5, O11 */
+    margin: 0;
+}
+
+svg:not(:root) { /* Corrects overflow displayed oddly in IE9 */
+    overflow: hidden;
+}
+
+
+/* Forms
+-------------------------------------------------------------- */
+
+.note.bottom:before,
+.note.top:before,
+.note.left:before,
+.note.right:before {
+	background: url(assets/BG-note-bottom.png) no-repeat center bottom transparent;
+    bottom: -12px;
+    content: "";
+    height: 14px;
+    left: 50%;
+    margin-left: -12px;
+    position: absolute;
+    width: 24px;
+}
+
+.note.top:before {}
+
+.note.left:before {}
+
+.note.right:before {}
+
+form { /* Corrects margin displayed oddly in IE6/7 */
+    margin: 0;
+}
+
+fieldset { /* Define consistent border, margin, and padding */
+    border: none;
+    margin: 0;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+
+.fieldrow {
+    background: url(assets/BG-dashed.gif) repeat scroll 0 0 #FFFFFF;
+    border: 4px solid #EEEEEE;
+    -webkit-border-radius: 4px 4px 4px 4px;
+     -khtml-border-radius: 4px 4px 4px 4px;
+      -icab-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+         -o-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    display: block;
+    margin-bottom: 10px;
+    top: 2px;
+}
+
+.fieldrow.radio-row, .fieldrow.check-row {}
+
+.fieldrow.file-row {
+}
+
+.fieldrow.textarea-row {}
+
+.fieldrow.textarea-row:before {
+    background: none repeat scroll 0 0 #EEEEEE;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 30%;
+	z-index: 1;
+}
+
+label {
+    background: #EEEEEE;
+    color: #333333;
+    float: left;
+    font-family: "museo-sans","Helvetica","Arial",sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    height: 30px;
+    line-height: 28px;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-indent: 6px;
+    width: 30%;
+}
+
+label.for-boxes {
+    background: none repeat scroll 0 0 transparent !important;
+    color: #000000 !important;
+    display: inline;
+    float: none;
+    font-family: Georgia,serif;
+    font-style: italic;
+    height: 18px;
+    line-height: 18px;
+    margin: 0 4px 0 0 !important;
+    min-width: 0 !important;
+    padding: 0 0 0 6px !important;
+    top: 2px;
+}
+
+.select-row label, .radio-row label, .check-row label {
+}
+
+.fieldrow.textarea-row label {
+	z-index: 5;
+}
+
+.fieldrow.textarea label {
+    display: block;
+    float: none;
+    width: 98% !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	/* Safari and Google Chrome only - fix margins */
+	label {
+    line-height: 2em;
+	}
+}
+
+legend {
+    border: 0; /* 1. Corrects color not being inherited in IE6/7/8/9 */
+    padding: 0;
+    white-space: normal; /* 2. Corrects text not wrapping in FF3 */
+    *margin-left: -7px; /* 3. Corrects alignment displayed oddly in IE6/7 */
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1. Corrects font size not being inherited in all browsers */
+    margin: 0; /* 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome */
+    vertical-align: baseline; /* 3. Improves appearance and consistency in all browsers */
+    *vertical-align: middle; /* 3. Improves appearance and consistency in all browsers */
+}
+
+input {
+    border: medium none;
+    color: #000000;
+    font-family: Georgia,serif;
+    font-style: italic;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: normal; /* 1. Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet */
+}
+
+input[type="text"], input[type="number"], input[type="date"] {
+    background: none repeat scroll 0 0 transparent !important;
+    color: #000000;
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+    height: 18px;
+    line-height: 24px;
+    margin: 5px 0 7px !important;
+    padding: 0 6px !important;
+}
+
+input[type=text] {
+    width: 70%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1. Addresses box sizing set to content-box in IE8/9 */
+    padding: 0; /* 2. Removes excess padding in IE8/9 */
+    height: 16px;
+    *height: 0.8125em; /* 3. Removes excess padding in IE7; excess padding remains in IE6 */
+    width: 16px;
+    *width: 0.8125em; /* 3. Removes excess padding in IE7; excess padding remains in IE6 */
+    margin: 0 !important;
+    padding: 0 !important;
+    top: -2px;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+input[type="radio"] {
+    width: 15px;
+    height: 15px;    
+    top: 0px;
+}
+
+input[type="file"] {
+    height: 100%;
+    left: auto;
+    opacity: 0;
+    position: absolute;
+    right: auto;
+    top: 0;
+    width: 70%;
+    z-index: 10;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1. Addresses appearance set to searchfield in S5, Chrome */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none; /* Removes inner padding and search cancel button in S5, Chrome on OS X */
+}
+
+input::-webkit-input-placeholder {
+    color: gray;
+    opacity: 0.5;
+}
+
+input:-moz-placeholder {
+    color: gray;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	/* Safari and Google Chrome only - fix margins */
+	input[type=radio], input[type=checkbox] {
+    top: -1px;
+	}
+}
+
+select {
+    background: none repeat scroll 0 0 transparent !important;
+    border: medium none !important;
+    color: black;
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+    height: 30px;
+    margin: 0 !important;
+    padding: 4px !important;
+    vertical-align: bottom;
+    width: 70%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	/* Safari and Google Chrome only - fix margins */
+	select {
+    font-size: 1em;
+    top: 0.1875em;
+	}
+}
+
+button,
+.btn,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer; /* 1. Improves usability and consistency of cursor style between image-type 'input' and others */
+    -webkit-appearance: button; /* 2. Corrects inability to style clickable 'input' types in iOS */
+    *overflow: visible;  /* 3. Removes inner spacing in IE7 without affecting normal text inputs; inner spacing remains in IE6 */
+}
+
+button,
+.btn {
+    background-color: #dddddd;
+	background-image: linear-gradient(bottom, rgb(204,204,204) 0%, rgb(238,238,238) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(238,238,238) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(238,238,238) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(238,238,238) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(238,238,238) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(204,204,204)),
+		color-stop(1, rgb(238,238,238))
+	);
+    border: medium none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+     -khtml-border-radius: 2px 2px 2px 2px;
+      -icab-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+         -o-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+    color: #444444;
+    font-size: 0.75em;
+    line-height: 1.75em;
+    display: inline-block;
+    overflow: visible;
+    padding: 1px;
+    text-decoration: none;
+    top: 3px;
+}
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;  /* overrides extra padding in Firefox */
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+button span,
+.btn span { 
+    background-color: #eeeeee;
+	background-image: linear-gradient(bottom, rgb(238,238,238) 0%, rgb(255,255,255) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(238,238,238) 0%, rgb(255,255,255) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(238,238,238) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(238,238,238) 0%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(238,238,238) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(238,238,238)),
+		color-stop(1, rgb(255,255,255))
+	);
+    border-top: 1px solid #FFFFFF;
+    display: block;
+    height: 1.83333em;
+    margin: 0 !important;
+    padding: 0 0.666667em;
+    text-align: center;
+    text-shadow: 0 1px 0 white;
+    text-transform: uppercase;
+    top: 0;
+    white-space: nowrap;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	/* Safari and Google Chrome only - fix margins */
+	button span {
+    margin-top: -1px;
+	}
+}
+
+button.medium,
+.btn.medium {
+    font-size: 0.875em;
+    line-height: 2em;
+}
+
+button.medium span,
+.btn.medium span {
+    height: 2.14285714em;
+    padding: 0 0.71428571em;
+}
+
+button.large,
+.btn.large {
+    font-size: 1em;
+    line-height: 2.25em;
+}
+
+button.large span,
+.btn.large span {
+    height: 2.375em;
+    padding: 0 0.75em;
+}
+
+button:hover,
+.btn:hover {
+    background: #BBBBBB;
+    color: #000000;
+}
+
+button.white,
+.btn.white,
+button.white span,
+.btn.white span {
+    background: #FFFFFF;
+}
+
+button.black,
+.btn.black {
+    background-color: #333333;
+	background-image: linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(0,0,0)),
+		color-stop(1, rgb(51,51,51))
+	);
+	color: #eeeeee;
+}
+
+button.black span,
+.btn.black span {
+    border-top: 1px solid #999999;
+    background-color: #555555;
+	background-image: linear-gradient(bottom, rgb(51,51,51) 0%, rgb(102,102,102) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(51,51,51) 0%, rgb(102,102,102) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(51,51,51) 0%, rgb(102,102,102) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(51,51,51) 0%, rgb(102,102,102) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(51,51,51) 0%, rgb(102,102,102) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(51,51,51)),
+		color-stop(1, rgb(102,102,102))
+	);
+	text-shadow: 0 1px 0 #000000;
+}
+
+button.black:hover,
+.btn.black:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+textarea {
+    overflow: auto; /* 1. Removes default vertical scrollbar in IE6/7/8/9 */
+    vertical-align: top; /* 2. Improves readability and alignment in all browsers */
+    background: none repeat scroll 0 0 transparent !important;
+    border: medium none;
+    color: #000000;
+    display: block;
+    font-family: Georgia,serif;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 24px;
+    margin: 2px 0 10px !important;
+    min-height: 90px;
+    padding: 0 6px !important;
+    resize: none;
+    width: 70% !important;
+}
+
+.file-row button,
+.file-row .btn {
+    float: right;
+    left: auto;
+    right: 3px !important;
+}
+
+fieldset.submit {
+    text-align: center;
+}
+
+fieldset.submit button,
+fieldset.submit .btn {
+	top: 1px;
+}
+
+.fieldrow.error {
+	border-color: #f49956;
+}
+
+.fieldrow.error label,
+.fieldrow.textarea-row.error:before {
+    background: #f49956;
+    color: #ffffff;
+}
+
+.fieldrow.success {
+	border-color: #8dae7c;
+}
+
+.fieldrow.success label,
+.fieldrow.textarea-row.success:before {
+    color: #ffffff;
+    background: #8dae7c;
+}
+
+
+/* Tables
+-------------------------------------------------------------- */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 0.5em;
+    text-align: left;
+    width: 100%;
+}
+
+table th, table td {
+    border-bottom: 1px solid gray;
+    line-height: 2.125em;
+}
+
+table tr th:first-child, table tr td:first-child {
+    padding-left: 0.5em;
+}
+
+table tr th:last-child, table tr td:last-child {
+    padding-right: 0.5em;
+}
+
+table thead th, table tbody tr:last-child td {
+    border-bottom: 1px solid black;
+}
+
+table tfoot td {}
+
+
+/* MOBILE
+--------------------------------------------------------------
+
+@media screen and (max-width: 592px) {
+} */
+
+
+/* SMALL
+--------------------------------------------------------------
+
+@media screen and (min-width: 593px) and (max-width: 849px) {
+} */
+
+
+/* MEDIUM
+--------------------------------------------------------------
+
+@media screen and (min-width: 850px) and (max-width: 1025px) {
+} */
+

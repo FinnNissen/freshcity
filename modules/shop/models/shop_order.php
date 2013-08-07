@@ -683,6 +683,7 @@
 				$billing_info->save_to_customer($customer);
 				$shipping_info->save_to_customer($customer);
 				$customer->set_api_fields(Shop_CheckoutData::get_custom_fields());
+				Backend::$events->fireEvent('shop:onOrderAfterUpdateCustomer', $customer);
 				$customer->save();
 				
 				/*
@@ -1985,7 +1986,7 @@
 					 */
 					$desc = $item_obj->product_name;
 					
-					if ($item['grouped_option_desc'])
+					if (!Phpr::$config->get('DISABLE_GROUPED_PRODUCTS') && $item['grouped_option_desc'])
 						$desc .= "\n".$item['grouped_menu_label'].': '.$item['grouped_option_desc'];
 						
 					$options = $item_obj->get_options();

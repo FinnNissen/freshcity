@@ -701,7 +701,7 @@
 			else
 				$result = $output_name ? $this->product_name.'. ' : null;
 			
-			if ($this->product->grouped_option_desc)
+			if (!Phpr::$config->get('DISABLE_GROUPED_PRODUCTS') && $this->product->grouped_option_desc)
 			{
 				if ($result)
 				{

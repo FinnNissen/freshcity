@@ -18,6 +18,8 @@
 
 		public $implement = 'Db_Sortable';
 		
+		public $parent_product;
+
 		protected static $id_name_cache = array();
 
 		public static function create()
@@ -66,8 +68,13 @@
 		 * @documentable
 		 * @return array Returns an array of option values.
 		 */
-		public function list_values()
+		public function list_values($limit_to_om = true)
 		{
+			if ($limit_to_om && $this->parent_product && Shop_ConfigurationRecord::get()->strict_option_values && $this->parent_product->has_om_records())
+			{
+				return $this->list_om_values();
+			}
+			
 			$values = explode("\n", $this->attribute_values);
 			$result = array();
 			foreach ($values as $value)
@@ -77,6 +84,19 @@
 			}
 
 			return $result;
+		}
+		
+		/**
+		 * Returns a list of the option values limited with the existing active Option Matrix record combination.
+		 * @return array Returns an array of option values.
+		 */
+		protected function list_om_values()
+		{
+			return Shop_OptionMatrixRecord::get_available_option_values(
+				$this->parent_product,
+				$this, 
+				Shop_ProductHelper::get_default_options($this->parent_product)
+			);
 		}
 		
 		public function copy()

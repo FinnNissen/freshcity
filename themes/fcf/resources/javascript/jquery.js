@@ -1,16 +1,4 @@
-/*!
- * jQuery JavaScript Library v1.9.0
- * http://jquery.com/
- *
- * Includes Sizzle.js
- * http://sizzlejs.com/
- *
- * Copyright 2005, 2012 jQuery Foundation, Inc. and other contributors
- * Released under the MIT license
- * http://jquery.org/license
- *
- * Date: 2013-1-14
- */
+/*! jQuery JavaScript Library | http://jquery.org/license | v1.9.0 */
 (function( window, undefined ) {
 "use strict";
 var
@@ -3670,12 +3658,7 @@ jQuery.each( ("blur focus focusin focusout load resize scroll unload click dblcl
 		jQuery.event.fixHooks[ name ] = jQuery.event.mouseHooks;
 	}
 });
-/*!
- * Sizzle CSS Selector Engine
- * Copyright 2012 jQuery Foundation and other contributors
- * Released under the MIT license
- * http://sizzlejs.com/
- */
+/*! Sizzle CSS Selector Engine | http://sizzlejs.com/ */
 (function( window, undefined ) {
 
 var i,

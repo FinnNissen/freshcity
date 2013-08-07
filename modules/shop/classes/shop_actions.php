@@ -152,9 +152,12 @@
 			
 			if (!$specific_product)
 			{
-				$grouped_products = $product->grouped_products;
-				if ($grouped_products->count)
-					$product = $grouped_products[0];
+				if (!Phpr::$config->get('DISABLE_GROUPED_PRODUCTS'))
+				{
+					$grouped_products = $product->grouped_products;
+					if ($grouped_products->count)
+						$product = $grouped_products[0];
+				}
 					
 				if (!$product->enabled || ($product->is_out_of_stock() && $product->hide_if_out_of_stock))
 				{

@@ -90,7 +90,7 @@
 		{
 			$result = array();
 			
-			if ($this->product->grouped_option_desc)
+			if (!Phpr::$config->get('DISABLE_GROUPED_PRODUCTS') && $this->product->grouped_option_desc)
 				$result[] = $this->product->grouped_menu_label.': '.$this->product->grouped_option_desc;
 			
 			foreach ($this->options as $name=>$value) 

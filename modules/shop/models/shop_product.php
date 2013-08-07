@@ -192,6 +192,7 @@
 		
 		public $category_sort_order;
 		protected $categories_column;
+		protected $has_om_records = null;
 
 		public static function create()
 		{
@@ -1234,6 +1235,15 @@
 					return $this->master_grouped_product->product_rating_all_review_num;
 
 				return $this->product_rating_all_review_num;
+			}
+			
+			if ($name == 'options')
+			{
+				$options = parent::__get($name);
+				foreach ($options as $option)
+					$option->parent_product = $this;
+
+				return $options;
 			}
 			
 			if ($name == 'extra_options')
@@ -3461,6 +3471,20 @@
 		}
 		
 		/**
+		 * Returns true if the product has Option Matrix records.
+		 * @documentable
+		 * @return boolean
+		 */
+		public function has_om_records()
+		{
+			if ($this->has_om_records !== null)
+				return $this->has_om_records;
+
+			return $this->has_om_records = 
+				Db_DbHelper::scalar('select count(*) from shop_option_matrix_records where product_id=:product_id', array('product_id'=>$this->id)) ? true : false;
+		}
+		
+		/**
 		 * Processes posted product options by removing non-existing options
 		 * from the list, replacing non-existing option values with the first
 		 * available option value and added product options which have not been
@@ -3482,25 +3506,48 @@
 			 */
 
 			$posted_options = array();
-			
-			foreach ($options as $option_key=>$option_value)
+
+			if (Shop_ConfigurationRecord::get()->strict_option_values && $this->has_om_records())
 			{
-				$product_option = $this->get_option_by_key($option_key);
-				if ($product_option)
+				$option_record = Shop_OptionMatrixRecord::find_record($options, $this, true);
+				if (!$option_record || $option_record->disabled)
 				{
-					if ($product_option->value_exists($option_value))
-						$posted_options[$option_key] = $option_value;
-					else
-						$posted_options[$option_key] = $product_option->get_first_value();
+					$posted_options = $options;
+
+					if (Cms_Controller::get_instance())
+					{
+						foreach ($this->options as $option)
+						{
+							$updated_values = Shop_OptionMatrixRecord::get_first_available_value_set($this, $option, $posted_options);
+							if ($updated_values) {
+								$posted_options = $updated_values;
+								break;
+							}
+						}
+					}
+				} else
+					$posted_options = $options;
+			} else {
+				foreach ($options as $option_key=>$option_value)
+				{
+					$product_option = $this->get_option_by_key($option_key);
+
+					if ($product_option)
+					{
+						if ($product_option->value_exists($option_value))
+							$posted_options[$option_key] = $option_value;
+						else
+							$posted_options[$option_key] = $product_option->get_first_value();
+					}
 				}
 			}
-			
+
 			foreach ($this->options as $product_option)
 			{
 				if (!array_key_exists($product_option->option_key, $posted_options))
 					$posted_options[$product_option->option_key] = $product_option->get_first_value();
 			}
-			
+
 			return $posted_options;
 		}
 		
@@ -3529,7 +3576,7 @@
 			 * option set.
 			 */
 			
-			if (!$this->option_matrix_records->count)
+			if (!$this->has_om_records())
 			{
 				$result = array();
 				
@@ -3620,7 +3667,7 @@
 				$options = array();
 				foreach ($this->options as $option)
 				{
-					$values = $option->list_values();
+					$values = $option->list_values(false);
 					if (count($values))
 						$options[$option->option_key] = $values[0];
 				}

@@ -36,6 +36,8 @@
 			$this->define_column('tax_inclusive_country_id', 'Tax inclusive label - country');
 			$this->define_column('tax_inclusive_state_id', 'Tax inclusive label - state');
 			$this->define_column('product_details_behavior', 'Product details page behavior');
+			$this->define_column('strict_option_values', 'Strict option values for Option Matrix products');
+			
 			$this->define_column('nested_category_urls', 'Enable category URL nesting');
 			$this->define_column('category_urls_prepend_parent', 'Prepend parent category URL');
 		}
@@ -60,6 +62,7 @@
 			$this->add_form_field('search_in_option_matrix')->tab('Product Search')->comment('When this feature is enabled Option Matrix records are displayed as individual products in the search result.', 'below');
 			
 			$this->add_form_field('product_details_behavior')->tab('Product Details Page')->renderAs(frm_radio)->comment('Please select a behavior the Product Details page should use to load a default product.', 'above');
+			$this->add_form_field('strict_option_values')->tab('Product Details Page')->comment('When this option is enabled, the option drop-down fields on the Product Details page display only option combinations that exist (and enabled) in the product\'s Option Matrix configuration.', 'above');
 
 			$this->add_form_field('nested_category_urls')->tab('Categories')->comment('When the feature is enabled, you can use category URLs like "men/jumpers". Please note that this feature requires a minor update of the category pagination code, described in the <a target="_blank" href="http://lemonstand.com/docs/displaying_a_list_of_products/#nested-urls">documentation</a>.', 'below', true);
 			$field = $this->add_form_field('category_urls_prepend_parent')->tab('Categories')->comment('Automatically prepend parent category URL to URLs of children categories.');

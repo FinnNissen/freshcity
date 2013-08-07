@@ -1,63 +1,27 @@
-<header>
-  <div class="row topline">
-    <div class="six columns login">
-      <? if ($this->customer): ?>
-        Welcome, <?= h($this->customer->first_name) ?>!
-        <a href="<?= root_url('logout') ?>">Logout</a>
-      <? else: ?>
-        <a href="<?= root_url('login') ?>">Login or Register</a>
-      <? endif ?>
-    </div>
-    <div class="six columns">
-      <div class="row">
-        <div class="seven columns">
-          <?= open_form(array('class'=>'search', 'method'=>'get', 'action'=>root_url('search'))) ?>
-            <input type="text" name="query" value="<?= isset($query) ? $query : null ?>" placeholder="Search store&hellip;"/>
-          <?= close_form() ?>
-        </div>
-        <div class="five columns" id="mini-cart"><?= $this->render_partial('shop:mini_cart') ?></div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <h1 class="four columns"><?= Shop_CompanyInformation::get()->name ? Shop_CompanyInformation::get()->name : 'Zest' ?></h1>
-    <div class="eight columns">
-      <ul class="nav-bar">
-        <? $active_page = isset($active_page) ? $active_page : 'home' ?>
-        <li class="<?= $active_page == 'home' ? 'active' : null ?>"><a href="<?= root_url('/') ?>">Home</a></li>
-        <li class="has-flyout <?= $active_page == 'shop' ? 'active' : null ?>">
-          <a href="<?= root_url('shop') ?>">Shop</a>
-          <a class="flyout-toggle" href="<?= site_url('shop') ?>"><span> </span></a>
-          <ul class="flyout" style="display: none;">
-            <? foreach (Shop_Category::create()->list_root_children() as $category): ?>
-              <li><a href="<?= $category->page_url('/category') ?>"><?= h($category->name) ?></a></li>
-            <? endforeach ?>
-          </ul>
-        </li>
-        <? if ($this->customer): ?>
-          <li class="<?= $active_page == 'orders' ? 'active' : null ?>"><a href="<?= root_url('orders') ?>">My Orders</a></li>
-          <li class="<?= $active_page == 'profile' ? 'active' : null ?>"><a href="<?= root_url('profile') ?>">My Profile</a></li>
-        <? endif ?>
-        <li class="<?= $active_page == 'about' ? 'active' : null ?>"><a href="<?= root_url('about') ?>">About</a></li>
-        <li class="<?= $active_page == 'contact' ? 'active' : null ?>"><a href="<?= root_url('contact') ?>">Contact</a></li>
-        <li class="<?= $active_page == 'blog' ? 'active' : null ?>"><a href="<?= root_url('blog') ?>">Blog</a></li>
-      </ul>
-    </div>
-  </div>
-  
-  <? if (isset($title_area) && $title_area): ?>
-    <div class="row secondhead">
-      <div class="twelve columns omega">
-        <!-- 
-          If the block 'title' is defined on the page, output it. 
-          Otherwise output the H2 element with the current page's title. 
-        -->
-        <? $this->render_block('title', '<h2 class="left">'.h($this->page->title).'</h2>') ?>
-        <div class="right">
-          <? $this->render_block('breadcrumbs') ?>
-        </div>
-        <div class="clear"></div>
-      </div>
-    </div>
-  <? endif ?>
+<header class="check-out">
+	<nav class="wrap">
+		<ul class="inline" id="main-nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Bag Overview</a></li>
+			<li><a href="#">Store</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Sign Up</a></li>
+		</ul>
+		<ul class="inline" id="secondary-nav">
+			<li><a href="#">My Account</a></li>
+			<li><a href="#">Contact Us</a></li>
+			<li><a href="#">Get Involved</a></li>
+			<li><a href="#">City Farming</a></li>
+			<li><a href="#">Our Farming</a></li>
+		</ul>
+	</nav>
+	<div id="breadcrumb">
+		<ol class="inline wrap">
+			<li class="completed"><a href="#">Type & Size</a></li>
+			<li class="active"><a href="#">Delivery Information</a></li>
+			<li><a href="#">Account & Payment</a></li>
+			<li><a href="#">Review & Buy it!</a></li>
+		</ol>
+	</div>
 </header>

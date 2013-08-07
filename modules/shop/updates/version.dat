@@ -879,3 +879,8 @@
 #1.25.93 Minor update in the default PayPal Pro payment partial templates
 #1.25.94 Minor update in the API
 #1.25.95 Minor fix in the Discount Engine
+#1.25.96|@a290354 Fixed the Philippines 3 digit ISO country code. Minor update in the API.
+#1.25.97|@b14285d Added new eCommerce Configuration Option (System/Settings/eCommerce Settings): "Strict option values for Option Matrix products". Updated the USPS shipping module.
+#1.25.98 Minor fix in the Option Matrix API
+#1.25.99 Minor fix in the USPS shipping module
+#1.25.100 Added new API event: shop:onOrderAfterUpdateCustomer

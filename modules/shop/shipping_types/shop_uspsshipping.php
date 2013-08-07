@@ -25,7 +25,12 @@
 			'EXPRESS_FLAT_ENV_PICKUP'=>array('Express Mail Flat-Rate Envelope Hold For Pickup', 27, false),
 			'REGIONAL_BOX_A'=>array('Priority Mail Regional Rate Box A', 47, true),
 			'REGIONAL_BOX_B'=>array('Priority Mail Regional Rate Box B', 49, true),
-			'REGIONAL_BOX_C'=>array('Priority Mail Regional Rate Box C', 58, true)
+			'REGIONAL_BOX_C'=>array('Priority Mail Regional Rate Box C', 58, true),
+			'REGIONAL_BOX_C_PICKUP'=>array('Priority Mail Regional Rate Box C Hold For Pickup', 59, true),
+			'FIRST_CLASS_PACKAGE'=>array('First-Class Package Service', 61, true),
+			'PRIORITY_EXPRESS_PADDED_FLAT'=>array('Priority Mail Express Padded Flat Rate Envelope', 62, true),
+			'PRIORITY_EXPRESS_PADDED_FLAT_HOLD'=>array('Priority Mail Express Padded Flat Rate Envelope Hold For Pickup', 63, true),
+			'PRIORITY_EXPRESS_SUNDAY_HOLIDAY'=>array('Priority Mail Express Sunday/Holiday Delivery Padded Flat Rate Envelope', 64, true)
 		);
 
 		/**
@@ -144,7 +149,17 @@
 				11=>'Priority Mail Large Flat Rate Box',
 				14=>'First Class Mail International Flats',
 				15=>'First Class Mail International Parcels',
-				16=>'Priority Mail Small Flat Rate Box'
+				16=>'Priority Mail Small Flat Rate Box',
+				18=>'Priority Mail International Gift Card Flat Rate Envelope',
+				19=>'Priority Mail International Window Flat Rate Envelope',
+				20=>'Priority Mail International Small Flat Rate Envelope',
+				21=>'First-Class Mail International Postcard',
+				22=>'Priority Mail International Legal Flat Rate Envelope',
+				23=>'Priority Mail International Padded Flat Rate Envelope',
+				24=>'Priority Mail International DVD Flat Rate priced box',
+				25=>'Priority Mail International Large Video Flat Rate priced box',
+				26=>'Priority Mail International Flat Rate Boxes',
+				27=>'Priority Mail International Padded Flat Rate Envelope'
 			);
 			
 			if ($current_key_value == -1)
@@ -353,7 +368,12 @@
 					if ($class_id == 0)
 						$option_name = 'First class';
 					
+					$option_name = str_replace('&lt;sup&gt;&#8482;&lt;/sup&gt;', '', $option_name);
+					$option_name = str_replace('&lt;sup&gt;&#174;&lt;/sup&gt;', '', $option_name);
+					$option_name = str_replace('&amp;lt;sup&amp;gt;&amp;#8482;&amp;lt;/sup&amp;gt;', '', $option_name);
 					$option_name = str_replace('&lt;sup&gt;&amp;reg;&lt;/sup&gt;', '', $option_name);
+					$option_name = str_replace('&lt;sup&gt;&amp;trade;&lt;/sup&gt;', '', $option_name);
+
 					if(!$host_obj->commercial_rates)
 						$total = $xPath->query('Rate', $postage)->item(0)->nodeValue;
 					else
@@ -396,9 +416,15 @@
 						continue;
 
 					$option_name = $xPath->query('SvcDescription', $postage)->item(0)->nodeValue;
+					$option_name = str_replace('&amp;lt;sup&amp;gt;&amp;#8482;&amp;lt;/sup&amp;gt;', '', $option_name);
+					$option_name = str_replace('&amp;lt;sup&amp;gt;&amp;#174;&amp;lt;/sup&amp;gt;', '', $option_name);
+					$option_name = str_replace('&lt;sup&gt;&#174;&lt;/sup&gt;', '', $option_name);
+					
+					$option_name = str_replace('&lt;sup&gt;&#8482;&lt;/sup&gt;', '', $option_name);
 					$option_name = str_replace('&lt;sup&gt;&amp;reg;&lt;/sup&gt;', '', $option_name);
 					$option_name = str_replace('&lt;sup&gt;&amp;trade;&lt;/sup&gt;**', '', $option_name);
-					
+					$option_name = str_replace('&lt;sup&gt;&amp;trade;&lt;/sup&gt;', '', $option_name);
+
 					if($host_obj->commercial_rates)
 						$total = $xPath->query('CommercialPostage', $postage)->item(0)->nodeValue;
 					

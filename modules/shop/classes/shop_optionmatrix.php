@@ -92,7 +92,7 @@
 			 * return TRUE - we consider non-existing Option Matrix records as disabled.
 			 */
 			
-			if ($property_name == 'disabled' && $product->option_matrix_records->count)
+			if ($property_name == 'disabled' && $product->has_om_records())
 				return true;
 
 			/* 
