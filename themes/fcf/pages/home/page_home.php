@@ -3,8 +3,8 @@
 		<div class="genbox full-col">
 			<p class="p-heading"><strong>Select your Basket Type & Size</strong></p>
 			<p>Lorem ipsum dolor sit amet, consectetur.</p>
-			<a href="#" class="btn medium white" id="step-back"><span>&#171; Step Back</span></a>
-			<a href="#" class="btn medium" id="next-step"><span>Next Step &#187;</span></a>
+			<a href="#" class="btn large white" id="step-back"><span>&#171; Step Back</span></a>
+			<a href="#" class="btn large" id="next-step"><span>Next Step &#187;</span></a>
 		</div>
 		<div class="genbox four-col">
 			<h2 class="tk-league-gothic p-name all-caps">Veggie Bag</h2>

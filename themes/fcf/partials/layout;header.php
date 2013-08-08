@@ -16,8 +16,8 @@
 			<li><a href="#">Our Farming</a></li>
 		</ul>
 	</nav>
-	<div id="breadcrumb">
-		<ol class="inline wrap">
+	<div class="breadcrumb">
+		<ol class="inline tk-museo-sans wrap">
 			<li class="completed"><a href="#">Type & Size</a></li>
 			<li class="active"><a href="#">Delivery Information</a></li>
 			<li><a href="#">Account & Payment</a></li>

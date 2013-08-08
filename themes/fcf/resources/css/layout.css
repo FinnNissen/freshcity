@@ -20,6 +20,56 @@
 }
 
 
+/* CHECK-OUT
+-------------------------------------------------------------- */
+
+.check-out .breadcrumb ol.inline li {
+    counter-increment: checkoutIndex;
+    font-size: 22px;
+    line-height: 45px;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+    width: auto;
+    float: none;
+    display: inline-block;
+}
+
+.check-out .breadcrumb ol.inline li a {
+    height: 45px;
+}
+
+.check-out .breadcrumb ol.inline li:before {
+    content: counter(checkoutIndex, decimal) ")";
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 40px;
+    height: 45px;
+}
+
+.check-out .breadcrumb ol.inline li.active,
+.check-out .breadcrumb ol.inline li:hover {
+    color: #000000;
+}
+
+.check-out .breadcrumb ol.inline li.active {
+    background: url(assets/BG-breadcrumb-active.png) no-repeat center bottom transparent;
+}
+
+.check-out .breadcrumb ol.inline li.completed,
+.check-out .breadcrumb ol.inline li.completed a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.check-out .breadcrumb ol.inline li.completed:before {
+    content: "";
+    background: url(assets/ICON-checkmark.svg) no-repeat center center transparent;
+}
+
+
 /* FORMS
 -------------------------------------------------------------- */
 

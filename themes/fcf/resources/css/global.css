@@ -100,7 +100,7 @@ nav ul li:last-child {
     border-right:1px solid black;
 }
 
-#breadcrumb {
+.breadcrumb {
     background: none repeat scroll 0 0 #CCCCCC;
     height: 2.8125em;
     position: relative;
@@ -108,14 +108,34 @@ nav ul li:last-child {
     width: 100%;
 }
 
-#breadcrumb ol.inline {
-	display: none;
-    padding: 0;
+.breadcrumb .inline {
+    text-align: center;
+    padding-left: 6.25%;
+    padding-right: 6.25%;
 }
 
-#breadcrumb ol.inline li {}
+.breadcrumb .inline li {
+    color: #666666;
+    list-style: none outside none;
+    font-weight: 100;
+    text-align: left;
+}
 
-#breadcrumb ol.inline li a {}
+.breadcrumb .inline li.active {
+    font-weight: 300;
+}
+
+.breadcrumb .inline li a {
+    color: #666666;
+    display: block;
+    text-decoration: none;
+}
+
+.breadcrumb .inline li.active a,
+.breadcrumb .inline li a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
 
 
 /* CONTENT
@@ -197,12 +217,12 @@ nav ul li:last-child {
 outline:1px solid #999999;
 }
 
-ul.inline {
+.inline {
     list-style-type:none;
     padding-left:0;
 }
 
-ul.inline li {
+.inline li {
     display:inline;
     float:left;
     padding:0;
@@ -341,6 +361,7 @@ canvas.alignright {
 
 .h-entry .e-content {
     margin-bottom: -2px;
+    margin-top: 0.5em;
 }
 
 .h-entry .e-content p {
