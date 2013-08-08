@@ -1,3 +1,4 @@
+<? $active_page = isset($active_page) ? $active_page : 'home' ?>
 <header class="check-out">
 	<nav class="wrap">
 		<ul class="inline" id="main-nav">
@@ -17,11 +18,6 @@
 		</ul>
 	</nav>
 	<div class="breadcrumb">
-		<ol class="inline tk-museo-sans wrap">
-			<li class="completed"><a href="#">Type & Size</a></li>
-			<li class="active"><a href="#">Delivery Information</a></li>
-			<li><a href="#">Account & Payment</a></li>
-			<li><a href="#">Review & Buy it!</a></li>
-		</ol>
+		<? $this->render_block('breadcrumbs') ?>
 	</div>
 </header>

@@ -15,8 +15,28 @@
     right: 14.2857%;
 }
 
+#home section:first-of-type {
+background-color: #f2f2e1;
+background-image: linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
+background-image: -o-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(242,242,225)),
+	color-stop(1, rgb(255,255,255))
+);
+    margin-bottom: 2em;
+    padding-bottom: 4em;
+}
+
 #home section .full-col {
-    margin-bottom: 1em; /* 16px */
+    border-bottom: 1px solid #F2F2E1;
+    margin-bottom: 15px;
+    padding-bottom: 1em; /* 16px */
 }
 
 
@@ -59,7 +79,7 @@
 
 .check-out .breadcrumb ol.inline li.active,
 .check-out .breadcrumb ol.inline li:hover {
-    color: #000000;
+    color: #f2f2e1;
 }
 
 .check-out .breadcrumb ol.inline li.active {
@@ -68,7 +88,7 @@
 
 .check-out .breadcrumb ol.inline li.completed,
 .check-out .breadcrumb ol.inline li.completed a {
-    color: #ffffff;
+    color: #f49956;
     text-decoration: none;
 }
 

@@ -12,12 +12,12 @@
 			<small class="tk-museo-sans">Small type goes at the bottom</small>
 		</div>
 		<div class="genbox four-col">
-			<h2 class="tk-league-gothic p-name all-caps">Fruit & Veggie</h2>
+			<h2 class="tk-league-gothic p-name all-caps"><span style="color:#f49956">Fruit</span> & Veggie</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacus metus, tempor lobortis velit vel, aliquet condimentum.</p>
 			<small class="tk-museo-sans">Small type goes at the bottom</small>
 		</div>
 		<div class="genbox four-col">
-			<h2 class="tk-league-gothic p-name all-caps">Fruit Bag</h2>
+			<h2 class="tk-league-gothic p-name all-caps" style="color:#f49956">Fruit Bag</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacus metus, tempor lobortis velit vel, aliquet condimentum.</p>
 			<small class="tk-museo-sans">Small type goes at the bottom</small>
 		</div>

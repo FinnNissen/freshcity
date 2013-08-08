@@ -1,4 +1,3 @@
 <?
-$this->data['body_class'] = 'checkout';
-$this->data['active_page'] = 'shop';
+$this->data['active_page'] = 'sign_up_4';
 ?>

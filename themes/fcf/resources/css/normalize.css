@@ -53,7 +53,7 @@ body, button, button *, input, select, textarea { /* Addresses font-family incon
     font-family: Georgia,serif;
     font-size: 1em; /* 16px */
     line-height: 1.5em; /* 24px */
-	color: #444444;
+	color: #715341;
 }
 
 html, body { /* Addresses margins handled incorrectly in IE6/7 */
@@ -202,7 +202,7 @@ sub {
 }
 
 .tk-league-gothic.p-name {
-    color: #000000;
+    color: #8DAE7C;
     font-size: 3.5em; /* 56px */
     line-height: 1em; /* 56px */
     padding-bottom: 0.142857em; /* 8px */
@@ -215,14 +215,14 @@ sub {
 }
 
 small.tk-museo-sans {
-    color: #999999;
+    color: #C6BAB3;
     display: block;
     font-weight: 300;
     top: -3px;
 }
 
 .p-heading {
-    color: #000000;
+    color: #553E31;
     font-size: 1.4375em; /* 23px */
     font-style: italic;
     line-height: 1.3913em; /* 32px */
@@ -232,7 +232,7 @@ small.tk-museo-sans {
 }
 
 .tk-museo-sans.note {
-    background: none repeat scroll 0 0 #333333;
+    background: none repeat scroll 0 0 #553E31;
     -webkit-border-radius: 1em 1em 1em 1em;
      -khtml-border-radius: 1em 1em 1em 1em;
       -icab-border-radius: 1em 1em 1em 1em;
@@ -427,8 +427,8 @@ fieldset { /* Define consistent border, margin, and padding */
 }
 
 .fieldrow {
-    background: url(assets/BG-LRG-dashed.gif) repeat scroll 0 0 #FFFFFF;
-    border: 0.25em solid #EEEEEE; /* 4px */
+    background: url(assets/BG-LRG-dashed.gif) repeat scroll 0 0 #f2f2e1;
+    border: 0.25em solid #f2f2e1; /* 4px */
     -webkit-border-radius: 0.25em 0.25em 0.25em 0.25em;
      -khtml-border-radius: 0.25em 0.25em 0.25em 0.25em;
       -icab-border-radius: 0.25em 0.25em 0.25em 0.25em;
@@ -448,7 +448,7 @@ fieldset { /* Define consistent border, margin, and padding */
 .fieldrow.textarea-row {}
 
 .fieldrow.textarea-row:before {
-    background: none repeat scroll 0 0 #EEEEEE;
+    background: none repeat scroll 0 0 #f2f2e1;
     content: "";
     height: 100%;
     left: 0;
@@ -459,8 +459,8 @@ fieldset { /* Define consistent border, margin, and padding */
 }
 
 label {
-    background: #EEEEEE;
-    color: #333333;
+    background: #f2f2e1;
+    color: #715341;
     float: left;
     font-family: "museo-sans","Helvetica","Arial",sans-serif;
     font-size: 0.9375em; /* 15px  */
@@ -475,7 +475,7 @@ label {
 
 label.for-boxes {
     background: none repeat scroll 0 0 transparent !important;
-    color: #000000 !important;
+    color: #553E31 !important;
     display: inline;
     float: none;
     font-family: Georgia,serif;
@@ -520,7 +520,7 @@ textarea {
 
 input {
     border: medium none;
-    color: #000000;
+    color: #553E31;
     font-family: Georgia,serif;
     font-style: italic;
     margin: 0 !important;
@@ -530,7 +530,7 @@ input {
 
 input[type="text"], input[type="number"], input[type="date"] {
     background: none repeat scroll 0 0 transparent !important;
-    color: #000000;
+    color: #553E31;
     display: block;
     font-size: 1em; /* 16px */
     font-style: italic;
@@ -594,13 +594,13 @@ input::-webkit-input-placeholder {
 }
 
 input:-moz-placeholder {
-    color: #999999;
+    color: #d6a87e;
 }
 
 select {
     background: none repeat scroll 0 0 transparent !important;
     border: medium none !important;
-    color: black;
+    color: #553E31;
     display: block;
     font-size: 1em; /* 16px */
     font-style: italic;
@@ -621,19 +621,19 @@ input[type="submit"] {
 
 button,
 .btn {
-    background-color: #dddddd;
-	background-image: linear-gradient(bottom, rgb(204,204,204) 0%, rgb(238,238,238) 100%);
-	background-image: -o-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(238,238,238) 100%);
-	background-image: -moz-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(238,238,238) 100%);
-	background-image: -webkit-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(238,238,238) 100%);
-	background-image: -ms-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(238,238,238) 100%);
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0, rgb(204,204,204)),
-		color-stop(1, rgb(238,238,238))
-	);
+    background-color: #dbd8c1;
+background-image: linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -o-linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(219,216,193)),
+	color-stop(1, rgb(242,242,225))
+);
     border: medium none;
     -webkit-border-radius: 2px 2px 2px 2px;
      -khtml-border-radius: 2px 2px 2px 2px;
@@ -641,7 +641,7 @@ button,
        -moz-border-radius: 2px 2px 2px 2px;
          -o-border-radius: 2px 2px 2px 2px;
     border-radius: 2px 2px 2px 2px;
-    color: #444444;
+    color: #715341;
     font-size: 0.75em; /* 12px */
     display: inline-block;
 	line-height: 1.75em; /* 21px */
@@ -667,19 +667,20 @@ input::-moz-focus-inner {
 
 button span,
 .btn span { 
-    background-color: #eeeeee;
-	background-image: linear-gradient(bottom, rgb(238,238,238) 0%, rgb(255,255,255) 100%);
-	background-image: -o-linear-gradient(bottom, rgb(238,238,238) 0%, rgb(255,255,255) 100%);
-	background-image: -moz-linear-gradient(bottom, rgb(238,238,238) 0%, rgb(255,255,255) 100%);
-	background-image: -webkit-linear-gradient(bottom, rgb(238,238,238) 0%, rgb(255,255,255) 100%);
-	background-image: -ms-linear-gradient(bottom, rgb(238,238,238) 0%, rgb(255,255,255) 100%);
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0, rgb(238,238,238)),
-		color-stop(1, rgb(255,255,255))
-	);
+    background-color: #f2f2e1;
+background-image: linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
+background-image: -o-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(242,242,225)),
+	color-stop(1, rgb(255,255,255))
+);
     border-top: 1px solid #FFFFFF;
     display: block;
     height: 1.83333em; /* 21px */
@@ -720,58 +721,60 @@ button.large span,
 
 button:hover,
 .btn:hover {
-    background: #BBBBBB;
-    color: #000000;
+    background: #dbd8c1;
+    color: #1c1510;
 }
 
 button.white,
 .btn.white,
 button.white span,
 .btn.white span {
-    background: #FFFFFF;
+    background: transparent;
 }
 
 button.black,
 .btn.black {
-    background-color: #333333;
-	background-image: linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 100%);
-	background-image: -o-linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 100%);
-	background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 100%);
-	background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 100%);
-	background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 100%);
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0, rgb(0,0,0)),
-		color-stop(1, rgb(51,51,51))
-	);
+    background-color: #a4be96;
+background-image: linear-gradient(bottom, rgb(164,190,150) 0%, rgb(187,206,176) 100%);
+background-image: -o-linear-gradient(bottom, rgb(164,190,150) 0%, rgb(187,206,176) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(164,190,150) 0%, rgb(187,206,176) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(164,190,150) 0%, rgb(187,206,176) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(164,190,150) 0%, rgb(187,206,176) 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(164,190,150)),
+	color-stop(1, rgb(187,206,176))
+);
 	color: #eeeeee;
 }
 
 button.black span,
 .btn.black span {
-    border-top: 1px solid #999999;
-    background-color: #555555;
-	background-image: linear-gradient(bottom, rgb(51,51,51) 0%, rgb(102,102,102) 100%);
-	background-image: -o-linear-gradient(bottom, rgb(51,51,51) 0%, rgb(102,102,102) 100%);
-	background-image: -moz-linear-gradient(bottom, rgb(51,51,51) 0%, rgb(102,102,102) 100%);
-	background-image: -webkit-linear-gradient(bottom, rgb(51,51,51) 0%, rgb(102,102,102) 100%);
-	background-image: -ms-linear-gradient(bottom, rgb(51,51,51) 0%, rgb(102,102,102) 100%);
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0, rgb(51,51,51)),
-		color-stop(1, rgb(102,102,102))
-	);
-	text-shadow: 0 1px 0 #000000;
+    border-top: 1px solid #d1dfcb;
+    background-color: #8dae7c;
+background-image: linear-gradient(bottom, rgb(141,174,124) 0%, rgb(164,190,150) 100%);
+background-image: -o-linear-gradient(bottom, rgb(141,174,124) 0%, rgb(164,190,150) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(141,174,124) 0%, rgb(164,190,150) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(141,174,124) 0%, rgb(164,190,150) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(141,174,124) 0%, rgb(164,190,150) 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(141,174,124)),
+	color-stop(1, rgb(164,190,150))
+);
+	text-shadow: 0 1px 0 #8dae7c;
     -webkit-font-smoothing: antialiased;
 }
 
 button.black:hover,
 .btn.black:hover {
-    background: #000000;
+    background: #8dae7c;
     color: #ffffff;
 }
 
@@ -780,7 +783,7 @@ textarea {
     vertical-align: top; /* 2. Improves readability and alignment in all browsers */
     background: none repeat scroll 0 0 transparent !important;
     border: medium none;
-    color: #000000;
+    color: #553E31;
     display: block;
     font-family: Georgia,serif;
     font-size: 1em; /* 16px */
