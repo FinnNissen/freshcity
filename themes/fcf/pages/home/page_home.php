@@ -91,8 +91,8 @@
 				</div>
 				<div class="fieldrow check-row">
 					<label for="option">Checkbox</label>
-					<label for="option-a" class="for-boxes"><input type="checkbox" name="option" id="option-a" value="a" /> Option A</label>
-					<label for="option-b" class="for-boxes"><input type="checkbox" name="option" id="option-b" value="b" /> Option B</label>
+					<label for="option-a" class="for-boxes"><input type="checkbox" name="option" id="option-a" value="a" /> Opt A</label>
+					<label for="option-b" class="for-boxes"><input type="checkbox" name="option" id="option-b" value="b" /> Opt B</label>
 				</div>
 				<div class="fieldrow file-row">
 					<label for="file-input">File input</label>
@@ -105,16 +105,16 @@
 				</div>
 			<fieldset class="submit">
 				<a href="#" class="btn white"><span>Button</span></a>
-				<a href="#" class="btn"><span>Button</span></a>
+				<button type="submit"><span>Button</span></button>
 				<a href="#" class="btn black"><span>Button</span></a>
 			</fieldset>
 			<fieldset class="submit">
 				<a href="#" class="btn medium white"><span>Button</span></a>
 				<a href="#" class="btn medium"><span>Button</span></a>
-				<a href="#" class="btn medium black"><span>Button</span></a>
+				<button type="submit" class="medium black"><span>Button</span></button>
 			</fieldset>
 			<fieldset class="submit">
-				<a href="#" class="btn large white"><span>Button</span></a>
+				<button type="submit" class="large white"><span>Button</span></button>
 				<a href="#" class="btn large"><span>Button</span></a>
 				<a href="#" class="btn large black"><span>Button</span></a>
 			</fieldset>

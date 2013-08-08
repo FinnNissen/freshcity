@@ -3,7 +3,7 @@
 
 #home #step-back,
 #home #next-step {
-    bottom: 1em;
+    bottom: 1em; /* 16px */
     position: absolute;
     right: 0;
     left: auto;
@@ -16,19 +16,23 @@
 }
 
 #home section .full-col {
-    margin-bottom: 1.25em;
+    margin-bottom: 1em; /* 16px */
 }
 
 
 /* CHECK-OUT
 -------------------------------------------------------------- */
 
+.check-out .breadcrumb {
+	display: block;
+}
+
 .check-out .breadcrumb ol.inline li {
     counter-increment: checkoutIndex;
-    font-size: 22px;
-    line-height: 45px;
-    padding-left: 40px;
-    padding-right: 40px;
+    font-size: 1.375em; /* 22px */
+    line-height: 2.04545455em; /* 45px */
+    padding-left: 1.81818182em; /* 40px */
+    padding-right: 1.81818182em; /* 40px */
     position: relative;
     width: auto;
     float: none;
@@ -36,17 +40,21 @@
 }
 
 .check-out .breadcrumb ol.inline li a {
-    height: 45px;
+    height: 2.04545455em; /* 45px */
+    font-size: inherit;
+    line-height: inherit;
 }
 
 .check-out .breadcrumb ol.inline li:before {
     content: counter(checkoutIndex, decimal) ")";
     left: 0;
+    font-size: inherit;
+    line-height: inherit;
     position: absolute;
     text-align: center;
     top: 0;
-    width: 40px;
-    height: 45px;
+    width: 1.81818182em; /* 40px */
+    height: 2.04545455em; /* 45px */
 }
 
 .check-out .breadcrumb ol.inline li.active,
@@ -55,7 +63,7 @@
 }
 
 .check-out .breadcrumb ol.inline li.active {
-    background: url(assets/BG-breadcrumb-active.png) no-repeat center bottom transparent;
+    background: url(assets/BG-breadcrumb-active.svg) no-repeat center bottom transparent;
 }
 
 .check-out .breadcrumb ol.inline li.completed,
@@ -70,146 +78,19 @@
 }
 
 
-/* FORMS
--------------------------------------------------------------- */
-
-#forms fieldset.col-2 {width:47.4359%;}
-
-#forms .tel-row, #forms .postal-row {
-    float: left;
-    width: 46.87%;
+/* MED
+--------------------------------------------------------------
+--------------------------------------------------------------
+@media screen and (min-width: 896px) and (max-width: 1151px) { */
+@media screen and (max-width: 1151px) {
+#home section .full-col {
+    margin-bottom: 0.933333em; /* 14px */
 }
-
-#forms .tel-row label, #forms .postal-row label {
-    min-width: 31%;
-    padding: 0 2.12766%;
-}
-
-#forms .tel-row {
-    margin-right: 2.88%;
-}
-
-/* MEDIA
--------------------------------------------------------------- */
-
-#media .main > img:first-of-type {
-    margin-top: 14px;
-}
-
-#media .main .col-full p > .alignleft {
-    top: -4px;
-    width: 31%;
-}
-
-#media .main .col-full p > .alignright {
-    width: 30.4%;
 }
 
 
-/* MOBILE
---------------------------------------------------------------  */
-
-@media screen and (max-width: 592px) {
-	#home .main .col-3 {
-    width: 25.8065%;
-	}
-	
-	#home .main .col-2 {
-    width: 42.47312%;
-	}
-	
-	#forms fieldset.col-2 {
-    width: 92.4731%;
-	}
-	
-	#forms .tel-row, #forms .postal-row {
-    float: none;
-    width: auto;
-    margin-right: 0;
-	}
-	
-	#forms .tel-row label, #forms .postal-row label {
-    min-width: 31%;
-    padding: 0 1%;
-	}
-	
-	#media .main .col-full p > img.left {
-    width: 63.9535%;
-	}
-
-	#media .main .col-full p > img.right {
-    width: 65.2%;
-	}
-}
-
-
-/* SMALL
--------------------------------------------------------------- */
-
-@media screen and (min-width: 593px) and (max-width: 849px) {
-	#home .main .col-3 {
-    width: 27.0833%;
-	}
-	
-	#home .main .col-2 {
-    width: 43.75%;
-	}
-	
-	#forms fieldset.col-2 {
-    width: 45.8333%;
-	}
-	
-	#forms .tel-row, #forms .postal-row {
-    float: none;
-    width: auto;
-    margin-right: 0;
-	}
-	
-	#forms .tel-row label, #forms .postal-row label {
-    min-width: 24.5%;
-    padding: 0 1%;
-	}
-	
-	#media .main .col-full p > img.left {
-    width: 46.6667%;
-	}
-
-	#media .main .col-full p > img.right {
-    width: 46.4%;
-	}
-}
-
-
-/* MEDIUM: Column 9
--------------------------------------------------------------- */
-
-@media screen and (min-width: 850px) and (max-width: 1025px) {
-	#home .main .col-3 {
-    width: 29.0123%;
-	}
-	
-	#home .main .col-2 {
-    width: 45.679%;
-	}
-	
-	#forms fieldset.col-2 {width: 47.1193%;}
-	
-	#forms .tel-row, #forms .postal-row {
-    float: none;
-    width: auto;
-    margin-right: 0;
-	}
-	
-	#forms .tel-row label, #forms .postal-row label {
-    min-width: 20.9%;
-    padding: 0 1%;
-	}
-	
-	#media .main .col-full p > img.left {
-    width: 30.4897%;
-	}
-
-	#media .main .col-full p > img.right {
-    width: 29.4%;
-	}
-}
+/* SML
+--------------------------------------------------------------
+--------------------------------------------------------------
+@media screen and (max-width: 895px) {}
+ */

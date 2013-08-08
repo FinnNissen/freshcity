@@ -1,8 +1,8 @@
 /* LRG
 -------------------------------------------------------------- */
 
-ul#grid{background:url('assets/BG-grid.gif') repeat scroll left top green;display:none;height:100%;list-style-type:none;margin:0 auto;opacity:.3;padding:0;position:fixed;top:0;left:0px;width:100%;z-index:1000;font-size:8px;line-height:8px;max-width:1280px;min-width:1152px;right:0;height:816px;}
-ul#grid li{background:url("assets/BG-grid.gif") repeat scroll left top red;height:100%;display:inline;float:left;padding:0;margin-left:6.25%;margin-right:0;width:6.25%}
+ul#grid{background:url('assets/BG-LRG-grid.gif') repeat scroll left top green;display:none;height:100%;list-style-type:none;margin:0 auto;opacity:.3;padding:0;position:fixed;top:0;left:0px;width:100%;z-index:1000;font-size:8px;line-height:8px;max-width:1280px;min-width:1152px;right:0;height:816px;}
+ul#grid li{background:url("assets/BG-LRG-grid.gif") repeat scroll left top red;height:100%;display:inline;float:left;padding:0;margin-left:6.25%;margin-right:0;width:6.25%}
 ul#grid li:nth-child(9),ul#grid li:nth-child(10),ul#grid li:nth-child(11){background:rgba(0, 0, 0, 0.6);height: 5.515%;left: 0;margin: 0;position: absolute;top: 9.069%;width: 100%;z-index: 10}
 ul#grid li:nth-child(10){height: 14.706%;top: 23.529%}
 ul#grid li:nth-child(11){height: 38.235%;top: 61.765%}
@@ -10,16 +10,25 @@ ul#grid li:nth-child(12){display:none;}
 
 
 /* MED
--------------------------------------------------------------- */
-
-@media screen and (min-width: 896px) and (max-width: 1151px) {
-ul#grid{background-color:gray;min-width:896px;max-width:1024px;}
+--------------------------------------------------------------
+--------------------------------------------------------------
+@media screen and (min-width: 896px) and (max-width: 1151px) { */
+@media screen and (max-width: 1151px) {
+ul#grid{background:url('assets/BG-MED-grid.gif') repeat scroll left top gray;min-width:896px;max-width:1024px;height: 720px;}
+ul#grid li{background-image:url("assets/BG-MED-grid.gif")}
+ul#grid li:nth-child(9) {height: 40px;top: 65px;}
+ul#grid li:nth-child(10){height: 105px;top: 168px;}
+ul#grid li:nth-child(11){height: 278px;top: 442px;}
 }
 
 
 /* SML
--------------------------------------------------------------- */
-
+--------------------------------------------------------------
+--------------------------------------------------------------
 @media screen and (max-width: 895px) {
-ul#grid{background-color:yellow;min-width:640px;max-width:768px}
-}
+ul#grid{background:url('assets/BG-SML-grid.gif') repeat scroll left top yellow;min-width:640px;max-width:768px;height: 528px;}
+ul#grid li{background-image:url("assets/BG-SML-grid.gif")}
+ul#grid li:nth-child(9) {height: 5.493%;top: 9.091%;}
+ul#grid li:nth-child(10){height: 14.773%;top: 23.485%;}
+ul#grid li:nth-child(11){height: 38.258%;top: 61.742%;}
+} */

@@ -15,11 +15,11 @@ body {
 }
 
 .content > section {
-    padding-bottom: 2em;
+    padding-bottom: 2em; /* 32px */
 }
 
 .content > section:last-child {
-    margin-bottom: 4em;
+    margin-bottom: 4em; /* 64px */
 }
 
 .wrap {
@@ -40,13 +40,13 @@ body {
 header {
     background: none repeat scroll 0 0 #EEEEEE;
     display: block;
-    height: 4.625em;
+    height: 4.625em; /* 74px */
     overflow: hidden;
-    margin-bottom: 3px;
+    margin-bottom: 0.1875em; /* 3px */
 }
 
 header.check-out {
-    height: 7.4375em;
+    height: 7.4375em; /* 119px */
 }
 
 #logo {
@@ -84,7 +84,7 @@ nav ul li a {
     background:#eeeeee none repeat scroll 0 0;
     border-bottom:1px solid black;
     float:left;
-    padding:0.5em 1em 0.5em;
+    padding:0.5em 1em 0.5em; /* 8px 16px 8px */
 }
 
 nav ul li a:hover {
@@ -102,9 +102,10 @@ nav ul li:last-child {
 
 .breadcrumb {
     background: none repeat scroll 0 0 #CCCCCC;
-    height: 2.8125em;
+    display: none;
+    height: 2.8125em; /* 45px */
     position: relative;
-    top: 4.625em;
+    top: 4.625em; /* 74px */
     width: 100%;
 }
 
@@ -156,9 +157,9 @@ nav ul li:last-child {
 }
 
 .full-col {
-    clear:left;
+    clear: both;
+    display: block;
     float: none;
-    display:block;
 }
 
 .two-col {
@@ -261,16 +262,16 @@ outline:1px solid #999999;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    font-size: 1em;
-    line-height: 1em;
+    font-size: 1em; /* 16px */
+    line-height: 1em; /* 16px */
     outline: none;
 }
 
 .more-link {
     color: #999999;
-    font-size: 0.714286em;
+    font-size: 0.714286em; /* 15px */
     font-weight: 300;
-    line-height: 1.06667em;
+    line-height: 1.06667em; /* 16px */
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -347,55 +348,56 @@ canvas.alignright {
 -------------------------------------------------------------- */
 
 .h-entry {
-    margin-bottom: 4em;
-    margin-top: 3em;
+    margin-bottom: 4.125em; /* 66px */
+    margin-top: 2.75em; /* 44px */
     overflow: visible;
-    padding-top: 2.5em;
+    padding-top: 2.75em; /* 44px */
     position: relative;
 }
 
 .h-entry .tk-league-gothic.p-name {
-    font-size: 4em;
-    padding-bottom: 0.203125em;
+    font-size: 4em; /* 64px */
+    padding-bottom: 0.28125em; /* 18px */
+    padding-top: 0.125em; /* 8px */
+    top: 0.046875em; /* 3px */
 }
 
 .h-entry .e-content {
-    margin-bottom: -2px;
-    margin-top: 0.5em;
+    margin-top: 0.5em; /* 8px */
 }
 
 .h-entry .e-content p {
-    font-size: 1.3125em;
-    line-height: 1.52381em;
-    padding: 0.380952em 0;
+    font-size: 1.3125em; /* 21px */
+    line-height: 1.52381em; /* 32px */
+    padding: 0.380952em 0; /* 8px 0 */
     -webkit-font-smoothing: antialiased;
 }
 
 .h-entry .e-content .p-heading {
     color: #000000;
-    font-size: 1.4375em;
+    font-size: 1.4375em; /* 23px */
     font-style: italic;
-    line-height: 1.3913em;    
-    padding: 0.86956522em 0;
+    line-height: 1.3913em; /* 32px */
+    padding: 0.86956522em 0; /* 20px 0 */
     text-decoration: underline;
-    top: 8px;
+    top: 8px; /* 8px */
 }
 
 .h-entry .e-content .tk-museo-sans.p-heading {
-    font-size: 1.5625em;
+    font-size: 1.5625em; /* 25px */
     font-style: normal;
     font-weight: 700;
-    line-height: 1.28em;
-    padding: 0.8em 0;
+    line-height: 1.28em; /* 32px */
+    padding: 0.8em 0; /* 20px 0 */
     text-decoration: none;
     top: 7px;
 }
 
 .h-entry .meta-data {
     background: #EEEEEE;
-    height: 2.46154em;
+    height: 2.46154em; /* 32px */
     left: -5.55556%;
-    line-height: 2.30769231em;
+    line-height: 2.30769231em; /* 30px */
     position: absolute;
     top: -2px;
     width: 105.556%;
@@ -409,14 +411,18 @@ canvas.alignright {
     position: relative;
 }
 
+.h-entry .meta-data .u-url:hover {
+    background-color: #777777;
+}
+
 .h-entry .meta-data .u-url:before {
-    position: absolute;
-    content: "";
     background: url(assets/BG-u-url.png) no-repeat center right transparent;
-    width: 12px;
-    height: 32px;
+    content: "";
+    height: 100%;
+    position: absolute;
     right: 0;
     top: 0;
+    width: 1em; /* 13px */
 }
 
 .h-entry .meta-data a {
@@ -425,15 +431,14 @@ canvas.alignright {
 }
 
 .h-entry .meta-data a:hover {
+	color: #777777;
     text-decoration: underline;
 }
 
-.h-entry .meta-data .p-author {}
-
 .h-entry .meta-data .dt-published {
     border-left: 1px solid #CCCCCC;
-    margin-left: 4px;
-    padding-left: 7px;
+    margin-left: 0.307692em; /* 4px */
+    padding-left: 0.538462em; /* 7px */
 }
 
 .h-entry .meta-data ul.p-tags {
@@ -443,7 +448,7 @@ canvas.alignright {
 
 .h-entry .meta-data ul.p-tags li {
     height: 100%;
-    margin-right: 1px;
+    margin-left: 1px;
 }
 
 .h-entry .meta-data ul.p-tags li a {
@@ -451,29 +456,20 @@ canvas.alignright {
     color: #FFFFFF;
     display: block;
     height: 100%;
-    line-height: 30px;
-    padding: 0 12px;
+    line-height: 2.30769em; /* 30px */
+    padding: 0 0.923077em; /* 0 12px */
     text-decoration: none;
+}
+
+.h-entry .meta-data ul.p-tags li a:hover {
+    background-color: #AAAAAA;
 }
 
 
 /* ASIDE
 -------------------------------------------------------------- */
 
-aside {
-    background: none repeat scroll 0 0 #EEEEEE;
-    float: right;
-    margin: 1em 2.5% 1em 0;
-    padding-bottom: 0.5em;
-    width: 21.875%;
-}
-
-aside .genbox {
-    margin: 0 5.71429%;
-}
-
-aside .border {
-}
+aside {}
 
 
 /* FOOTER
@@ -481,9 +477,9 @@ aside .border {
 
 footer {
     background: none repeat scroll 0 0 #FFFFFF;
-    font-size: 1em;
-    height: 4em;
-    margin: -4em auto 0;
+    font-size: 1em; /* 16px */
+    height: 4em; /* 64px */
+    margin: -4em auto 0; /* -64px auto 0 */
     padding: 0;
     width: 100%;
 }
@@ -493,210 +489,125 @@ footer div.wrap {
     margin: 0 6.25%;
     max-width: none;
     min-width: 0;
-    padding: 0.5em 0 0;
+    padding: 0.5em 0 0; /* 8px 0 0 */
     width: auto;
 }
 
-
-/* MEDIUM
--------------------------------------------------------------- */
-
-@media screen and (min-width: 850px) and (max-width: 1025px) {
-	.med-hide {
-    display: none;
-   }
-   
-   .wrapper, footer {
-    min-width: 850px;
-    max-width: 1025px;
-	}
-	
-	.main {
-    margin-left: 1.4%;
-    margin-right: 1.4%;
-    width: 64.8%;
-	}
-	
-	.main.full {
-    margin-right: 0%;
-    width: 97.2%;
-	}
-	
-	.main .genbox {
-    margin-left: 2.1605%;
-    margin-right: 2.1605%;
-	}
-	
-	.main .border {
-    padding-left: 2.16049%;
-    padding-right: 2.16049%;
-	}
-	
-	.main.full .genbox {
-    margin-left: 1.44033%;
-    margin-right: 1.44033%;
-	}
-	
-	.main.full .border {
-    padding-left: 1.4403292%;
-    padding-right: 1.4403292%;
-	}
-	
-	aside {
-    margin-right: 2.8%;
-    width: 29.6%;
-	}
-	
-	aside .genbox {
-    margin-left: 4.72973%;
-    margin-right: 4.72973%;
-	}
-	
-	label {
-    min-width: 20.9%;
-	}
-	
-	label.for-boxes {
-    padding-right: 1%;
-	}
-	
-	input[type="text"] {
-    width: 74%;
-	}
-	
-	textarea {
-    width: 74% !important;
-	}
-	
-	select {
-    width: 77%;
-	}
-	
-	.multiple label + span, .file-row label + span {
-    width: 75%;
-	}
-	
-	.multiple input[type="text"] {
-    width: 90%;
-	}
-	
-	.multiple label + span a.img-txt {
-    width: 6.5%;
-	}
-	
-	input.fake-file {
-    width: 67%;
-	}
-	
-	.file-row .btn {
-    right: -1px;
-    width: 29.5%;
-	}
-	
-	footer div {
-    margin: 0 2.8%;
-	}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.h-entry .e-content .tk-museo-sans.p-heading {top:8px}
+	.h-entry .meta-data .p-author, .h-entry .meta-data .dt-published {position:relative;top:1px}
+	.h-entry .meta-data ul.p-tags li a {line-height:2.38461538em; /* 31px */}
 }
 
 
-/* SMALL
--------------------------------------------------------------- */
-
-@media screen and (min-width: 593px) and (max-width: 849px) {
-	.small-hide {
-	display: none;
-	}
-	
-	.wrapper, footer {
-    min-width: 593px;
-    max-width: 768px;
-	}
-	
-	.main {
-    margin-left: 2%;
-    margin-right: 2%;
-    width: 64%;
-	}
-		
-	.main.full {
-    margin-right: 0;
-    width: 96%;
-	}
-	
-	.main .genbox {
-    margin-left: 3.125%;
-    margin-right: 3.125%;
-	}
-	
-	.main .border {
-    padding-left: 3.125%;
-    padding-right: 3.125%;
-	}
-	
-	.main.full .genbox {
-    margin-left: 2.0833333%;
-    margin-right: 2.0833333%;
-	}
-	
-	.main.full .border {
-    padding-left: 2.0833333%;
-    padding-right: 2.0833333%;
-	}
-	
-	aside {
-    margin-right: 4%;
-    width: 28%;
-	}
-	
-	
-	aside .genbox {
-    margin-left: 7.14286%;
-    margin-right: 7.14286%;
-	}
-	
-	label {
-    min-width: 24.5%;
-	}
-	
-	label.for-boxes {
-    padding-right: 1%;
-	}
-	
-	input[type="text"] {
-    width: 70.2%;
-	}
-	
-	textarea {
-    width: 70.2% !important;
-	}
-	
-	select {
-    width: 73%;
-	}
-	
-	.multiple label + span, .file-row label + span {
-    width: 71.2%;
-	}
-	
-	.multiple input[type="text"] {
-    width: 88%;
-	}
-	
-	.multiple label + span a.img-txt {
-    width: 9%;
-	}
-	
-	input.fake-file {
-    width: 57%;
-	}
-	
-	.file-row .btn {
-    right: 0;
-    width: 38%;
-	}
-	
-	footer div {
-    margin: 0 4%;
-	}
+/* MED
+--------------------------------------------------------------
+--------------------------------------------------------------
+@media screen and (min-width: 896px) and (max-width: 1151px) { */
+@media screen and (max-width: 1151px) {
+.content > section {
+    padding-bottom: 28px;
 }
 
+.content > section:last-child {
+    margin-bottom: 56px;
+}
+
+.wrap {
+    max-width: 1024px;
+    min-width: 896px;
+}
+
+header {
+    height: 65px;
+    margin-bottom: 5px;
+}
+
+header.check-out {
+    height: 105px;
+}
+
+.breadcrumb {
+    height: 40px;
+    top: 65px;
+}
+
+.img-txt {
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.more-link {
+    font-size: 13px;
+    line-height: 14px;
+}
+
+.h-entry {
+    margin-bottom: 42px;
+    margin-top: 23px;
+    padding-top: 42px;
+}
+
+.h-entry .tk-league-gothic.p-name {
+    font-size: 56px;
+    padding-bottom: 14px;
+    padding-top: 7px;
+    top: 1px;
+}
+
+.h-entry .e-content {
+    margin-top: 7px;
+}
+
+.h-entry .e-content p {
+    font-size: 19px;
+    line-height: 28px;
+    padding: 7px 0;
+}
+
+.h-entry .e-content .p-heading {
+    font-size: 21px;
+    line-height: 28px;
+    padding: 14px 0;
+    top: 6px;
+}
+
+.h-entry .e-content .tk-museo-sans.p-heading {
+    font-size: 22px;
+    line-height: 28px;
+    padding: 14px 0;
+    top: 6px;
+}
+
+.h-entry .meta-data {
+    height: 28px;
+    line-height: 28px;
+    top: 0;
+}
+
+.h-entry .meta-data .u-url {
+	background-position: 4px center;
+}
+
+.h-entry .meta-data ul.p-tags li a {
+    line-height: 28px;
+    padding: 0 11px;
+}
+
+footer {
+    font-size: 1em;
+    height: 56px;
+    margin: -56px auto 0;
+}
+
+footer div.wrap {
+    padding: 0.5em 0 0;
+}
+}
+
+
+/* SML
+--------------------------------------------------------------
+--------------------------------------------------------------
+@media screen and (max-width: 895px) {}
+ */
