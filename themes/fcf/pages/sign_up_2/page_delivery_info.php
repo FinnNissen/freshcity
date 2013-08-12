@@ -27,7 +27,7 @@
 			<a href="#" class="btn"><span>Search</span></a>
 			<input type="text" name="delivery-postal" id="delivery-postal" maxlength="6" />
 		</div>
-		<div class="tk-museo-sans note right">Delivery Fee: <strong>$3</strong><br /> Delivery Time: <br /><strong>Wednesday (5 &ndash; 7PM)</strong></div>
+		<div class="tk-museo-sans note right">Delivery Time: <strong>Wed (5 &ndash; 7PM)</strong><br/>Delivery Fee: <strong>$3</strong></div>
 		<div class="genbox five-col required fieldrow radio-row delivery-info-row" id="residence-type-row">
 			<label for="residence-type" class="for-boxes"><input type="radio" id="residence-type" name="delivered-to" value="House"> House</label>
 			<label for="residence-type" class="for-boxes"><input type="radio" id="residence-type" name="delivered-to" value="Apartment"> Apartment</label>
