@@ -69,9 +69,22 @@ a:focus { /* Addresses outline displayed oddly in Chrome */
     outline: thin dotted;
 }
 
-a:hover,
-a:active { /* Improves readability when focused and also mouse hovered in all browsers */
-    outline: 0;
+a {
+	color: #CC6633;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #D6A87E;	
+}
+
+a:hover {
+	color: #CC6633;
+}
+
+a:active {
+	color: #F49956;
+    outline: none;
 }
 
 h1 a,
@@ -122,10 +135,6 @@ dfn { /* Addresses styling not present in S5, Chrome */
 mark { /* Addresses styling not present in IE6/7/8/9 */
     background: #ff0;
     color: #000000;
-}
-
-a {
-	color: #8dae7c;
 }
 
 p,
@@ -222,7 +231,7 @@ small.tk-museo-sans {
 }
 
 .p-heading {
-    color: #553E31;
+    color: #AA988D;
     font-size: 1.4375em; /* 23px */
     font-style: italic;
     line-height: 1.3913em; /* 32px */
@@ -232,14 +241,14 @@ small.tk-museo-sans {
 }
 
 .tk-museo-sans.note {
-    background: none repeat scroll 0 0 #553E31;
+    background: none repeat scroll 0 0 #392A21;
     -webkit-border-radius: 1em 1em 1em 1em;
      -khtml-border-radius: 1em 1em 1em 1em;
       -icab-border-radius: 1em 1em 1em 1em;
        -moz-border-radius: 1em 1em 1em 1em;
          -o-border-radius: 1em 1em 1em 1em;
     border-radius: 1em 1em 1em 1em; /* 16px */
-    color: #FFFFFF;
+    color: #AA988D;
     font-weight: 100;
     overflow: visible;
     padding: 0.6875em 1em 0.8125em; /* 11px 16px 13px */
@@ -248,43 +257,91 @@ small.tk-museo-sans {
     text-shadow: 0 1px 0 #000000;
     top: 1px;
     z-index: 10;
-    -webkit-animation:noteInit 2s;
-     -khtml-animation:noteInit 2s;
-      -icab-animation:noteInit 2s;
-       -moz-animation:noteInit 2s;
-         -o-animation:noteInit 2s;
-    animation:noteInit 2s;
     -webkit-font-smoothing: antialiased;
 }
 
-@-webkit-keyframes noteInit {
+.tk-museo-sans.note.bottom {
+    -webkit-animation:noteInitBott 2s;
+     -khtml-animation:noteInitBott 2s;
+      -icab-animation:noteInitBott 2s;
+       -moz-animation:noteInitBott 2s;
+         -o-animation:noteInitBott 2s;
+    animation:noteInitBott 2s;
+}
+
+.tk-museo-sans.note.right {
+    -webkit-animation:noteInitRight 2s;
+     -khtml-animation:noteInitRight 2s;
+      -icab-animation:noteInitRight 2s;
+       -moz-animation:noteInitRight 2s;
+         -o-animation:noteInitRight 2s;
+    animation:noteInitRight 2s;
+}
+
+.tk-museo-sans.note strong,
+.tk-museo-sans.note b {
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+@-webkit-keyframes noteInitBott {
 	from {top: 20px;opacity: 0;}
 	to {top: 1px;opacity: 1;}
 }
 
-@-khtml-keyframes noteInit {
+@-khtml-keyframes noteInitBott {
 	from {top: 20px;opacity: 0;}
 	to {top: 1px;opacity: 1;}
 }
 
-@-icab-keyframes noteInit {
+@-icab-keyframes noteInitBott {
 	from {top: 20px;opacity: 0;}
 	to {top: 1px;opacity: 1;}
 }
 
-@-moz-keyframes noteInit {
+@-moz-keyframes noteInitBott {
 	from {top: 20px;opacity: 0;}
 	to {top: 1px;opacity: 1;}
 }
 
-@-o-keyframes noteInit {
+@-o-keyframes noteInitBott {
 	from {top: 20px;opacity: 0;}
 	to {top: 1px;opacity: 1;}
 }
 
-@keyframes noteInit {
+@keyframes noteInitBott {
 	from {top: 20px;opacity: 0;}
 	to {top: 1px;opacity: 1;}
+}
+
+@-webkit-keyframes noteInitRight {
+	from {margin-left: 40px;opacity: 0;}
+	to {margin-left: 0px;opacity: 1;}
+}
+
+@-khtml-keyframes noteInitRight {
+	from {margin-left: 40px;opacity: 0;}
+	to {margin-left: 0px;opacity: 1;}
+}
+
+@-icab-keyframes noteInitRight {
+	from {margin-left: 40px;opacity: 0;}
+	to {margin-left: 0px;opacity: 1;}
+}
+
+@-moz-keyframes noteInitRight {
+	from {margin-left: 40px;opacity: 0;}
+	to {margin-left: 0px;opacity: 1;}
+}
+
+@-o-keyframes noteInitRight {
+	from {margin-left: 40px;opacity: 0;}
+	to {margin-left: 0px;opacity: 1;}
+}
+
+@keyframes noteInitRight {
+	from {margin-left: 40px;opacity: 0;}
+	to {margin-left: 0px;opacity: 1;}
 }
 
 
@@ -296,7 +353,7 @@ menu,
 ol,
 ul { /* Addresses margins set differently in IE6/7 */
     margin: 0;
-    list-style:outside disc;
+    list-style-position:outside;
     padding-left: 1.5em; /* 24px */
     padding-bottom: 0.5em; /* 8px */
 }
@@ -307,7 +364,7 @@ li {
 
 ul ul,
 ol ul {
-    list-style:circle outside none;
+    list-style:outside circle;
     padding-bottom: 0;
 }
 
@@ -325,12 +382,6 @@ dd {
     margin: 0;
     padding-top: 0.5em; /* 8px */
     padding-bottom: 0.5em; /* 8px */
-}
-
-menu,
-ol,
-ul { /* Addresses paddings set differently in IE6/7 */
-    padding: 0 0 0 2em; /* 0 0 0 32px */
 }
 
 nav ul,
@@ -413,7 +464,15 @@ svg:not(:root) { /* Corrects overflow displayed oddly in IE9 */
 
 .note.left:before {}
 
-.note.right:before {}
+.note.right:before {
+    background: url("assets/BG-note-right.svg") no-repeat scroll right center transparent;
+    height: 24px;
+    left: 100%;
+    top: 50%;
+    margin-left: -2px;
+    width: 14px;
+    margin-top: -12px;
+}
 
 form { /* Corrects margin displayed oddly in IE6/7 */
     margin: 0;
@@ -440,12 +499,15 @@ fieldset { /* Define consistent border, margin, and padding */
     top: 2px;
 }
 
-.fieldrow.radio-row, .fieldrow.check-row {}
-
-.fieldrow.file-row {
+.fieldrow.selected {
+	background-color: #8DAE7C;
+    border: 0.25em solid #8DAE7C; /* 4px */
 }
 
-.fieldrow.textarea-row {}
+.fieldrow.selected label {
+    background-color: #8DAE7C;
+    color: #FFFFFF;
+}
 
 .fieldrow.textarea-row:before {
     background: none repeat scroll 0 0 #f2f2e1;
@@ -649,6 +711,11 @@ background-image: -webkit-gradient(
     padding: 1px;
     text-decoration: none;
     top: 3px;
+}
+
+button:visited,
+.btn:visited {
+    color: inherit;
 }
 
 button[disabled],

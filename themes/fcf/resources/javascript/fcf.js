@@ -12,4 +12,28 @@ $j(document).ready(function(){
 	$j(document).jkey('control+g', function() {
 		$j('ul#grid').toggle();
 	});
+
+/* Normalize
+-------------------------------------------------------------- */
+	
+	var allRadioParents = $j("input[type=radio]").parent(),
+		radioParentSelected = function(e) {
+			allRadioParents.removeClass('selected');
+			$j(this).parent().addClass('selected');
+		};
+	$j("input[type=radio]").on( "click", radioParentSelected );
+	
+/* SIGN-UP
+-------------------------------------------------------------- */
+	
+	var signUpNextBtn = $j(".sign-up .btn.next"),
+		nextStep = function(e) {
+			signUpNextBtn.addClass('black');
+		};
+
+/* SIGN-UP: TYPE & SIZE
+-------------------------------------------------------------- */
+	
+	$j("#sign-up-1 .required input[type=radio]").on( "click", nextStep );
+
 });

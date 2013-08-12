@@ -1,9 +1,63 @@
-/* HOME
+/* SIGN-UP
 -------------------------------------------------------------- */
 
-#home #step-back,
-#home #next-step {
-    bottom: 1em; /* 16px */
+.sign-up .status-bar {
+	display: block;
+}
+
+.sign-up .status-bar ol.inline li {
+    counter-increment: checkoutIndex;
+    font-size: 1.375em; /* 22px */
+    line-height: 2.04545455em; /* 45px */
+    padding-left: 1.81818182em; /* 40px */
+    padding-right: 1.81818182em; /* 40px */
+    position: relative;
+    width: auto;
+    float: none;
+    display: inline-block;
+}
+
+.sign-up .status-bar ol.inline li a {
+    height: 2.04545455em; /* 45px */
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.sign-up .status-bar ol.inline li:before {
+    content: counter(checkoutIndex, decimal) ")";
+    left: 0;
+    font-size: inherit;
+    line-height: inherit;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 1.81818182em; /* 40px */
+    height: 2.04545455em; /* 45px */
+}
+
+.sign-up .status-bar ol.inline li.active,
+.sign-up .status-bar ol.inline li:hover {
+    color: #f2f2e1;
+}
+
+.sign-up .status-bar ol.inline li.active {
+    background: url(assets/BG-breadcrumb-active.svg) no-repeat center bottom transparent;
+}
+
+.sign-up .status-bar ol.inline li.completed,
+.sign-up .status-bar ol.inline li.completed a {
+    color: #1C1510;
+    text-decoration: none;
+}
+
+.sign-up .status-bar ol.inline li.completed:before {
+    content: "";
+    background: url(assets/ICON-checkmark.svg) no-repeat center center transparent;
+}
+
+.sign-up section:first-of-type .btn.back,
+.sign-up section:first-of-type .btn.next {
+    bottom: 15px;
     position: absolute;
     right: 0;
     left: auto;
@@ -11,11 +65,11 @@
     width: 14.2857%;
 }
 
-#home #step-back {
+.sign-up section:first-of-type .btn.back {
     right: 14.2857%;
 }
 
-#home section:first-of-type {
+.sign-up section:first-of-type {
 background-color: #f2f2e1;
 background-image: linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
 background-image: -o-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
@@ -30,72 +84,288 @@ background-image: -webkit-gradient(
 	color-stop(1, rgb(255,255,255))
 );
     margin-bottom: 2em;
-    padding-bottom: 4em;
+    padding-bottom: 3em;
 }
 
-#home section .full-col {
+.sign-up section:first-of-type .full-col:first-of-type {
     border-bottom: 1px solid #F2F2E1;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     padding-bottom: 1em; /* 16px */
 }
 
+.sign-up section:first-of-type .full-col:first-of-type .p-heading {
+    margin-bottom: 5px;
+    margin-top: 4px;
+}
 
-/* CHECK-OUT
+.sign-up section h3.tk-museo-sans {
+    color: #392A21;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.sign-up section fieldset.submit {
+    border-top: 1px solid #F2F2E1;
+    margin-bottom: 36px !important;
+    margin-top: 56px !important;
+}
+
+.sign-up section fieldset.submit .btn {
+    top: -29px;
+}
+
+
+/* SIGN-UP: TYPE & SIZE
 -------------------------------------------------------------- */
 
-.check-out .breadcrumb {
-	display: block;
+#sign-up-1 section .full-col {
+    margin-bottom: 31px;
 }
 
-.check-out .breadcrumb ol.inline li {
-    counter-increment: checkoutIndex;
-    font-size: 1.375em; /* 22px */
-    line-height: 2.04545455em; /* 45px */
-    padding-left: 1.81818182em; /* 40px */
-    padding-right: 1.81818182em; /* 40px */
-    position: relative;
-    width: auto;
-    float: none;
-    display: inline-block;
-}
-
-.check-out .breadcrumb ol.inline li a {
-    height: 2.04545455em; /* 45px */
-    font-size: inherit;
-    line-height: inherit;
-}
-
-.check-out .breadcrumb ol.inline li:before {
-    content: counter(checkoutIndex, decimal) ")";
-    left: 0;
-    font-size: inherit;
-    line-height: inherit;
-    position: absolute;
+#sign-up-1 section .four-col {
+    margin: 8px 0 0;
     text-align: center;
+    width: 33%;
+}
+
+#sign-up-1 section #veggie-fruit-bag {
+    margin: 0;
+    width: 34%;
+}
+
+#sign-up-1 section .four-col img {
+    height: 176px;
+    left: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
     top: 0;
-    width: 1.81818182em; /* 40px */
-    height: 2.04545455em; /* 45px */
+    width: auto;
 }
 
-.check-out .breadcrumb ol.inline li.active,
-.check-out .breadcrumb ol.inline li:hover {
-    color: #f2f2e1;
+#sign-up-1 section .four-col h2.tk-league-gothic {
+    background: #CC6633;
+    color: #FFFFFF;
+    margin-top: 160px;
+    margin-bottom: 16px;
+    padding: 0.178571em 0 0.107143em; /* 10px 0 6px */
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    top: 0;
 }
 
-.check-out .breadcrumb ol.inline li.active {
-    background: url(assets/BG-breadcrumb-active.svg) no-repeat center bottom transparent;
+#sign-up-1 section #veggie-bag h2.tk-league-gothic {
+    background: url("assets/BG-sign-up-veggie.svg") no-repeat scroll left center transparent;
 }
 
-.check-out .breadcrumb ol.inline li.completed,
-.check-out .breadcrumb ol.inline li.completed a {
-    color: #f49956;
-    text-decoration: none;
-}
-
-.check-out .breadcrumb ol.inline li.completed:before {
+#sign-up-1 section #veggie-fruit-bag h2.tk-league-gothic:before,
+#sign-up-1 section #veggie-fruit-bag h2.tk-league-gothic:after {
+    background: url("assets/BFR-AFTR-sign-up-veggie-fruit.svg") no-repeat scroll left top transparent;
+    bottom: -8px;
     content: "";
-    background: url(assets/ICON-checkmark.svg) no-repeat center center transparent;
+    height: 8px;
+    left: 0;
+    position: absolute;
+    top: auto;
+    width: 4px;
 }
+
+#sign-up-1 section #veggie-fruit-bag h2.tk-league-gothic:after {
+    background: url("assets/BFR-AFTR-sign-up-veggie-fruit.svg") no-repeat scroll right top transparent;
+    left: auto;
+    right: 0;
+}
+
+#sign-up-1 section #fruit-bag h2.tk-league-gothic {
+    background: url("assets/BG-sign-up-fruit.svg") no-repeat scroll right center transparent;
+}
+
+#sign-up-1 section .four-col p,
+#sign-up-1 section .four-col .fieldrow  {
+	margin: 0 10.824742% 0;
+}
+
+#sign-up-1 section #veggie-bag p,
+#sign-up-1 section .four-col .fieldrow  {
+	margin: 0 9.0425532% 0 10.106383%;
+}
+
+#sign-up-1 section #fruit-bag p,
+#sign-up-1 section .four-col .fieldrow  {
+	margin: 0 10.106383% 0 9.0425532%;
+}
+
+#sign-up-1 section .four-col .fieldrow {
+    background: none repeat scroll 0 0 #F2F2E1;
+    border: 2px solid #FFFFFF;
+    position: relative;
+    top: 0;
+}
+
+#sign-up-1 section #veggie-fruit-bag .fieldrow {}
+
+#sign-up-1 section .four-col input[type="radio"] {
+    top: -1px !important;
+}
+
+#sign-up-1 section .four-col label {
+    color: #392A21;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    height: 52px;
+    padding-top: 12px !important;
+    width: 50%;
+}
+
+#sign-up-1 section .four-col label.selected,
+#sign-up-1 section .four-col label:hover {
+	background: #ffffff;
+}
+
+#sign-up-1 section .four-col label:first-of-type {
+    border-right: 1px solid #FFFFFF;
+}
+
+#sign-up-1 section .four-col label:last-of-type {
+    border-left: 1px solid #FFFFFF;
+}
+
+#sign-up-1 section .four-col label.selected {
+	background-color: #392A21;
+	color: #ffffff;
+}
+
+/*
+#sign-up-1 section #veggie-fruit-bag label.selected {
+	background-color: #CC6633;
+	border-color: #CC6633;
+	color: #ffffff;
+}
+
+#sign-up-1 section #fruit-bag label.selected {
+	background-color: #F49956;
+	border-color: #F49956;
+	color: #ffffff;
+}
+*/
+
+#sign-up-1 section#never-send-list .full-col {
+	text-align: center;
+}
+
+
+/* SIGN-UP: DELIVERY INFORMATION
+-------------------------------------------------------------- */
+
+#sign-up-2 section#delivery-schedule {
+    padding-bottom: 0;
+}
+
+#sign-up-2 section#delivery-schedule .fieldrow {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    border-radius: 0 0 0 0;
+    margin: 26px 28.5714% 0;
+    top: 0;
+}
+
+#sign-up-2 section#delivery-schedule label {
+    background: none repeat scroll 0 0 transparent;
+    border-radius: 8px 8px 0 0;
+    color: #392A21;
+    font-size: 18px;
+    font-weight: 500;
+    height: 52px;
+    padding-top: 13px !important;
+    text-align: center;
+    width: 50%;
+    cursor: pointer;
+}
+
+#sign-up-2 section#delivery-schedule label.selected {
+	background: #fff;
+}
+
+#sign-up-2 section#delivery-schedule input[type="radio"] {
+    top: -1px !important;
+}
+
+#sign-up-2 section#delivery-info {
+	padding-top: 1em;
+}
+
+#sign-up-2 section#delivery-info .four-col,
+#sign-up-2 section#delivery-info .five-col,
+#sign-up-2 section#delivery-info .six-col {
+    float: none;
+    margin: 0 auto 0.625em;
+}
+
+#sign-up-2 section#delivery-info .text-row label,
+#sign-up-2 section#delivery-info .select-row label {
+    width: 25%;
+}
+
+#sign-up-2 section#delivery-info .wrap {
+	position: relative;
+}
+
+#sign-up-2 section#delivery-info .note.right {
+    left: 17%;
+    position: absolute;
+    top: 35px;
+    width: 20%;
+    z-index: 10;
+}
+
+#sign-up-2 section#delivery-info .text-row input[type="text"],
+#sign-up-2 section#delivery-info .select-row select {
+    width: 75%;
+}
+
+
+#sign-up-2 section#delivery-info #delivered-to-row {
+    background: url("assets/BG-LRG-dashed.gif") repeat-x scroll 0 11px #FFFFFF;
+    top: 0;
+}
+
+#sign-up-2 section#delivery-info #delivered-to-row label {
+    font-size: 18px;
+    height: 44px;
+    line-height: 44px;
+    width: 33.3333%;
+}
+
+#sign-up-2 section#delivery-info #delivered-to-row label.for-boxes {
+    line-height: 38px;
+    margin-right: 0 !important;
+}
+
+#sign-up-2 section#delivery-info #delivery-postal-row {}
+
+#sign-up-2 section#delivery-info #delivery-postal-row a.btn {
+    left: auto;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
+
+#sign-up-2 section#delivery-info .delivery-info-row {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    border-radius: 0 0 0 0;
+    margin-top: 18px !important;
+    padding: 4px 0 2px !important;
+    text-align: center;
+}
+
+#sign-up-2 section#delivery-info .delivery-info-row label.for-boxes {}
+
+#sign-up-2 section#delivery-info .delivery-info-row input[type="radio"] {}
 
 
 /* MED

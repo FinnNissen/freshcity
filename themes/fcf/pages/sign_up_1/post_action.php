@@ -1,3 +1,3 @@
 <?
-$this->data['active_page'] = 'sign_up_1';
+$this->data['active_page'] = 'sign-up-1';
 ?>

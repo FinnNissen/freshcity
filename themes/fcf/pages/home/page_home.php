@@ -3,17 +3,30 @@
 		<div class="genbox full-col">
 			<p class="p-heading"><strong>Select your Basket Type & Size</strong></p>
 			<p>Lorem ipsum dolor sit amet, consectetur.</p>
-			<a href="#" class="btn large white" id="step-back"><span>&#171; Step Back</span></a>
-			<a href="#" class="btn large" id="next-step"><span>Next Step &#187;</span></a>
+			<a href="#" class="btn large white" id="back"><span>&#171; Go Back</span></a>
+			<a href="#" class="btn large" id="next"><span>Next Step &#187;</span></a>
 		</div>
 		<div class="genbox four-col">
 			<h2 class="tk-league-gothic p-name all-caps">Veggie Bag</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacus metus, tempor lobortis velit vel, aliquet condimentum.</p>
+			<ol>
+				<li>Cras non condimentum nisi, nec lacinia elit.</li>
+				<li>Vestibulum et nulla non turpis rutrum eleifend nec in mi.</li>
+			</ol>
+			<p>Morbi pharetra, est quis pretium dapibus, tellus felis vulputate urna, vel bibendum leo ante non augue.</p>
 			<small class="tk-museo-sans">Small type goes at the bottom</small>
 		</div>
 		<div class="genbox four-col">
 			<h2 class="tk-league-gothic p-name all-caps"><span style="color:#f49956">Fruit</span> & Veggie</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacus metus, tempor lobortis velit vel, aliquet condimentum.</p>
+			<ul>
+				<li>Cras non condimentum nisi, nec lacinia elit.
+					<ol>
+						<li>Vestibulum et nulla non turpis rutrum eleifend nec in mi.</li>
+					</ol>
+				</li>
+			</ul>
+			<p>Morbi pharetra, est quis pretium dapibus, tellus felis vulputate urna, vel bibendum leo ante non augue.</p>
 			<small class="tk-museo-sans">Small type goes at the bottom</small>
 		</div>
 		<div class="genbox four-col">
@@ -27,8 +40,26 @@
 	<div class="wrap">
 		<div class="genbox nine-col">
 			<article class="h-entry">
-				<h2 class="tk-league-gothic p-name">Lorem ipsum dolor sit, consectetur adipiscing elit amit.</h2>
+				<h2 class="tk-league-gothic p-name"><a href="#">Lorem ipsum dolor sit, consectetur adipiscing elit amit.</a></h2>
 				<div class="e-content">
+					<ol>
+						<li>Cras non condimentum nisi, nec lacinia elit.</li>
+						<li>Cras non condimentum nisi, nec lacinia elit.
+							<ol>
+								<li>Vestibulum et nulla non turpis rutrum eleifend nec in mi.</li>
+							</ol>
+						</li>
+					</ol>
+					<p>Vestibulum aliquet lorem ut sodales lacinia. Sed sit amet erat auctor, sollicitudin lorem at, aliquet enim. Vestibulum et justo auctor, iaculis orci vitae, fermentum purus. Nulla nec leo dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+					<ul>
+						<li>Cras non condimentum nisi, nec lacinia elit.</li>
+						<li>Vestibulum et nulla non turpis rutrum eleifend nec in mi.</li>
+						<li>Cras non condimentum nisi, nec lacinia elit.
+							<ol>
+								<li>Vestibulum et nulla non turpis rutrum eleifend nec in mi.</li>
+							</ol>
+						</li>
+					</ul>
 					<p>Nullam eu purus quis velit mattis malesuada, non arcu nulla. Curabitur lacinia tortor ipsum, non consequat magna sodales ut. Nam ut adipiscing risus. Morbi a ante suscipit, pulvinar tellus ac, venenatis quam. Ut vel vestibulum lorem, at malesuada tortor&hellip; <a href="#" class="tk-museo-sans more-link">more &#187;</a></p>
 				</div>
 				<small class="tk-museo-sans meta-data">

@@ -42,11 +42,7 @@ header {
     display: block;
     height: 4.625em; /* 74px */
     overflow: hidden;
-    margin-bottom: 0.1875em; /* 3px */
-}
-
-header.check-out {
-    height: 7.4375em; /* 119px */
+    margin-bottom: 3px;
 }
 
 #logo {
@@ -100,41 +96,42 @@ nav ul li:last-child {
     border-right:1px solid black;
 }
 
-.breadcrumb {
-    background: none repeat scroll 0 0 #715341;
+.status-bar {
+    background: #715341;
     display: none;
     height: 2.8125em; /* 45px */
+    margin-left: 3px;
+    margin-right: 3px;
     position: relative;
-    top: 4.625em; /* 74px */
-    width: 100%;
 }
 
-.breadcrumb .inline {
+.status-bar .inline {
     text-align: center;
     padding-left: 6.25%;
     padding-right: 6.25%;
+    padding-bottom: 0;
 }
 
-.breadcrumb .inline li {
+.status-bar .inline li {
     color: #d6a87e;
     list-style: none outside none;
     font-weight: 100;
     text-align: left;
 }
 
-.breadcrumb .inline li.active {
+.status-bar .inline li.active {
     font-weight: 300;
 }
 
-.breadcrumb .inline li a {
+.status-bar .inline li a {
     color: #d6a87e;
     display: block;
     text-decoration: none;
 }
 
-.breadcrumb .inline li.active a,
-.breadcrumb .inline li:hover a,
-.breadcrumb .inline li a:hover {
+.status-bar .inline li.active a,
+.status-bar .inline li:hover a,
+.status-bar .inline li a:hover {
     color: #f2f2e1;
     text-decoration: underline;
 }
@@ -269,7 +266,6 @@ outline:1px solid #999999;
 }
 
 .more-link {
-    color: #F49956;
     font-size: 0.714286em; /* 15px */
     font-weight: 300;
     line-height: 1.06667em; /* 16px */
@@ -357,22 +353,62 @@ canvas.alignright {
 }
 
 .h-entry .tk-league-gothic.p-name {
-    color: #553E31;
+    color: #392A21;
     font-size: 4em; /* 64px */
     padding-bottom: 0.28125em; /* 18px */
     padding-top: 0.125em; /* 8px */
     top: 0.046875em; /* 3px */
 }
 
+.h-entry .tk-league-gothic.p-name a {
+    text-decoration: none;
+}
+
+.h-entry .tk-league-gothic.p-name a:visited {
+	color: #D6A87E;	
+}
+
+.h-entry .tk-league-gothic.p-name a:hover {
+	color: #CC6633;
+}
+
+.h-entry .tk-league-gothic.p-name a:active {
+	color: #F49956;
+}
+
 .h-entry .e-content {
     margin-top: 0.5em; /* 8px */
 }
 
+.h-entry .e-content ol,
+.h-entry .e-content ul,
 .h-entry .e-content p {
     font-size: 1.3125em; /* 21px */
     line-height: 1.52381em; /* 32px */
-    padding: 0.380952em 0; /* 8px 0 */
+    padding: 0.380952em 0 0.76190476em; /* 8px 0 12px */
     -webkit-font-smoothing: antialiased;
+}
+
+.h-entry .e-content ol,
+.h-entry .e-content ul {
+    padding-left: 1.25em; /* 26px */
+    padding-top: 0;
+}
+
+.h-entry .e-content li {
+    padding-top: 0.380952em; /* 8px */
+}
+
+.h-entry .e-content ul ul,
+.h-entry .e-content ol ul {
+    font-size: 1em; /* 21px */
+    padding-bottom: 0;
+}
+
+.h-entry .e-content ul ol,
+.h-entry .e-content ol ol {
+    font-size: 1em; /* 21px */
+    padding-bottom: 0;
 }
 
 .h-entry .e-content .p-heading {
@@ -444,6 +480,7 @@ canvas.alignright {
 .h-entry .meta-data ul.p-tags {
     float: right;
     height: 100%;
+    padding-bottom: 0;
 }
 
 .h-entry .meta-data ul.p-tags li {
@@ -529,11 +566,7 @@ header {
     margin-bottom: 5px;
 }
 
-header.check-out {
-    height: 105px;
-}
-
-.breadcrumb {
+.status-bar {
     height: 40px;
     top: 65px;
 }

@@ -1,5 +1,4 @@
-<? $active_page = isset($active_page) ? $active_page : 'home' ?>
-<header class="check-out">
+<header>
 	<nav class="wrap">
 		<ul class="inline" id="main-nav">
 			<li><a href="#">Home</a></li>
@@ -17,7 +16,7 @@
 			<li><a href="#">Our Farming</a></li>
 		</ul>
 	</nav>
-	<div class="breadcrumb">
-		<? $this->render_block('breadcrumbs') ?>
-	</div>
 </header>
+<div class="status-bar">
+	<? $this->render_block('breadcrumbs') ?>
+</div>
