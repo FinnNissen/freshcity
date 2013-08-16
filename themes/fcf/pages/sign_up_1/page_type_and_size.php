@@ -2,8 +2,7 @@
 	<div class="wrap">
 		<div class="genbox full-col">
 			<p class="p-heading">Please select your Bag Type & Size</p>
-			<!-- <p>You can create a list of ‘never-send’ items if you have deitary restrictions.</p> -->
-			<a href="<?= root_url() ?>delivery-info" class="btn medium next"><span>Next Step &#187;</span></a>
+			<a href="<?= root_url() ?>delivery-info" class="btn medium next disabled"><span>Next Step &#187;</span></a>
 		</div>
 		<div class="genbox four-col" id="veggie-bag">
 			<img src="<?= root_url('themes/fcf/resources/images') ?>/IMG-veggie-fruit-bag.png" alt="Veggie Bag" width="100%" height="auto" />
@@ -89,13 +88,13 @@
 				</select>
 			</div>
 		</fieldset>
-		<p class="genbox full-col">Click the text above to create a list of 5 items we should never include in your bag.</p>
+		<p class="genbox full-col">Click the text above to create a list of 5 items we should never include in your bag. <br />You’ll be able to edit this later.</p>
 	</div>
 </section>
 <section id="submit">
 	<div class="wrap">
 		<fieldset class="genbox full-col submit">
-			<a class="btn large next" href="<?= root_url() ?>delivery-info"><span>Delivery Information is Next &#187;</span></a>
+			<a href="<?= root_url() ?>delivery-info" class="btn large next disabled"><span>Delivery Information is Next &#187;</span></a>
 		</fieldset>
 	</div>
 </section>

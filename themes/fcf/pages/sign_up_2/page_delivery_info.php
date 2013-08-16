@@ -3,10 +3,10 @@
 		<div class="genbox full-col">
 			<p class="p-heading">Please set your Delivery Information</p>
 			<a href="<?= root_url() ?>type-and-size" class="btn medium white back"><span>&#171; Go Back</span></a>
-			<a href="<?= root_url() ?>account-and-payment" class="btn medium next"><span>Next Step &#187;</span></a>
+			<a href="<?= root_url() ?>account-and-payment" class="btn medium next disabled"><span>Next Step &#187;</span></a>
 		</div>
 		<div class="genbox full-col">
-			<div class="required fieldrow radio-row">
+			<div class="required fieldrow radio-row" id="delivery-schedule-row">
 				<label for="delivery-weekly" class="completed"><input type="radio" id="delivery-weekly" name="delivery-schedule" value="Weekly" checked="checked"> Weekly Delivery</label>
 				<label for="delivery-biweekly"><input type="radio" id="delivery-biweekly" name="delivery-schedule" value="Bi-weekly"> Bi-weekly Delivery</label>
 			</div>
@@ -22,7 +22,7 @@
 		</div>
 		<div class="genbox four-col required fieldrow text-row" id="delivery-postal-row">
 			<label for="delivery-postal">Postal</label>
-			<a href="#" class="btn"><span>Search</span></a>
+			<a href="#" class="btn"><span>Look Up</span></a>
 			<input type="text" name="delivery-postal" id="delivery-postal" maxlength="7" />
 		</div>
 		<fieldset class="delivered-to-type" id="pick-up-type" style="display:none">
@@ -67,7 +67,7 @@
 				<label for="residence-city">City</label>
 				<input type="text" name="residence-city" id="residence-city" value="Toronto" />
 			</div>
-			<div class="genbox five-col required fieldrow select-row" id="residence-residence-row">
+			<div class="genbox five-col required fieldrow select-row" id="residence-instructions-row">
 				<label for="residence-instructions">Instructions</label>
 				<select name="residence-instructions" id="residence-instructions">
 					<option>- select one -</option>
@@ -90,7 +90,7 @@
 <section id="submit">
 	<div class="wrap">
 		<fieldset class="genbox full-col submit">
-			<a class="btn large next" href="<?= root_url() ?>account-and-payment"><span>Account & Payment is Next &#187;</span></a>
+			<a class="btn large next disabled" href="<?= root_url() ?>account-and-payment"><span>Account & Payment is Next &#187;</span></a>
 		</fieldset>
 	</div>
 </section>
