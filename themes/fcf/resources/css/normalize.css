@@ -270,12 +270,12 @@ small.tk-museo-sans {
 }
 
 .tk-museo-sans.note.right {
-    -webkit-animation:noteInitRight 2s;
-     -khtml-animation:noteInitRight 2s;
-      -icab-animation:noteInitRight 2s;
-       -moz-animation:noteInitRight 2s;
-         -o-animation:noteInitRight 2s;
-    animation:noteInitRight 2s;
+    -webkit-animation:noteInitRight 1s;
+     -khtml-animation:noteInitRight 1s;
+      -icab-animation:noteInitRight 1s;
+       -moz-animation:noteInitRight 1s;
+         -o-animation:noteInitRight 1s;
+    animation:noteInitRight 1s;
 }
 
 .tk-museo-sans.note strong,
@@ -481,8 +481,7 @@ form { /* Corrects margin displayed oddly in IE6/7 */
 fieldset { /* Define consistent border, margin, and padding */
     border: none;
     margin: 0;
-    padding-bottom: 0.5em; /* 8px */
-    padding-top: 0.5em; /* 8px */
+    padding: 0;
 }
 
 .fieldrow {
@@ -497,27 +496,6 @@ fieldset { /* Define consistent border, margin, and padding */
     display: block;
     margin-bottom: 0.625em; /* 10px */
     top: 2px;
-}
-
-.fieldrow.selected {
-	background-color: #8DAE7C;
-    border: 0.25em solid #8DAE7C; /* 4px */
-}
-
-.fieldrow.selected label {
-    background-color: #8DAE7C;
-    color: #FFFFFF;
-}
-
-.fieldrow.textarea-row:before {
-    background: none repeat scroll 0 0 #f2f2e1;
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 30%;
-	z-index: 1;
 }
 
 label {
@@ -536,7 +514,7 @@ label {
 }
 
 label.for-boxes {
-    background: none repeat scroll 0 0 transparent !important;
+    background: transparent !important;
     color: #553E31 !important;
     display: inline;
     float: none;
@@ -548,19 +526,6 @@ label.for-boxes {
     min-width: 0 !important;
     padding: 0 0 0 0.4em !important; /* 0 0 0 6px */
     top: 2px;
-}
-
-.select-row label, .radio-row label, .check-row label {
-}
-
-.fieldrow.textarea-row label {
-	z-index: 5;
-}
-
-.fieldrow.textarea label {
-    display: block;
-    float: none;
-    width: 98% !important;
 }
 
 legend {
@@ -660,7 +625,7 @@ input:-moz-placeholder {
 }
 
 select {
-    background: none repeat scroll 0 0 transparent !important;
+    background: transparent !important;
     border: medium none !important;
     color: #553E31;
     display: block;
@@ -671,6 +636,10 @@ select {
     padding: 0.25em !important; /* 4px */
     vertical-align: bottom;
     width: 70%;
+}
+
+select option {
+    background: #ffffff !important;
 }
 
 button, .btn,
@@ -754,6 +723,8 @@ background-image: -webkit-gradient(
     color: inherit !important;
     line-height: inherit !important;
     margin: 0 !important;
+	font-family: "museo-sans","Helvetica","Arial",sans-serif;
+	font-weight: 100;
     padding: 0 0.666667em; /* 0 8px */
     text-align: center;
     text-shadow: 0 1px 0 white;
@@ -764,26 +735,28 @@ background-image: -webkit-gradient(
 
 button.medium,
 .btn.medium {
-    font-size: 0.875em; /* 14px */
-    line-height: 2em; /* 28px */
-}
-
-button.medium span,
-.btn.medium span {
-    height: 2.14285714em; /* 29px */
-    padding: 0 0.71428571em; /* 0 10px */
-}
-
-button.large,
-.btn.large {
     font-size: 1em; /* 16px */
     line-height: 2.25em; /* 36px */
 }
 
-button.large span,
-.btn.large span {
+button.medium span,
+.btn.medium span {
+	font-weight: 300;
     height: 2.375em; /* 37px */
     padding: 0 0.75em; /* 0 12px */
+}
+
+button.large,
+.btn.large {
+    font-size: 1.3125em; /* 21px */
+    line-height: 2.19048em; /* 46px */
+}
+
+button.large span,
+.btn.large span {
+	font-weight: 300;
+    height: 2.19048em; /* 46px */
+    padding: 0 1em; /* 0 21px */
 }
 
 button:hover,
@@ -801,47 +774,45 @@ button.white span,
 
 button.black,
 .btn.black {
-    background-color: #a4be96;
-background-image: linear-gradient(bottom, rgb(164,190,150) 0%, rgb(187,206,176) 100%);
-background-image: -o-linear-gradient(bottom, rgb(164,190,150) 0%, rgb(187,206,176) 100%);
-background-image: -moz-linear-gradient(bottom, rgb(164,190,150) 0%, rgb(187,206,176) 100%);
-background-image: -webkit-linear-gradient(bottom, rgb(164,190,150) 0%, rgb(187,206,176) 100%);
-background-image: -ms-linear-gradient(bottom, rgb(164,190,150) 0%, rgb(187,206,176) 100%);
-
+    background-color: #8dae7c;
+background-image: linear-gradient(bottom, rgb(54,73,45) 0%, rgb(106,131,93) 100%);
+background-image: -o-linear-gradient(bottom, rgb(54,73,45) 0%, rgb(106,131,93) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(54,73,45) 0%, rgb(106,131,93) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(54,73,45) 0%, rgb(106,131,93) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(54,73,45) 0%, rgb(106,131,93) 100%);
 background-image: -webkit-gradient(
 	linear,
 	left bottom,
 	left top,
-	color-stop(0, rgb(164,190,150)),
-	color-stop(1, rgb(187,206,176))
+	color-stop(0, rgb(54,73,45)),
+	color-stop(1, rgb(106,131,93))
 );
-	color: #eeeeee;
+	color: #f2f2e1;
 }
 
 button.black span,
 .btn.black span {
-    border-top: 1px solid #d1dfcb;
-    background-color: #8dae7c;
-background-image: linear-gradient(bottom, rgb(141,174,124) 0%, rgb(164,190,150) 100%);
-background-image: -o-linear-gradient(bottom, rgb(141,174,124) 0%, rgb(164,190,150) 100%);
-background-image: -moz-linear-gradient(bottom, rgb(141,174,124) 0%, rgb(164,190,150) 100%);
-background-image: -webkit-linear-gradient(bottom, rgb(141,174,124) 0%, rgb(164,190,150) 100%);
-background-image: -ms-linear-gradient(bottom, rgb(141,174,124) 0%, rgb(164,190,150) 100%);
-
+    border-top: 1px solid #a4be96;
+    background-color: #6a835d;
+background-image: linear-gradient(bottom, rgb(73,98,60) 0%, rgb(141,174,124) 100%);
+background-image: -o-linear-gradient(bottom, rgb(73,98,60) 0%, rgb(141,174,124) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(73,98,60) 0%, rgb(141,174,124) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(73,98,60) 0%, rgb(141,174,124) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(73,98,60) 0%, rgb(141,174,124) 100%);
 background-image: -webkit-gradient(
 	linear,
 	left bottom,
 	left top,
-	color-stop(0, rgb(141,174,124)),
-	color-stop(1, rgb(164,190,150))
+	color-stop(0, rgb(73,98,60)),
+	color-stop(1, rgb(141,174,124))
 );
-	text-shadow: 0 1px 0 #8dae7c;
+	text-shadow: 0 1px 0 #36492d;
     -webkit-font-smoothing: antialiased;
 }
 
 button.black:hover,
 .btn.black:hover {
-    background: #8dae7c;
+    background: #36492d;
     color: #ffffff;
 }
 
@@ -863,6 +834,21 @@ textarea {
     width: 70% !important;
 }
 
+.fieldrow.textarea-row label {
+	z-index: 5;
+}
+
+.fieldrow.textarea-row:before {
+    background: none repeat scroll 0 0 #f2f2e1;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 30%;
+	z-index: 1;
+}
+
 .file-row button,
 .file-row .btn {
     float: right;
@@ -879,24 +865,26 @@ fieldset.submit .btn {
 	top: 1px;
 }
 
+.fieldrow.completed {
+	background-color: #8DAE7C;
+    border-color: #8DAE7C; /* 4px */
+}
+
+.fieldrow.completed label,
+.fieldrow.textarea-row.completed:before {
+    background-color: #8DAE7C;
+    color: #FFFFFF;
+}
+
 .fieldrow.error {
+	background-color: #f49956;
 	border-color: #f49956;
 }
 
 .fieldrow.error label,
 .fieldrow.textarea-row.error:before {
-    background: #f49956;
+    background-color: #f49956;
     color: #ffffff;
-}
-
-.fieldrow.success {
-	border-color: #8dae7c;
-}
-
-.fieldrow.success label,
-.fieldrow.textarea-row.success:before {
-    color: #ffffff;
-    background: #8dae7c;
 }
 
 
@@ -1102,14 +1090,13 @@ button,
 
 button.medium,
 .btn.medium {
-    font-size: 14px !important;
-    line-height: 28px !important;
+    font-size: 16px !important;
+    line-height: 33px !important;
 }
 
 button.medium span,
 .btn.medium span {
-    height: 2.14285714em; /* 29px */
-    padding: 0 0.71428571em; /* 0 10px */
+    height: 36px;
 }
 
 button.large,
