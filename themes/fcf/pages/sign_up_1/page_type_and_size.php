@@ -40,7 +40,7 @@
 			<div class="fieldrow select-row" id="never-send-1-row">
 				<label for="never-send-1">Item 1</label>
 				<select name="never-send-1" id="never-send-1">
-					<option>- select one -</option>
+					<option>- - - -</option>
 					<option>Item</option>
 					<option>Item</option>
 					<option>Item</option>
@@ -50,7 +50,7 @@
 			<div class="fieldrow select-row" id="never-send-2-row">
 				<label for="never-send-2">Item 2</label>
 				<select name="never-send2" id="never-send-2">
-					<option>- select one -</option>
+					<option>- - - -</option>
 					<option>Item</option>
 					<option>Item</option>
 					<option>Item</option>
@@ -60,7 +60,7 @@
 			<div class="fieldrow select-row" id="never-send-3-row">
 				<label for="never-send-3">Item 3</label>
 				<select name="never-send-3" id="never-send-3">
-					<option>- select one -</option>
+					<option>- - - -</option>
 					<option>Item</option>
 					<option>Item</option>
 					<option>Item</option>
@@ -70,7 +70,7 @@
 			<div class="fieldrow select-row" id="never-send-4-row">
 				<label for="never-send-4">Item 4</label>
 				<select name="never-send-4" id="never-send-4">
-					<option>- select one -</option>
+					<option>- - - -</option>
 					<option>Item</option>
 					<option>Item</option>
 					<option>Item</option>
@@ -80,7 +80,7 @@
 			<div class="fieldrow select-row" id="never-send-5-row">
 				<label for="never-send-5">Item 5</label>
 				<select name="never-send-5" id="never-send-5">
-					<option>- select one -</option>
+					<option>- - - -</option>
 					<option>Item</option>
 					<option>Item</option>
 					<option>Item</option>

@@ -70,7 +70,7 @@
 			<div class="genbox five-col required fieldrow select-row" id="residence-instructions-row">
 				<label for="residence-instructions">Instructions</label>
 				<select name="residence-instructions" id="residence-instructions">
-					<option>- select one -</option>
+					<option>- - - -</option>
 					<option>Leave at front-door</option>
 					<option>Leave at back-door</option>
 					<option>Leave at front-desk</option>

@@ -319,9 +319,8 @@ body#sign-up-2 section#delivery-info {
 	padding-top: 2em;
 }
 
-body#sign-up-2 section#delivery-info .four-col,
-body#sign-up-2 section#delivery-info .five-col,
-body#sign-up-2 section#delivery-info .six-col {
+body#sign-up-2 section#delivery-info .genbox.fieldrow,
+body#sign-up-3 section#payment .genbox {
     float: none;
     margin: 0 auto 0.625em;
 }
@@ -380,7 +379,8 @@ body#sign-up-2 section#delivery-info #delivery-postal-row a.btn {
     z-index: 5;
 }
 
-body#sign-up-2 section#delivery-info #residence-type-row {
+body#sign-up-2 section#delivery-info #residence-type-row,
+body#sign-up-3 section#payment #payment-type-row {
     background: none repeat scroll 0 0 transparent;
     border: medium none;
     border-radius: 0 0 0 0;
@@ -554,8 +554,99 @@ body#sign-up-3 section#account #account-name-email {
 }
 
 body#sign-up-3 section#payment {
-    background: #F2F2E1;
-    padding-top: 30px;
+    background-color: #dbd8c1;
+background-image: linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -o-linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(219,216,193)),
+	color-stop(1, rgb(242,242,225))
+);
+    padding-bottom: 2.5em;
+    padding-top: 22px;
+    position: relative;
+}
+
+body#sign-up-3 section#payment:before {
+    background: url("assets/BG-payment.svg") no-repeat center center transparent;
+    content: "";
+    height: 32px;
+    position: absolute;
+    top: 24px;
+    width: 6.25%;
+}
+
+body#sign-up-3 section#payment .payment-type {
+    margin-bottom: 0;
+}
+
+body#sign-up-3 section#payment #credit-card {
+    padding-right: 13.3333%;
+}
+
+body#sign-up-3 section#payment #credit-card:before {
+    background: url(assets/ICON-payment.gif) no-repeat center center / 50px auto #FFFFFF;
+    border: 1px solid #DBD8C1;
+    -webkit-border-radius: 4px 4px 4px 4px;
+     -khtml-border-radius: 4px 4px 4px 4px;
+      -icab-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+         -o-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    content: "";
+    height: 86px;
+    position: absolute;
+    right: 9%;
+    width: 62px;
+}
+
+body#sign-up-3 section#payment .payment-type .fieldrow {
+    box-shadow: 0 0 4px #DBD8C1;
+}
+
+body#sign-up-3 section#payment #name-on-cc-row,
+body#sign-up-3 section#payment #cc-number-row {
+    margin-left: 10.3%;
+}
+
+body#sign-up-3 section#payment #expiry-date-row {
+    float: left;
+    margin-left: 18.75%;
+    margin-right: 2%;
+    width: 50%;
+}
+
+body#sign-up-3 section#payment #expiry-date-row label {
+    width: 37%;
+}
+
+body#sign-up-3 section#payment #expiry-date-row select {
+    float: left;
+    width: auto;
+}
+
+body#sign-up-3 section#payment select#expiry-date-month {
+}
+
+body#sign-up-3 section#payment select#expiry-date-year {
+    float: right;
+}
+
+body#sign-up-3 section#payment #cvc-row {
+    width: 29.25%;
+}
+
+body#sign-up-3 section#payment #cvc-row label {
+    width: 40%;
+}
+
+body#sign-up-3 section#payment input#cvc {
+    width: 60%;
 }
 
 body#sign-up-3 section#promo-and-rules {}

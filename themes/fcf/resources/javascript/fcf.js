@@ -33,7 +33,7 @@ $j(document).ready(function(){
 		if (($text.length > 0) && ($text.val() != "") ||
 			($testEmail.test($email)) ||
 			($textarea.length > 0) && ($textarea.val() != "") || 
-			($select.length > 0) && ($select.val() != "- select one -") || 
+			($select.length > 0) && ($select.val() != "- - - -") || 
 			($checked > 0)) { // && ($checked >= $unChecked)
 			
 			$j(this).removeClass('error').addClass('completed');
