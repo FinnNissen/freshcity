@@ -1,7 +1,7 @@
 /* LAYOUT: HOME
 -------------------------------------------------------------- */
 
-body.body section:first-of-type .full-col:first-of-type {
+body.body section:first-of-type div.full-col:first-of-type {
     margin-bottom: 13px;
 }
 
@@ -11,11 +11,6 @@ body.body section:first-of-type .full-col:first-of-type {
 
 body.sign-up .status-bar {
 	display: block;
-}
-
-body.sign-up .status-bar ol.inline {
-	padding-left: 0;
-	padding-right: 0;
 }
 
 body.sign-up .status-bar ol.inline li {
@@ -48,8 +43,7 @@ body.sign-up .status-bar ol.inline li:before {
     width: 1.8em; /* 36px */
 }
 
-body.sign-up .status-bar ol.inline li.active,
-body.sign-up .status-bar ol.inline li:hover {
+body.sign-up .status-bar ol.inline li.active {
     color: #f2f2e1;
 }
 
@@ -286,19 +280,20 @@ body#sign-up-1 section#never-send-list fieldset {
 -------------------------------------------------------------- */
 
 body#sign-up-2 section#delivery-schedule {
+    margin-bottom: 1.5em;
     padding-bottom: 0;
 }
 
-body#sign-up-2 section#delivery-schedule .fieldrow {
+body#sign-up-2 #delivery-schedule-row {
     background: none repeat scroll 0 0 transparent;
     border: medium none;
     border-radius: 0 0 0 0;
-    margin: 28px 27.5714% 0;
+    margin: 44px 27.5714% 0;
     padding: 6px 1% 0;
     top: 0;
 }
 
-body#sign-up-2 section#delivery-schedule label {
+body#sign-up-2 #delivery-schedule-row label {
     background: none repeat scroll 0 0 transparent;
     border-radius: 8px 8px 0 0;
     color: #392A21;
@@ -311,12 +306,12 @@ body#sign-up-2 section#delivery-schedule label {
     cursor: pointer;
 }
 
-body#sign-up-2 section#delivery-schedule label.completed {
+body#sign-up-2 #delivery-schedule-row label.completed {
     background: none repeat scroll 0 0 #FFFFFF;
     box-shadow: 0 0 6px #E3DDD9;
 }
 
-body#sign-up-2 section#delivery-schedule input[type="radio"] {
+body#sign-up-2 #delivery-schedule-row input[type="radio"] {
     top: -1px !important;
 }
 
@@ -324,9 +319,8 @@ body#sign-up-2 section#delivery-info {
 	padding-top: 2em;
 }
 
-body#sign-up-2 section#delivery-info .four-col,
-body#sign-up-2 section#delivery-info .five-col,
-body#sign-up-2 section#delivery-info .six-col {
+body#sign-up-2 section#delivery-info .genbox.fieldrow,
+body#sign-up-3 section#payment .genbox {
     float: none;
     margin: 0 auto 0.625em;
 }
@@ -385,7 +379,8 @@ body#sign-up-2 section#delivery-info #delivery-postal-row a.btn {
     z-index: 5;
 }
 
-body#sign-up-2 section#delivery-info #residence-type-row {
+body#sign-up-2 section#delivery-info #residence-type-row,
+body#sign-up-3 section#payment #payment-type-row {
     background: none repeat scroll 0 0 transparent;
     border: medium none;
     border-radius: 0 0 0 0;
@@ -413,6 +408,7 @@ body#sign-up-2 section#delivery-info #pick-up-type .fieldrow img {
 }
 
 body#sign-up-2 section#delivery-info #pick-up-type .fieldrow label.for-boxes {
+    cursor: pointer;
     display: block;
     height: auto;
     left: 0;
@@ -442,6 +438,218 @@ body#sign-up-2 section#delivery-info #pick-up-type .fieldrow small {
 body#sign-up-2 section#delivery-info #pick-up-type p {
 	text-align: center;
 }
+
+
+/* PAGE: SIGN-UP » ACCOUNT & PAYMENT
+-------------------------------------------------------------- */
+
+body#sign-up-3 section#account {
+    background: transparent;
+    margin-bottom: 0;
+    padding-bottom: 26px;
+}
+
+body#sign-up-3 section#account div.full-col:first-of-type {
+    margin-bottom: 6px;
+}
+
+body#sign-up-3 section#account h3.tk-museo-sans {
+    margin-bottom: 20px;
+}
+
+body#sign-up-3 section#account a.three-col {
+    background: none repeat scroll 0 0 #F2F2E1;
+    border: 0.25em solid;
+    -webkit-border-radius: 0.5em 0.5em 0.5em 0.5em;
+     -khtml-border-radius: 0.5em 0.5em 0.5em 0.5em;
+      -icab-border-radius: 0.5em 0.5em 0.5em 0.5em;
+       -moz-border-radius: 0.5em 0.5em 0.5em 0.5em;
+         -o-border-radius: 0.5em 0.5em 0.5em 0.5em;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    letter-spacing: 1px;
+    margin-left: auto;
+    -webkit-opacity: 0.8;
+     -khtml-opacity: 0.8;
+      -icab-opacity: 0.8;
+       -moz-opacity: 0.8;
+         -o-opacity: 0.8;
+    opacity: 0.8;
+    -webkit-transform: scale(1, 1);
+     -khtml-transform: scale(1, 1);
+      -icab-transform: scale(1, 1);
+       -moz-transform: scale(1, 1);
+         -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    padding: 0.5em 0 0.5em 3em;
+    text-decoration: none;
+    top: 2px;   
+    -webkit-transition: -webkit-opacity 250ms, -webkit-transform 250ms;
+     -khtml-transition: -khtml-opacity 250ms, -khtml-transform 250ms;
+      -icab-transition: -icab-opacity 250ms, -icab-transform 250ms;
+       -moz-transition: -moz-opacity 250ms, -moz-transform 250ms;
+         -o-transition: -o-opacity 250ms, -o-transform 250ms;
+    transition: opacity 250ms, transform 250ms;
+}
+
+body#sign-up-3 section#account a.three-col:hover {
+	-webkit-opacity: 1;
+	 -khtml-opacity: 1;
+	  -icab-opacity: 1;
+	   -moz-opacity: 1;
+	     -o-opacity: 1;
+	opacity: 1;
+	-webkit-transform: scale(1.05, 1.05);
+	 -khtml-transform: scale(1.05, 1.05);
+	  -icab-transform: scale(1.05, 1.05);
+	   -moz-transform: scale(1.05, 1.05);
+	     -o-transform: scale(1.05, 1.05);
+	transform: scale(1.05, 1.05);
+}
+
+body#sign-up-3 section#account a.three-col:before {
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 40px 40px;
+     -khtml-background-size: 40px 40px;
+      -icab-background-size: 40px 40px;
+       -moz-background-size: 40px 40px;
+         -o-background-size: 40px 40px;
+    background-size: 40px 40px;
+    content: "";
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 40px;
+}
+
+body#sign-up-3 section#account a#facebook-account {
+    background: none repeat scroll 0 0 #E8EAED;
+    border-color: #3B5998;
+    color: #3B5998;
+    margin-left: 28.3333%;
+}
+
+body#sign-up-3 section#account a#facebook-account:before {
+	background-image: url(assets/BG-fb-account.svg);
+	background-color: #3B5998;
+	outline: 1px solid #3B5998;
+}
+
+body#sign-up-3 section#account a#google-account {
+    background: none repeat scroll 0 0 #eeeeee;
+    border-color: #dd4b39;
+    color: #dd4b39;
+}
+
+body#sign-up-3 section#account a#google-account:before {
+	background-image: url(assets/BG-gplus-account.svg);
+	background-color: #dd4b39;
+	outline: 1px solid #dd4b39;
+}
+
+body#sign-up-3 section#account #account-name-email {
+    margin-left: 15%;
+    margin-right: 0;
+}
+
+body#sign-up-3 section#payment {
+    background-color: #dbd8c1;
+background-image: linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -o-linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(219,216,193) 0%, rgb(242,242,225) 100%);
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(219,216,193)),
+	color-stop(1, rgb(242,242,225))
+);
+    padding-bottom: 2.5em;
+    padding-top: 22px;
+    position: relative;
+}
+
+body#sign-up-3 section#payment:before {
+    background: url("assets/BG-payment.svg") no-repeat center center transparent;
+    content: "";
+    height: 32px;
+    position: absolute;
+    top: 24px;
+    width: 6.25%;
+}
+
+body#sign-up-3 section#payment .payment-type {
+    margin-bottom: 0;
+}
+
+body#sign-up-3 section#payment #credit-card {
+    padding-right: 13.3333%;
+}
+
+body#sign-up-3 section#payment #credit-card:before {
+    background: url(assets/ICON-payment.gif) no-repeat center center / 50px auto #FFFFFF;
+    border: 1px solid #DBD8C1;
+    -webkit-border-radius: 4px 4px 4px 4px;
+     -khtml-border-radius: 4px 4px 4px 4px;
+      -icab-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+         -o-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    content: "";
+    height: 86px;
+    position: absolute;
+    right: 9%;
+    width: 62px;
+}
+
+body#sign-up-3 section#payment .payment-type .fieldrow {
+    box-shadow: 0 0 4px #DBD8C1;
+}
+
+body#sign-up-3 section#payment #name-on-cc-row,
+body#sign-up-3 section#payment #cc-number-row {
+    margin-left: 10.3%;
+}
+
+body#sign-up-3 section#payment #expiry-date-row {
+    float: left;
+    margin-left: 18.75%;
+    margin-right: 2%;
+    width: 50%;
+}
+
+body#sign-up-3 section#payment #expiry-date-row label {
+    width: 37%;
+}
+
+body#sign-up-3 section#payment #expiry-date-row select {
+    float: left;
+    width: auto;
+}
+
+body#sign-up-3 section#payment select#expiry-date-month {
+}
+
+body#sign-up-3 section#payment select#expiry-date-year {
+    float: right;
+}
+
+body#sign-up-3 section#payment #cvc-row {
+    width: 29.25%;
+}
+
+body#sign-up-3 section#payment #cvc-row label {
+    width: 40%;
+}
+
+body#sign-up-3 section#payment input#cvc {
+    width: 60%;
+}
+
+body#sign-up-3 section#promo-and-rules {}
 
 
 /* MED

@@ -555,7 +555,7 @@ input {
     line-height: normal; /* 1. Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet */
 }
 
-input[type="text"], input[type="number"], input[type="date"] {
+input[type="text"], input[type="number"], input[type="date"], input[type="email"], input[type="password"], input[type="search"] {
     background: none repeat scroll 0 0 transparent !important;
     color: #553E31;
     display: block;
@@ -567,7 +567,9 @@ input[type="text"], input[type="number"], input[type="date"] {
     padding: 0 0.375em !important; /* 0 6px */
 }
 
-input[type=text] {
+input[type="text"], input[type="number"], input[type="date"], input[type="email"], input[type="password"], input[type="search"] {
+    box-shadow: none !important;
+    outline: medium none !important;
     width: 70%;
 }
 
@@ -816,6 +818,11 @@ button.black:hover,
     color: #ffffff;
 }
 
+button.disabled,
+.btn.disabled {
+	cursor: default; 
+}
+
 textarea {
     overflow: auto; /* 1. Removes default vertical scrollbar in IE6/7/8/9 */
     vertical-align: top; /* 2. Improves readability and alignment in all browsers */
@@ -863,6 +870,19 @@ fieldset.submit {
 fieldset.submit button,
 fieldset.submit .btn {
 	top: 1px;
+}
+
+
+.fieldrow.focus,
+.fieldrow:hover {
+    border-color: #EAEADC;
+}
+
+.fieldrow.focus label,
+.fieldrow.focus:before,
+.fieldrow:hover:before,
+.fieldrow:hover label {
+    background: #EAEADC;
 }
 
 .fieldrow.completed {
