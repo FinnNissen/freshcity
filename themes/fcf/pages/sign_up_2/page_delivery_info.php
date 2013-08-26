@@ -82,7 +82,7 @@
 			</div>
 			<div class="genbox five-col fieldrow textarea-row" id="notes-row">
 				<label for="notes">Notes</label>
-				<textarea name="notes" id="notes"></textarea>
+				<textarea name="notes" id="notes" placeholder="optional"></textarea>
 			</div>	
 		</fieldset>
 	</div>

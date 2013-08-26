@@ -5,11 +5,7 @@
 			<a href="<?= root_url() ?>delivery-info" class="btn medium white back"><span>&#171; Go Back</span></a>
 			<a href="<?= root_url() ?>review" class="btn medium next disabled"><span>Next Step &#187;</span></a>
 		</div>
-		<!-- <div class="genbox six-col sign-in-with" id="facebook-account">
-			<h3 class="tk-museo-sans p-heading"><img src="<?= root_url('themes/fcf/resources/images') ?>/img.jpg" alt="img" width="80" height="80" /> {Customer Name} <small>lisa.m@gmail.com</small></h3>
-			<p class="tk-museo-sans">Your account is linked via Facebook <a href="#">Unlink it</a></p>
-		</div> -->
-		<fieldset class="genbox four-col" id="create-account-set">
+		<fieldset class="genbox four-col" id="fill-in-set">
 			<h3 class="tk-museo-sans p-heading">Fill in your details…</h3>
 			<div class="required fieldrow text-row" id="account-name-row">
 				<label for="account-name">Name</label>
@@ -28,14 +24,22 @@
 				<input type="password" class="confirm" name="account-pass" id="account-pass-confirm" />
 			</div>
 		</fieldset>
-		<div class="genbox four-col">
+		<div class="genbox four-col" id="sign-in-set">
 			<h3 class="tk-museo-sans p-heading">…sign-in with your</h3>
 			<a href="#" class="sign-in-with tk-museo-sans" id="facebook-account">Facebook Account</a>
 			<a href="#" class="sign-in-with tk-museo-sans" id="google-account">Google+ Account</a>
 		</div>
+		<div class="genbox six-col sign-in-with" id="facebook-account" style="display:none">
+			<h3 class="tk-museo-sans p-heading"><img src="<?= root_url('themes/fcf/resources/images') ?>/img.jpg" alt="img" width="80" height="80" /> {Customer Name} <small>lisa.m@gmail.com</small></h3>
+			<p class="tk-museo-sans">Your account is linked via Facebook <a href="#">Unlink it</a></p>
+		</div>
+		<div class="genbox six-col sign-in-with" id="google-account" style="display:none">
+			<h3 class="tk-museo-sans p-heading"><img src="<?= root_url('themes/fcf/resources/images') ?>/img.jpg" alt="img" width="80" height="80" /> {Customer Name} <small>lisa.m@gmail.com</small></h3>
+			<p class="tk-museo-sans">Your account is linked via Google+ <a href="#">Unlink it</a></p>
+		</div>
 	</div>
 </section>
-<section id="payment">
+<section id="payment" class="payment">
 	<div class="wrap">
 		<h3 class="genbox five-col tk-museo-sans p-heading">Choose your payment method</h3>
 		<div class="genbox five-col required fieldrow radio-row" id="payment-type-row">
@@ -87,10 +91,10 @@
 			</div>
 		</fieldset>
 		<fieldset class="genbox six-col payment-type" id="paypal-set" style="display:none">
-			<p>Paypal lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<p>Paypal lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Exercitation sed do eiusmod tempor incididunt ut labore et dolore magna ad minim veniam.</p>
 		</fieldset>
 		<fieldset class="genbox six-col payment-type" id="cheque-set" style="display:none">
-			<p>Cheque ut enim ad minim veniam, quis nostrud exercitation sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<p>Cheque ut enim ad minim veniam, quis nostrud exer citation sed do eiusmod tempor incididunt ut labore et dolore magna. Exercitation sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
 		</fieldset>
 	</div>
 </section>
@@ -99,7 +103,7 @@
 		<fieldset class="genbox eight-col" id="promo-code-set">
 			<div class="fieldrow text-row" id="promo-code-row">
 				<label for="promo-code">Promo Code</label>
-				<input type="text" name="promo-code" id="promo-code" />
+				<input type="text" name="promo-code" id="promo-code" placeholder="optional" />
 			</div>
 			<div class="fieldrow select-row" id="feedback-row">
 				<label for="feedback">How did you hear about us?</label>

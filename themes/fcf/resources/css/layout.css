@@ -94,7 +94,7 @@ background-image: -webkit-gradient(
 }
 
 body.sign-up section:first-of-type div.full-col:first-of-type {
-    border-bottom: 1px solid #F2F2E1;
+    border-bottom: 1px solid #E2E0CD;
     margin-bottom: 14px;
     padding-bottom: 25px;
 }
@@ -112,7 +112,7 @@ body.sign-up section h3.tk-museo-sans {
 }
 
 body.sign-up fieldset.submit {
-    border-top: 1px solid #F2F2E1;
+    border-top: 1px solid #E2E0CD;
     margin-bottom: 38px !important;
     margin-top: 41px !important;
 }
@@ -321,8 +321,8 @@ body#sign-up-2 section#delivery-info {
 	padding-top: 3.5em;
 }
 
+section.payment .genbox,
 body#sign-up-2 section#delivery-info .genbox.fieldrow,
-body#sign-up-3 section#payment .genbox,
 body#sign-up-3 section#promo-and-rules .genbox {
     float: none;
     margin: 0 auto 0.625em;
@@ -382,8 +382,8 @@ body#sign-up-2 section#delivery-info #delivery-postal-row a.btn {
     z-index: 5;
 }
 
-body#sign-up-2 section#delivery-info #residence-type-row,
-body#sign-up-3 section#payment #payment-type-row {
+section.payment .fieldrow#payment-type-row,
+body#sign-up-2 section#delivery-info #residence-type-row {
     background: transparent;
     border: medium none;
     -webkit-border-radius: 0 0 0 0;
@@ -464,11 +464,11 @@ body#sign-up-3 section#account .wrap {
 	overflow: hidden;
 }
 
-body#sign-up-3 section#account #create-account-set {
+body#sign-up-3 section#account #fill-in-set {
     margin-left: 20%;
 }
 
-body#sign-up-3 section#account #create-account-set:after {
+body#sign-up-3 section#account #fill-in-set:after {
     color: #392A21;
     content: "OR";
     font-family: "museo-sans","Helvetica","Arial",sans-serif;
@@ -486,11 +486,11 @@ body#sign-up-3 section#account h3.tk-museo-sans {
     margin-bottom: 20px;
 }
 
-body#sign-up-3 section#account #create-account-set label {
+body#sign-up-3 section#account #fill-in-set label {
     width: 37.2%;
 }
 
-body#sign-up-3 section#account #create-account-set input {
+body#sign-up-3 section#account #fill-in-set input {
     width: 62.8%;
 }
 
@@ -642,100 +642,6 @@ body#sign-up-3 section#account #account-name-email-set {
     margin-right: 0;
 }
 
-body#sign-up-3 section#payment {
-    background-color: #f2f2e1;
-background-image: linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
-background-image: -o-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
-background-image: -moz-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
-background-image: -webkit-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
-background-image: -ms-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
-background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0, rgb(242,242,225)),
-	color-stop(1, rgb(247,247,237))
-);
-    padding-bottom: 40px;
-    padding-top: 18px;
-    position: relative;
-}
-
-body#sign-up-3 section#payment h3.tk-museo-sans {
-    margin-bottom: 12px;
-    padding-top: 0;
-}
-
-body#sign-up-3 section#payment .payment-type {
-    margin-bottom: 0;
-}
-
-body#sign-up-3 section#payment #credit-card-set {
-    padding-right: 4.5%;
-}
-
-body#sign-up-3 section#payment #credit-card-set:before {
-    background: url("/136-fcf/themes/fcf/resources/css/assets/BG-payment.svg") no-repeat scroll center center transparent;
-    content: "";
-    height: 134px;
-    left: auto;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    top: 2px;
-    width: 48px;
-}
-
-body#sign-up-3 section#payment #cc-number-row,
-body#sign-up-3 section#payment #name-on-cc-row,
-body#sign-up-3 section#payment #expiry-date-row {
-    margin-left: 0;
-}
-
-body#sign-up-3 section#payment #cc-number-row label, 
-body#sign-up-3 section#payment #name-on-cc-row label {
-    width: 37.4%;
-}
-
-body#sign-up-3 section#payment #cc-number-row input, 
-body#sign-up-3 section#payment #name-on-cc-row input {
-    width: 62.6%;
-}
-
-body#sign-up-3 section#payment #expiry-date-row {
-	float: left;
-    margin-right: 2%;
-    width: 68%;
-}
-
-body#sign-up-3 section#payment #expiry-date-row label {
-    width: 35%;
-}
-
-body#sign-up-3 section#payment #expiry-date-row select {
-    float: left;
-    width: auto;
-}
-
-body#sign-up-3 section#payment select#expiry-date-month {
-}
-
-body#sign-up-3 section#payment select#expiry-date-year {
-    float: right;
-}
-
-body#sign-up-3 section#payment #cvc-row {
-    width: 30%;
-}
-
-body#sign-up-3 section#payment #cvc-row label {
-    width: 40%;
-}
-
-body#sign-up-3 section#payment input#cvc {
-    width: 60%;
-}
-
 body#sign-up-3 section#promo-and-rules #promo-code-set {
     padding-top: 2.5em;
 }
@@ -764,11 +670,102 @@ body#sign-up-3 section#promo-and-rules #rules-agree-set {
     text-align: center;
 }
 
-body#sign-up-3 section#promo-and-rules #rules-agree-row {
+body#sign-up-3 section#promo-and-rules #rules-agree-row,
+body#sign-up-4 section#overview-promo-rules #rules-agree-row {
     background: none repeat scroll 0 0 transparent;
     border: medium none;
     margin-bottom: 0.25em;
     padding-top: 0.25em;
+}
+
+
+/* PAGE: SIGN-UP » REVIEW
+-------------------------------------------------------------- */
+
+body#sign-up-4 section#overview-type-size {
+    padding-bottom: 0;
+}
+
+body#sign-up-4 section#overview-type-size .wrap {
+    background: url(../images/IMG-veggie-fruit-bag.png) no-repeat scroll 55% 120% transparent;
+    -webkit-background-size: 300px auto;
+     -khtml-background-size: 300px auto;
+      -icab-background-size: 300px auto;
+       -moz-background-size: 300px auto;
+         -o-background-size: 300px auto;
+    background-size: 300px auto;
+}
+
+body#sign-up-4 section#overview-type-size div.full-col:first-of-type {
+	margin-bottom: 0;
+}
+
+body#sign-up-4 section#overview-type-size #basket-overview {
+    margin-right: 0;
+    margin-top: 14px;
+}
+
+body#sign-up-4 section#overview-type-size #basket-overview h2.tk-league-gothic {
+    color: #1C1510;
+}
+
+body#sign-up-4 section#overview-type-size #totals-overview {
+    margin-left: 0;
+}
+
+body#sign-up-4 section#overview-delivery-info {
+    padding-bottom: 19px;
+}
+
+body#sign-up-4 section#overview-delivery-info h3.tk-museo-sans {
+    margin-bottom: 19px;
+    padding-top: 20px;
+}
+
+body#sign-up-4 section#overview-delivery-info .eight-col {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body#sign-up-4 section#overview-delivery-info p.eight-col {
+    border-top: 1px solid #F2F2E1;
+    margin-bottom: 15px;
+    padding-left: 13.3333%;
+    position: relative;
+}
+
+body#sign-up-4 section#overview-delivery-info p.eight-col:before {
+    background: none repeat scroll 0 0 #F2F2E1;
+    content: "Test";
+    height: 42px;
+    left: 0;
+    line-height: 42px;
+    padding-right: 2%;
+    position: absolute;
+    text-align: right;
+    top: -1px;
+    width: 21%;
+}
+
+body#sign-up-4 section#overview-delivery-info p#address:before {
+    content: "Address";
+}
+
+body#sign-up-4 section#overview-delivery-info p#instructions:before {
+    content: "Instructions";
+}
+
+body#sign-up-4 section#submit fieldset.submit .btn {
+    width: 18%;
+}
+
+body#sign-up-4 section#overview-promo-rules #rules-agree-row {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1.25em;
+    text-align: center;
 }
 
 

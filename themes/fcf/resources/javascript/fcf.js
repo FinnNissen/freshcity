@@ -208,12 +208,24 @@ $j(document).ready(function(){
 /* SIGN-UP: ACCOUNT & PAYMENT
 -------------------------------------------------------------- */
 	
-	$j('body#sign-up-3 #payment-type-row input[type=radio]').on( "click", function(){
+	$j('body#sign-up-3 a.sign-in-with').on( "click", function(e){
+		$accountType = $j(this).attr('id');
+		$j(this).parents('section#account').find('.genbox').hide().filter(".full-col, div[id=" + $accountType + "]").show();
+		$resetNextStep();
+		e.preventDefault();
+	});
+	$j('body#sign-up-3 div.sign-in-with p.tk-museo-sans a').on( "click", function(e){
+		$j(this).parents('section#account').find('.genbox').hide().filter(".full-col, .four-col").show();
+		$resetNextStep();
+		e.preventDefault();
+	});
+	
+	$j('body#sign-up-3 #payment-type-row input[type=radio]').on( "click", function(e){
 		$paymentType = $j(this).attr('id');
 		$j('fieldset.payment-type').hide().filter("[id=" + $paymentType + "-set]").show();
 		$resetNextStep();
+		e.preventDefault();
 	});
-
 
 });
 

@@ -926,21 +926,21 @@ table {
 }
 
 table th, table td {
-    border-bottom: 1px solid gray;
-    line-height: 2.125em; /* 34px */
+	/* border-bottom: 1px solid gray; */
+    line-height: 1.5em; /* 24px */
 }
 
+table tr:nth-child(odd) th, table tr:nth-child(odd) td {}
+
 table tr th:first-child, table tr td:first-child {
-    padding-left: 0.5em; /* 8px */
+    padding-left: 1em; /* 16px */
 }
 
 table tr th:last-child, table tr td:last-child {
-    padding-right: 0.5em; /* 8px */
+    padding-right: 1em; /* 16px */
 }
 
-table thead th, table tbody tr:last-child td {
-    border-bottom: 1px solid black;
-}
+table thead th, table tbody tr:last-child td {}
 
 table tfoot td {}
 

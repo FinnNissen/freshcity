@@ -529,13 +529,263 @@ canvas.alignright {
 /* SECTION: PAYMENT
 -------------------------------------------------------------- */
 
-section#payment .fieldrow {
+section.payment .fieldrow {
     border-color: #E2E0CD;
     box-shadow: 0 0 8px #FFFFFF;
 }
 
-section#payment .fieldrow label {
+section.payment .fieldrow label {
     background: #E2E0CD;
+}
+
+section.payment {
+    background-color: #f2f2e1;
+background-image: linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
+background-image: -o-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(242,242,225)),
+	color-stop(1, rgb(247,247,237))
+);
+    padding-bottom: 40px;
+    padding-top: 18px;
+    position: relative;
+}
+
+section.payment h3.tk-museo-sans {
+    margin-bottom: 12px;
+    padding-top: 0;
+}
+
+section.payment .payment-type {
+    margin-bottom: 0;
+}
+
+section.payment #credit-card-set {
+    padding-right: 4.5%;
+}
+
+section.payment #credit-card-set:before {
+    background: url("/136-fcf/themes/fcf/resources/css/assets/BG-payment.svg") no-repeat scroll center center transparent;
+    content: "";
+    height: 134px;
+    left: auto;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 48px;
+}
+
+section.payment #cc-number-row,
+section.payment #name-on-cc-row,
+section.payment #expiry-date-row {
+    margin-left: 0;
+}
+
+section.payment #cc-number-row label, 
+section.payment #name-on-cc-row label {
+    width: 37.4%;
+}
+
+section.payment #cc-number-row input, 
+section.payment #name-on-cc-row input {
+    width: 62.6%;
+}
+
+section.payment #expiry-date-row {
+	float: left;
+    margin-right: 2%;
+    width: 68%;
+}
+
+section.payment #expiry-date-row label {
+    width: 35%;
+}
+
+section.payment #expiry-date-row select {
+    float: left;
+    width: auto;
+}
+
+section.payment select#expiry-date-month {
+}
+
+section.payment select#expiry-date-year {
+    float: right;
+}
+
+section.payment #cvc-row {
+    width: 30%;
+}
+
+section.payment #cvc-row label {
+    width: 40%;
+}
+
+section.payment input#cvc {
+    width: 60%;
+}
+
+section.payment #paypal-set,
+section.payment #cheque-set {
+    border: 0.25em solid #E2E0CD;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    margin-top: 18px;
+    padding: 4px 1em 0.75em;
+}
+
+section.payment #paypal-set:before,
+section.payment #cheque-set:before {
+    background: url(assets/ICON-paypal.svg) no-repeat center center transparent;
+    bottom: 0;
+    content: "";
+    height: 34px;
+    left: auto;
+    position: absolute;
+    right: 0;
+    top: auto;
+    width: 104px;
+    z-index: 1;
+}
+
+section.payment #cheque-set:before {
+    background: url(assets/ICON-cheque.svg) no-repeat center center transparent;
+    height: 38px;
+    width: 64px;
+    right: 8px;
+    bottom: 8px;
+}
+
+section.payment ul.credit-card {
+    font-family: "Courier New","Courier",monospace;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 0;
+    margin-top: 8px;
+    overflow: hidden;
+    padding: 14px 0 6px;
+    width: 552px;
+}
+
+section.payment .visa {}
+
+section.payment ul.credit-card li {
+    background: none repeat scroll 0 0 #cccccc;
+    border-bottom: 2px solid #FFFFFF;
+    -webkit-border-radius: 14px 14px 14px 14px;
+     -khtml-border-radius: 14px 14px 14px 14px;
+      -icab-border-radius: 14px 14px 14px 14px;
+       -moz-border-radius: 14px 14px 14px 14px;
+         -o-border-radius: 14px 14px 14px 14px;
+    border-radius: 14px 14px 14px 14px;
+    -webkit-box-shadow: 0 0 6px #888888;
+     -khtml-box-shadow: 0 0 6px #888888;
+      -icab-box-shadow: 0 0 6px #888888;
+       -moz-box-shadow: 0 0 6px #888888;
+         -o-box-shadow: 0 0 6px #888888;
+    box-shadow: 0 0 6px #888888;
+    height: 168px;
+    margin: 0 10px;
+    padding: 71px 12px 24px 24px;
+    position: relative;
+    width: 256px;
+}
+
+section.payment .credit-card .front {
+    background: none repeat scroll 0 0 #1E3562;
+    color: #FFFFFF;
+}
+
+section.payment .credit-card .front:before {
+    background: url(assets/ICON-cc-lock.svg) no-repeat center center transparent;
+    content: "";
+    height: 32px;
+    left: auto;
+    right: 24px;
+    position: absolute;
+    top: 24px;
+    width: 24px;
+}
+
+section.payment .credit-card .front:after {
+    background-color: #FFFFFF;
+	background-image: url(assets/ICON-cc-various.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+    border: 1px solid #000033;
+    content: "";
+    height: 32px;
+    left: 24px;
+    position: absolute;
+    top: 24px;
+    width: 48px;
+}
+
+section.payment .credit-card .back {
+    background: none repeat scroll 0 0 #EEEEEE;
+    color: #000000;
+}
+
+section.payment .credit-card .back:before {
+    background: none repeat scroll 0 0 #000000;
+    content: "";
+    height: 32px;
+    left: 0;
+    position: absolute;
+    top: 24px;
+    width: 100%;
+}
+
+section.payment .visa .front:after {
+	background-position: center top;
+}
+
+section.payment .master-card .front:after {
+	background-position: center center;
+}
+
+section.payment .amex .front:after {
+	background-position: center bottom;
+}
+
+
+/* TOTAL TABLES
+-------------------------------------------------------------- */
+
+table.totals {
+    background: none repeat scroll 0 0 #E2E0CD;
+    border-top: 8px solid #E2E0CD;
+}
+
+table.totals tr {}
+
+table.totals td {
+    padding: 6px 0 6px 16px;
+}
+
+table.totals td.currency {
+    padding-left: 0;
+    text-align: right;
+}
+
+table.totals tr.subtotal tr {}
+
+table.totals tr.subtotal td {}
+
+table.totals tr.total tr {}
+
+table.totals tr.total td {
+    border-top: 1px solid #F2F2E1;
+    font-weight: bold;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    text-transform: uppercase;
 }
 
 
