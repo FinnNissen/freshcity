@@ -1,6 +1,6 @@
 <ol class="inline tk-museo-sans wrap">
 	<li class="active"><a href="<?= root_url() ?>type-and-size">Type & Size</a></li>
-	<li><a href="<?= root_url() ?>delivery-info">Delivery Information</a></li>
-	<li><a href="<?= root_url() ?>account-and-payment">Account & Payment</a></li>
-	<li><a href="<?= root_url() ?>review">Review & Buy it!</a></li>
+	<li>Delivery Information</li>
+	<li>Account & Payment</li>
+	<li>Review & Buy it!</li>
 </ol>

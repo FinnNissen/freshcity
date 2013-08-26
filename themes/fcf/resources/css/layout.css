@@ -1,7 +1,7 @@
 /* LAYOUT: HOME
 -------------------------------------------------------------- */
 
-body.body section:first-of-type .full-col:first-of-type {
+body.body section:first-of-type div.full-col:first-of-type {
     margin-bottom: 13px;
 }
 
@@ -11,11 +11,6 @@ body.body section:first-of-type .full-col:first-of-type {
 
 body.sign-up .status-bar {
 	display: block;
-}
-
-body.sign-up .status-bar ol.inline {
-	padding-left: 0;
-	padding-right: 0;
 }
 
 body.sign-up .status-bar ol.inline li {
@@ -48,8 +43,7 @@ body.sign-up .status-bar ol.inline li:before {
     width: 1.8em; /* 36px */
 }
 
-body.sign-up .status-bar ol.inline li.active,
-body.sign-up .status-bar ol.inline li:hover {
+body.sign-up .status-bar ol.inline li.active {
     color: #f2f2e1;
 }
 
@@ -96,7 +90,6 @@ background-image: -webkit-gradient(
 	color-stop(0, rgb(242,242,225)),
 	color-stop(1, rgb(255,255,255))
 );
-    margin-bottom: 2em;
     padding-bottom: 3em;
 }
 
@@ -125,7 +118,7 @@ body.sign-up fieldset.submit {
 }
 
 body.sign-up fieldset.submit .btn {
-    top: -32px;
+    top: -24px;
 }
 
 
@@ -201,12 +194,12 @@ body#sign-up-1 section .four-col .fieldrow  {
 }
 
 body#sign-up-1 section #veggie-bag p,
-body#sign-up-1 section .four-col .fieldrow  {
+body#sign-up-1 section #veggie-bag .fieldrow  {
 	margin: 0 9.0425532% 0 10.106383%;
 }
 
 body#sign-up-1 section #fruit-bag p,
-body#sign-up-1 section .four-col .fieldrow  {
+body#sign-up-1 section #fruit-bag .fieldrow  {
 	margin: 0 10.106383% 0 9.0425532%;
 }
 
@@ -262,6 +255,10 @@ body#sign-up-1 section .four-col label.completed {
 	color: #ffffff;
 }
 
+body#sign-up-1 section#never-send-list {
+	padding-top: 2em;
+}
+
 body#sign-up-1 section#never-send-list .wrap {
 	overflow: hidden;
 }
@@ -289,16 +286,16 @@ body#sign-up-2 section#delivery-schedule {
     padding-bottom: 0;
 }
 
-body#sign-up-2 section#delivery-schedule .fieldrow {
+body#sign-up-2 #delivery-schedule-row {
     background: none repeat scroll 0 0 transparent;
     border: medium none;
     border-radius: 0 0 0 0;
-    margin: 28px 27.5714% 0;
+    margin: 44px 27.5714% 0;
     padding: 6px 1% 0;
     top: 0;
 }
 
-body#sign-up-2 section#delivery-schedule label {
+body#sign-up-2 #delivery-schedule-row label {
     background: none repeat scroll 0 0 transparent;
     border-radius: 8px 8px 0 0;
     color: #392A21;
@@ -311,22 +308,22 @@ body#sign-up-2 section#delivery-schedule label {
     cursor: pointer;
 }
 
-body#sign-up-2 section#delivery-schedule label.completed {
+body#sign-up-2 #delivery-schedule-row label.completed {
     background: none repeat scroll 0 0 #FFFFFF;
     box-shadow: 0 0 6px #E3DDD9;
 }
 
-body#sign-up-2 section#delivery-schedule input[type="radio"] {
+body#sign-up-2 #delivery-schedule-row input[type="radio"] {
     top: -1px !important;
 }
 
 body#sign-up-2 section#delivery-info {
-	padding-top: 2em;
+	padding-top: 3.5em;
 }
 
-body#sign-up-2 section#delivery-info .four-col,
-body#sign-up-2 section#delivery-info .five-col,
-body#sign-up-2 section#delivery-info .six-col {
+body#sign-up-2 section#delivery-info .genbox.fieldrow,
+body#sign-up-3 section#payment .genbox,
+body#sign-up-3 section#promo-and-rules .genbox {
     float: none;
     margin: 0 auto 0.625em;
 }
@@ -385,13 +382,21 @@ body#sign-up-2 section#delivery-info #delivery-postal-row a.btn {
     z-index: 5;
 }
 
-body#sign-up-2 section#delivery-info #residence-type-row {
-    background: none repeat scroll 0 0 transparent;
+body#sign-up-2 section#delivery-info #residence-type-row,
+body#sign-up-3 section#payment #payment-type-row {
+    background: transparent;
     border: medium none;
+    -webkit-border-radius: 0 0 0 0;
+     -khtml-border-radius: 0 0 0 0;
+      -icab-border-radius: 0 0 0 0;
+       -moz-border-radius: 0 0 0 0;
+         -o-border-radius: 0 0 0 0;
     border-radius: 0 0 0 0;
+    box-shadow: none;
     margin-top: 0 !important;
     padding: 4px 0 2px !important;
     text-align: center;
+    text-indent: -6px;
 }
 
 body#sign-up-2 section#delivery-info #pick-up-location-row {
@@ -399,20 +404,21 @@ body#sign-up-2 section#delivery-info #pick-up-location-row {
     margin-top: 16px;
 }
 
-body#sign-up-2 section#delivery-info #pick-up-type .fieldrow {
+body#sign-up-2 section#delivery-info #pick-up-type-set .fieldrow {
     background: none repeat scroll 0 0 #FFFFFF;
     margin-bottom: 14px;
     margin-top: 10px;
 }
 
-body#sign-up-2 section#delivery-info #pick-up-type .fieldrow img {
+body#sign-up-2 section#delivery-info #pick-up-type-set .fieldrow img {
     float: right;
     height: 120px;
     margin: 0 0 0 16px;
     width: auto;
 }
 
-body#sign-up-2 section#delivery-info #pick-up-type .fieldrow label.for-boxes {
+body#sign-up-2 section#delivery-info #pick-up-type-set .fieldrow label.for-boxes {
+    cursor: pointer;
     display: block;
     height: auto;
     left: 0;
@@ -425,13 +431,13 @@ body#sign-up-2 section#delivery-info #pick-up-type .fieldrow label.for-boxes {
     width: 100%;
 }
 
-body#sign-up-2 section#delivery-info #pick-up-type .fieldrow input {
+body#sign-up-2 section#delivery-info #pick-up-type-set .fieldrow input {
     left: 0.5em;
     position: absolute;
     top: 14px !important;
 }
 
-body#sign-up-2 section#delivery-info #pick-up-type .fieldrow small {
+body#sign-up-2 section#delivery-info #pick-up-type-set .fieldrow small {
     font-size: 13px;
     line-height: 16px;
     margin-top: 4px !important;
@@ -439,8 +445,330 @@ body#sign-up-2 section#delivery-info #pick-up-type .fieldrow small {
     top: 0;
 }
 
-body#sign-up-2 section#delivery-info #pick-up-type p {
+body#sign-up-2 section#delivery-info #pick-up-type-set p {
 	text-align: center;
+}
+
+
+/* PAGE: SIGN-UP » ACCOUNT & PAYMENT
+-------------------------------------------------------------- */
+
+body#sign-up-3 section#account {
+    background: none repeat scroll 0 0 transparent;
+    margin-bottom: 0;
+    padding-bottom: 34px;
+}
+
+body#sign-up-3 section#account .wrap {
+	position: relative;
+	overflow: hidden;
+}
+
+body#sign-up-3 section#account #create-account-set {
+    margin-left: 20%;
+}
+
+body#sign-up-3 section#account #create-account-set:after {
+    color: #392A21;
+    content: "OR";
+    font-family: "museo-sans","Helvetica","Arial",sans-serif;
+    font-size: 1.4375em;
+    font-weight: 700;
+    left: 100%;
+    line-height: 1.3913em;
+    position: absolute;
+    text-align: center;
+    top: 18px;
+    width: 25%;
+}
+
+body#sign-up-3 section#account h3.tk-museo-sans {
+    margin-bottom: 20px;
+}
+
+body#sign-up-3 section#account #create-account-set label {
+    width: 37.2%;
+}
+
+body#sign-up-3 section#account #create-account-set input {
+    width: 62.8%;
+}
+
+body#sign-up-3 section#account .sign-in-with {
+    border: 4px solid;
+    -webkit-border-radius: 8px 8px 8px 8px;
+     -khtml-border-radius: 8px 8px 8px 8px;
+      -icab-border-radius: 8px 8px 8px 8px;
+       -moz-border-radius: 8px 8px 8px 8px;
+         -o-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+    top: 2px;   
+}
+
+body#sign-up-3 section#account a.sign-in-with {
+    background: none repeat scroll 0 0 #eeeeee;
+	display: block;
+    height: 86px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    -webkit-opacity: 0.8;
+     -khtml-opacity: 0.8;
+      -icab-opacity: 0.8;
+       -moz-opacity: 0.8;
+         -o-opacity: 0.8;
+    opacity: 0.8;
+    text-align: center;
+    padding: 26px 0 0 0;
+    position: relative;
+    text-decoration: none;
+    -webkit-transition: -webkit-opacity 250ms;
+     -khtml-transition: -khtml-opacity 250ms;
+      -icab-transition: -icab-opacity 250ms;
+       -moz-transition: -moz-opacity 250ms;
+         -o-transition: -o-opacity 250ms;
+    transition: opacity 250ms;
+}
+
+body#sign-up-3 section#account a.sign-in-with:hover {
+	-webkit-opacity: 1;
+	 -khtml-opacity: 1;
+	  -icab-opacity: 1;
+	   -moz-opacity: 1;
+	     -o-opacity: 1;
+	opacity: 1;
+}
+
+body#sign-up-3 section#account .sign-in-with:before {
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 40px 40px;
+     -khtml-background-size: 40px 40px;
+      -icab-background-size: 40px 40px;
+       -moz-background-size: 40px 40px;
+         -o-background-size: 40px 40px;
+    background-size: 40px 40px;
+    bottom: 0;
+    content: "";
+    height: 40px;
+    left: 16px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: 40px;
+}
+
+body#sign-up-3 section#account #facebook-account,
+body#sign-up-3 section#account #facebook-account p.tk-museo-sans a {
+    border-color: #3B5998;
+    color: #3B5998;
+}
+
+body#sign-up-3 section#account #facebook-account:before {
+	background-image: url(assets/BG-fb-account.svg);
+	background-color: #3B5998;
+	outline: 1px solid #3B5998;
+}
+
+body#sign-up-3 section#account #google-account,
+body#sign-up-3 section#account #google-account p.tk-museo-sans a  {
+    border-color: #dd4b39;
+    color: #dd4b39;
+}
+
+body#sign-up-3 section#account #google-account:before {
+	background-image: url(assets/BG-gplus-account.svg);
+	background-color: #dd4b39;
+	outline: 1px solid #dd4b39;
+}
+
+body#sign-up-3 section#account div.sign-in-with {
+    float: none;
+    margin: 54px auto 33px;
+}
+
+body#sign-up-3 section#account div.sign-in-with:before {
+    bottom: 11px;
+    left: 12px;
+    top: auto;
+    z-index: 1;
+}
+
+body#sign-up-3 section#account div.sign-in-with h3.tk-museo-sans {
+    margin: 0 12px 20px;
+    overflow: hidden;
+    padding-top: 20px;
+    text-align: left;
+    top: 0;
+}
+
+body#sign-up-3 section#account div.sign-in-with img {
+    float: left;
+    height: 80px;
+    margin: -8px 12px 0 0;
+    width: 80px;
+}
+
+body#sign-up-3 section#account div.sign-in-with small {
+    border-top: 1px dotted #CCCCCC;
+    color: #888888;
+    display: block;
+    font-family: Georgia,serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    margin-left: 92px;
+    margin-top: 3px;
+    padding-top: 2px;
+}
+
+body#sign-up-3 section#account div.sign-in-with p.tk-museo-sans {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-radius: 0 0 5px 6px;
+    clear: left;
+    color: #888888;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+    padding: 15px 12px 16px 62px;
+}
+
+body#sign-up-3 section#account div.sign-in-with p.tk-museo-sans a {
+    display: block;
+}
+
+body#sign-up-3 section#account #account-name-email-set {
+    margin-left: 15%;
+    margin-right: 0;
+}
+
+body#sign-up-3 section#payment {
+    background-color: #f2f2e1;
+background-image: linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
+background-image: -o-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(247,247,237) 100%);
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(242,242,225)),
+	color-stop(1, rgb(247,247,237))
+);
+    padding-bottom: 40px;
+    padding-top: 18px;
+    position: relative;
+}
+
+body#sign-up-3 section#payment h3.tk-museo-sans {
+    margin-bottom: 12px;
+    padding-top: 0;
+}
+
+body#sign-up-3 section#payment .payment-type {
+    margin-bottom: 0;
+}
+
+body#sign-up-3 section#payment #credit-card-set {
+    padding-right: 4.5%;
+}
+
+body#sign-up-3 section#payment #credit-card-set:before {
+    background: url("/136-fcf/themes/fcf/resources/css/assets/BG-payment.svg") no-repeat scroll center center transparent;
+    content: "";
+    height: 134px;
+    left: auto;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 48px;
+}
+
+body#sign-up-3 section#payment #cc-number-row,
+body#sign-up-3 section#payment #name-on-cc-row,
+body#sign-up-3 section#payment #expiry-date-row {
+    margin-left: 0;
+}
+
+body#sign-up-3 section#payment #cc-number-row label, 
+body#sign-up-3 section#payment #name-on-cc-row label {
+    width: 37.4%;
+}
+
+body#sign-up-3 section#payment #cc-number-row input, 
+body#sign-up-3 section#payment #name-on-cc-row input {
+    width: 62.6%;
+}
+
+body#sign-up-3 section#payment #expiry-date-row {
+	float: left;
+    margin-right: 2%;
+    width: 68%;
+}
+
+body#sign-up-3 section#payment #expiry-date-row label {
+    width: 35%;
+}
+
+body#sign-up-3 section#payment #expiry-date-row select {
+    float: left;
+    width: auto;
+}
+
+body#sign-up-3 section#payment select#expiry-date-month {
+}
+
+body#sign-up-3 section#payment select#expiry-date-year {
+    float: right;
+}
+
+body#sign-up-3 section#payment #cvc-row {
+    width: 30%;
+}
+
+body#sign-up-3 section#payment #cvc-row label {
+    width: 40%;
+}
+
+body#sign-up-3 section#payment input#cvc {
+    width: 60%;
+}
+
+body#sign-up-3 section#promo-and-rules #promo-code-set {
+    padding-top: 2.5em;
+}
+
+body#sign-up-3 section#promo-and-rules #promo-code-row {
+    margin-left: 18.75%;
+    margin-right: 18.75%;
+}
+
+body#sign-up-3 section#promo-and-rules #promo-code-row label {
+    width: 29.5%;
+}
+
+body#sign-up-3 section#promo-and-rules #feedback-row label {
+    width: 37.3%;
+}
+
+body#sign-up-3 section#promo-and-rules #feedback-row select {
+    width: 62.7%;
+}
+
+body#sign-up-3 section#promo-and-rules #rules-agree-set {
+    border-top: 1px solid #F2F2E1;
+    margin-top: 2em;
+    padding-top: 15px;
+    text-align: center;
+}
+
+body#sign-up-3 section#promo-and-rules #rules-agree-row {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    margin-bottom: 0.25em;
+    padding-top: 0.25em;
 }
 
 

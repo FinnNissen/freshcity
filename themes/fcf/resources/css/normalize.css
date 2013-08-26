@@ -555,7 +555,7 @@ input {
     line-height: normal; /* 1. Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet */
 }
 
-input[type="text"], input[type="number"], input[type="date"] {
+input[type="text"], input[type="number"], input[type="date"], input[type="email"], input[type="password"], input[type="search"] {
     background: none repeat scroll 0 0 transparent !important;
     color: #553E31;
     display: block;
@@ -567,7 +567,9 @@ input[type="text"], input[type="number"], input[type="date"] {
     padding: 0 0.375em !important; /* 0 6px */
 }
 
-input[type=text] {
+input[type="text"], input[type="number"], input[type="date"], input[type="email"], input[type="password"], input[type="search"] {
+    box-shadow: none !important;
+    outline: medium none !important;
     width: 70%;
 }
 
@@ -816,6 +818,11 @@ button.black:hover,
     color: #ffffff;
 }
 
+button.disabled,
+.btn.disabled {
+	cursor: default; 
+}
+
 textarea {
     overflow: auto; /* 1. Removes default vertical scrollbar in IE6/7/8/9 */
     vertical-align: top; /* 2. Improves readability and alignment in all browsers */
@@ -865,24 +872,43 @@ fieldset.submit .btn {
 	top: 1px;
 }
 
-.fieldrow.completed {
+
+.fieldrow.focus,
+.fieldrow:hover {
+    border-color: #E2E0CD;
+}
+
+.fieldrow.focus label,
+.fieldrow.focus:before,
+.fieldrow:hover:before,
+.fieldrow:hover label {
+    background: #E2E0CD;
+}
+
+.fieldrow.completed,
+section#payment .fieldrow.completed {
 	background-color: #8DAE7C;
-    border-color: #8DAE7C; /* 4px */
+    border-color: #8DAE7C;
 }
 
 .fieldrow.completed label,
-.fieldrow.textarea-row.completed:before {
+.fieldrow.textarea-row.completed:before,
+section#payment .fieldrow.completed label,
+section#payment .fieldrow.textarea-row.completed:before {
     background-color: #8DAE7C;
     color: #FFFFFF;
 }
 
-.fieldrow.error {
+.fieldrow.error,
+section#payment .fieldrow.error {
 	background-color: #f49956;
 	border-color: #f49956;
 }
 
 .fieldrow.error label,
-.fieldrow.textarea-row.error:before {
+.fieldrow.textarea-row.error:before,
+section#payment .fieldrow.error label,
+section#payment .fieldrow.textarea-row.error:before {
     background-color: #f49956;
     color: #ffffff;
 }

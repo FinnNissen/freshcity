@@ -18,32 +18,88 @@ $j(document).ready(function(){
 /* Normalize
 -------------------------------------------------------------- */
 	
+	var $testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+	
 	$j.each($j(".fieldrow"), function(i,v) {
-		$text = $j(this).find('input:text'),
+		$text = $j(this).find('input').not(':radio, :checkbox, [type=email]'),
+		$email = $j(this).find('input[type=email]').val(),
 		$textarea = $j(this).find('textarea'),
 		$select = $j(this).find('select'),
-		$checked = $j(this).find('input:checked').not(':text').length,
-		$unChecked = $j(this).find('input:not(:checked)').not(':text').length;
+		$checked = $j(this).find('input:checked').not(':text').length;
+		//$unChecked = $j(this).find('input:not(:checked)').not(':text').length;
 		
-		if (($text.length > 0) && ($text.val() != "") || 
+		//console.log( this, $checked, $unChecked );
+		
+		if (($text.length > 0) && ($text.val() != "") ||
+			($testEmail.test($email)) ||
 			($textarea.length > 0) && ($textarea.val() != "") || 
-			($select.length > 0) && ($select.val() != "- select one -") || 
-			($checked > 0) && ($checked >= $unChecked)) {
-			//console.log( this );
+			($select.length > 0) && ($select.val() != "- - - -") || 
+			($checked > 0)) { // && ($checked >= $unChecked)
+			
 			$j(this).removeClass('error').addClass('completed');
 		} else {
 			$j(this).removeClass('completed');
+			if ($email != "") {
+				if (!$testEmail.test($email)) $j(this).find('input[type=email]').parents('.fieldrow').addClass('error');
+			}
 		}
 	});
  
-	$j(".fieldrow input:text, .fieldrow textarea").on('blur', function() {
-		$fieldRow = $j(this).parents('.fieldrow');
-		if ($j(this).val() != "") { $fieldRow.removeClass('error').addClass('completed'); } else { $fieldRow.removeClass('completed'); }
+	$j(".fieldrow input, .fieldrow textarea").not(':radio, :checkbox, [type=email]').on({
+		focus: function() {
+			$fieldRow = $j(this).parents('.fieldrow').addClass('focus');
+		},
+		blur: function() {
+			$fieldRow = $j(this).parents('.fieldrow').removeClass('focus');
+			if ($j(this).val() != "") { $fieldRow.removeClass('error').addClass('completed'); } else { $fieldRow.removeClass('completed'); }
+		}
 	});
 	
-	$j(".fieldrow select").on('blur', function() {
-		$fieldRow = $j(this).parents('.fieldrow');
-		if ($j(this).val() != "- select one -") { $fieldRow.removeClass('error').addClass('completed'); } else { $fieldRow.removeClass('completed'); }
+	$j(".fieldrow input[type=email]").on({
+		focus: function() {
+			$fieldRow = $j(this).parents('.fieldrow').addClass('focus');
+		},
+		blur: function() {
+			$email = $j(this).val(),
+			$fieldRow = $j(this).parents('.fieldrow').removeClass('focus');
+			if ($email != "") {
+				if ($testEmail.test($email)) {
+					$fieldRow.removeClass('error').addClass('completed');
+				} else {
+					$fieldRow.removeClass('completed').addClass('error');
+				}
+			} else { $fieldRow.removeClass('error').removeClass('completed'); }
+		}
+	});
+	
+	$j(".fieldrow input.confirm").on('blur', function() {
+		// 1. find all inputs that have the same name attr as the this and grab their val()
+		$thisName = $j(this).attr('name'),
+		$thisLength = $j(this).val(),
+		$testLength = $j('.fieldrow').find('input').filter("[name=" + $thisName + "]").not(this).val(),
+		$fieldRow = $j(this).parents('.fieldrow').removeClass('focus');
+
+		if ($j(this).val() != "") {
+		// 2. if val() match then: passed
+			if ($thisLength == $testLength) {
+				$fieldRow.removeClass('error').addClass('completed');
+		// 3. else: failed
+			} else {
+				$fieldRow.removeClass('completed').addClass('error');
+			}
+		} else {
+			$fieldRow.removeClass('error').removeClass('completed');
+		}
+	});
+	
+	$j(".fieldrow select").on({
+		focus: function() {
+			$fieldRow = $j(this).parents('.fieldrow').addClass('focus');
+		},
+		change: function() {
+			$fieldRow = $j(this).parents('.fieldrow').removeClass('focus');
+			if ($j(this).val() != "- select one -") { $fieldRow.removeClass('error').addClass('completed'); } else { $fieldRow.removeClass('completed'); }
+		}
 	});
 	
 	$j(".fieldrow input:radio, .fieldrow input:checkbox").on('click', function(){
@@ -51,16 +107,24 @@ $j(document).ready(function(){
 		$allRadioParents = $j("input[type=radio]").filter("[name=" + $radioName + "]").parents('label, .fieldrow');
 
 		$allRadioParents.removeClass('completed');
-		$j(this).parents('label, .fieldrow').addClass('completed');
+		$j(this).parents('label, .fieldrow').removeClass('error').addClass('completed');
 	});
+	
+	var $prevDef = function(e){
+		e.preventDefault();
+	};
+	$j('a.disabled, button.disabled').on('click', $prevDef);
 
 	
 /* SIGN-UP
 -------------------------------------------------------------- */
 	
-	var $signUpNextBtn = $j(".sign-up .btn.next"),
-		$nextStep = function(e) {
-			$signUpNextBtn.addClass('black');
+	var $signUpNextBtn = $j(".sign-up a.btn.next"),
+		$nextStep = function() {
+			$signUpNextBtn.removeClass('disabled').addClass('black').off('click', $prevDef);
+		},
+		$resetNextStep = function() {
+			$signUpNextBtn.removeClass('black').removeClass('disabled').on('click', $prevDef);
 		};
 
 
@@ -86,14 +150,12 @@ $j(document).ready(function(){
 	});
 	
 	$j('body#sign-up-2 #delivered-to-row input[type=radio]').on( "click", function(){
-		$deliveredTo = $j(this).attr('id');
-		$deliveryPostal = $j('body#sign-up-2 #delivery-postal-row input[type=text]').val();
-
 		$j('section#delivery-info .note').fadeOut('fast', function() {
 			$j(this).remove();
 		});
 		$j('fieldset.delivered-to-type:visible').fadeOut('fast');
 		$j('body#sign-up-2 #delivery-postal-row').removeClass('error');
+		$resetNextStep();
 	});
 	
 	$j("body#sign-up-2 #delivery-postal-row a.btn").on( "click", function(e){
@@ -112,7 +174,7 @@ $j(document).ready(function(){
 				}
 			});
 			$j('fieldset.delivered-to-type').fadeOut('fast');
-			$j('fieldset.delivered-to-type').filter("[id=" + $deliveredTo + "-type]").fadeIn('fast');
+			$j('fieldset.delivered-to-type').filter("[id=" + $deliveredTo + "-type-set]").fadeIn('fast');
 		} else {
 			$j('section#delivery-info .note').fadeOut('fast', function() {
 				$j(this).remove();
@@ -122,6 +184,36 @@ $j(document).ready(function(){
 		}
 		e.preventDefault();
 	});
-		
+	
+	$j("body#sign-up-2 select#residence-instructions").on('change', function() {
+		if ($j('#delivery-schedule-row').hasClass('completed') &&
+			$j('#delivered-to-row').hasClass('completed') &&
+			$j('#delivery-postal-row').hasClass('completed') &&
+			$j('#residence-type-row').hasClass('completed') &&
+			$j('#residence-address-1-row').hasClass('completed') &&
+			$j('#residence-city-row').hasClass('completed')) {
+			$nextStep();
+		}
+	});
+	
+	$j("body#sign-up-2 #pick-up-type-set input:radio").on('click', function() {
+		if ($j('#delivery-schedule-row').hasClass('completed') &&
+			$j('#delivered-to-row').hasClass('completed') &&
+			$j('#delivery-postal-row').hasClass('completed')) {
+			$nextStep();
+		}
+	});
+
+
+/* SIGN-UP: ACCOUNT & PAYMENT
+-------------------------------------------------------------- */
+	
+	$j('body#sign-up-3 #payment-type-row input[type=radio]').on( "click", function(){
+		$paymentType = $j(this).attr('id');
+		$j('fieldset.payment-type').hide().filter("[id=" + $paymentType + "-set]").show();
+		$resetNextStep();
+	});
+
+
 });
 

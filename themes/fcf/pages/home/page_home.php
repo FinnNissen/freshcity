@@ -2,8 +2,6 @@
 	<div class="wrap">
 		<div class="genbox full-col">
 			<p class="p-heading">Select your Basket Type & Size</p>
-			<!-- <a href="#" class="btn large white back"><span>&#171; Go Back</span></a>
-			<a href="#" class="btn large next"><span>Next Step &#187;</span></a> -->
 		</div>
 		<div class="genbox four-col">
 			<h2 class="tk-league-gothic p-name all-caps">Veggie Bag</h2>
