@@ -1,10 +1,9 @@
 <section>
 	<div class="wrap">
 		<div class="genbox full-col">
-			<p class="p-heading"><strong>Select your Basket Type & Size</strong></p>
-			<p>Lorem ipsum dolor sit amet, consectetur.</p>
-			<a href="#" class="btn large white" id="back"><span>&#171; Go Back</span></a>
-			<a href="#" class="btn large" id="next"><span>Next Step &#187;</span></a>
+			<p class="p-heading">Select your Basket Type & Size</p>
+			<!-- <a href="#" class="btn large white back"><span>&#171; Go Back</span></a>
+			<a href="#" class="btn large next"><span>Next Step &#187;</span></a> -->
 		</div>
 		<div class="genbox four-col">
 			<h2 class="tk-league-gothic p-name all-caps">Veggie Bag</h2>
@@ -145,7 +144,7 @@
 				<button type="submit" class="medium black"><span>Button</span></button>
 			</fieldset>
 			<fieldset class="submit">
-				<button type="submit" class="large white"><span>Button</span></button>
+				<!-- <button type="submit" class="large white"><span>Button</span></button> -->
 				<a href="#" class="btn large"><span>Button</span></a>
 				<a href="#" class="btn large black"><span>Button</span></a>
 			</fieldset>

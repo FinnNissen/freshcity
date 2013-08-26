@@ -7,8 +7,8 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 	<?= $this->render_partial('layout:head') ?>
 </head>
-<? $active_page = isset($active_page) ? $active_page : 'home' ?>
-<body class="body" id="<?= $active_page ?>">
+<? $active_page = isset($active_page) ? $active_page : 'sign-up-1' ?>
+<body class="body sign-up" id="<?= $active_page ?>">
 <?= $this->render_partial('layout:grid') ?>
 	<div class="content">
 		<?= $this->render_partial('layout:header') ?>

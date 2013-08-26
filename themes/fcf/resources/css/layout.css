@@ -1,62 +1,75 @@
-/* SIGN-UP
+/* LAYOUT: HOME
 -------------------------------------------------------------- */
 
-.sign-up .status-bar {
+body.body section:first-of-type .full-col:first-of-type {
+    margin-bottom: 13px;
+}
+
+
+/* LAYOUT: SIGN-UP
+-------------------------------------------------------------- */
+
+body.sign-up .status-bar {
 	display: block;
 }
 
-.sign-up .status-bar ol.inline li {
-    counter-increment: checkoutIndex;
-    font-size: 1.375em; /* 22px */
-    line-height: 2.04545455em; /* 45px */
-    padding-left: 1.81818182em; /* 40px */
-    padding-right: 1.81818182em; /* 40px */
-    position: relative;
-    width: auto;
-    float: none;
-    display: inline-block;
+body.sign-up .status-bar ol.inline {
+	padding-left: 0;
+	padding-right: 0;
 }
 
-.sign-up .status-bar ol.inline li a {
-    height: 2.04545455em; /* 45px */
+body.sign-up .status-bar ol.inline li {
+    counter-increment: signUpIndex;
+    display: inline-block;
+    float: none;
+    font-size: 1.25em; /* 20px */
+    line-height: 2.2em; /* 44px */
+    padding-left: 1.8em; /* 36px */
+    padding-right: 1.8em; /* 36px */
+    position: relative;
+    width: auto;
+}
+
+body.sign-up .status-bar ol.inline li a {
+    height: 2.25em; /* 45px */
     font-size: inherit;
     line-height: inherit;
 }
 
-.sign-up .status-bar ol.inline li:before {
-    content: counter(checkoutIndex, decimal) ")";
-    left: 0;
+body.sign-up .status-bar ol.inline li:before {
+    content: counter(signUpIndex, decimal) ")";
     font-size: inherit;
+    left: 0;
     line-height: inherit;
     position: absolute;
     text-align: center;
     top: 0;
-    width: 1.81818182em; /* 40px */
-    height: 2.04545455em; /* 45px */
+    height: 2.25em; /* 45px */
+    width: 1.8em; /* 36px */
 }
 
-.sign-up .status-bar ol.inline li.active,
-.sign-up .status-bar ol.inline li:hover {
+body.sign-up .status-bar ol.inline li.active,
+body.sign-up .status-bar ol.inline li:hover {
     color: #f2f2e1;
 }
 
-.sign-up .status-bar ol.inline li.active {
+body.sign-up .status-bar ol.inline li.active {
     background: url(assets/BG-breadcrumb-active.svg) no-repeat center bottom transparent;
 }
 
-.sign-up .status-bar ol.inline li.completed,
-.sign-up .status-bar ol.inline li.completed a {
+body.sign-up .status-bar ol.inline li.completed,
+body.sign-up .status-bar ol.inline li.completed a {
     color: #1C1510;
     text-decoration: none;
 }
 
-.sign-up .status-bar ol.inline li.completed:before {
+body.sign-up .status-bar ol.inline li.completed:before {
     content: "";
-    background: url(assets/ICON-checkmark.svg) no-repeat center center transparent;
+    background: url(assets/ICON-checkmark.svg) no-repeat center 45% transparent;
 }
 
-.sign-up section:first-of-type .btn.back,
-.sign-up section:first-of-type .btn.next {
+body.sign-up section:first-of-type .btn.back,
+body.sign-up section:first-of-type .btn.next {
     bottom: 15px;
     position: absolute;
     right: 0;
@@ -65,11 +78,11 @@
     width: 14.2857%;
 }
 
-.sign-up section:first-of-type .btn.back {
+body.sign-up section:first-of-type .btn.back {
     right: 14.2857%;
 }
 
-.sign-up section:first-of-type {
+body.sign-up section:first-of-type {
 background-color: #f2f2e1;
 background-image: linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
 background-image: -o-linear-gradient(bottom, rgb(242,242,225) 0%, rgb(255,255,255) 100%);
@@ -87,55 +100,54 @@ background-image: -webkit-gradient(
     padding-bottom: 3em;
 }
 
-.sign-up section:first-of-type .full-col:first-of-type {
+body.sign-up section:first-of-type div.full-col:first-of-type {
     border-bottom: 1px solid #F2F2E1;
-    margin-bottom: 15px;
-    padding-bottom: 1em; /* 16px */
+    margin-bottom: 14px;
+    padding-bottom: 25px;
 }
 
-.sign-up section:first-of-type .full-col:first-of-type .p-heading {
-    margin-bottom: 5px;
-    margin-top: 4px;
+body.sign-up section:first-of-type .full-col:first-of-type .p-heading {
 }
 
-.sign-up section h3.tk-museo-sans {
+body.sign-up section h3.tk-museo-sans {
     color: #392A21;
     font-style: normal;
     font-weight: 700;
     margin-bottom: 4px;
     text-align: center;
+    text-decoration: none;
 }
 
-.sign-up section fieldset.submit {
+body.sign-up fieldset.submit {
     border-top: 1px solid #F2F2E1;
-    margin-bottom: 36px !important;
-    margin-top: 56px !important;
+    margin-bottom: 38px !important;
+    margin-top: 41px !important;
 }
 
-.sign-up section fieldset.submit .btn {
-    top: -29px;
+body.sign-up fieldset.submit .btn {
+    top: -32px;
 }
 
 
-/* SIGN-UP: TYPE & SIZE
+/* PAGE: SIGN-UP » TYPE & SIZE
 -------------------------------------------------------------- */
 
-#sign-up-1 section .full-col {
-    margin-bottom: 31px;
+body.#sign-up-1 section:first-of-type .full-col:first-of-type{
+	margin-bottom: 30px;
 }
 
-#sign-up-1 section .four-col {
+body#sign-up-1 section .four-col {
     margin: 8px 0 0;
     text-align: center;
     width: 33%;
 }
 
-#sign-up-1 section #veggie-fruit-bag {
+body#sign-up-1 section #veggie-fruit-bag {
     margin: 0;
     width: 34%;
 }
 
-#sign-up-1 section .four-col img {
+body#sign-up-1 section .four-col img {
     height: 176px;
     left: 0;
     margin: 0 auto;
@@ -146,7 +158,7 @@ background-image: -webkit-gradient(
     width: auto;
 }
 
-#sign-up-1 section .four-col h2.tk-league-gothic {
+body#sign-up-1 section .four-col h2.tk-league-gothic {
     background: #CC6633;
     color: #FFFFFF;
     margin-top: 160px;
@@ -157,12 +169,12 @@ background-image: -webkit-gradient(
     top: 0;
 }
 
-#sign-up-1 section #veggie-bag h2.tk-league-gothic {
+body#sign-up-1 section #veggie-bag h2.tk-league-gothic {
     background: url("assets/BG-sign-up-veggie.svg") no-repeat scroll left center transparent;
 }
 
-#sign-up-1 section #veggie-fruit-bag h2.tk-league-gothic:before,
-#sign-up-1 section #veggie-fruit-bag h2.tk-league-gothic:after {
+body#sign-up-1 section #veggie-fruit-bag h2.tk-league-gothic:before,
+body#sign-up-1 section #veggie-fruit-bag h2.tk-league-gothic:after {
     background: url("assets/BFR-AFTR-sign-up-veggie-fruit.svg") no-repeat scroll left top transparent;
     bottom: -8px;
     content: "";
@@ -173,45 +185,57 @@ background-image: -webkit-gradient(
     width: 4px;
 }
 
-#sign-up-1 section #veggie-fruit-bag h2.tk-league-gothic:after {
+body#sign-up-1 section #veggie-fruit-bag h2.tk-league-gothic:after {
     background: url("assets/BFR-AFTR-sign-up-veggie-fruit.svg") no-repeat scroll right top transparent;
     left: auto;
     right: 0;
 }
 
-#sign-up-1 section #fruit-bag h2.tk-league-gothic {
+body#sign-up-1 section #fruit-bag h2.tk-league-gothic {
     background: url("assets/BG-sign-up-fruit.svg") no-repeat scroll right center transparent;
 }
 
-#sign-up-1 section .four-col p,
-#sign-up-1 section .four-col .fieldrow  {
+body#sign-up-1 section .four-col p,
+body#sign-up-1 section .four-col .fieldrow  {
 	margin: 0 10.824742% 0;
 }
 
-#sign-up-1 section #veggie-bag p,
-#sign-up-1 section .four-col .fieldrow  {
+body#sign-up-1 section #veggie-bag p,
+body#sign-up-1 section .four-col .fieldrow  {
 	margin: 0 9.0425532% 0 10.106383%;
 }
 
-#sign-up-1 section #fruit-bag p,
-#sign-up-1 section .four-col .fieldrow  {
+body#sign-up-1 section #fruit-bag p,
+body#sign-up-1 section .four-col .fieldrow  {
 	margin: 0 10.106383% 0 9.0425532%;
 }
 
-#sign-up-1 section .four-col .fieldrow {
+body#sign-up-1 section .four-col .fieldrow {
     background: none repeat scroll 0 0 #F2F2E1;
     border: 2px solid #FFFFFF;
+	box-shadow: 0 0 4px #d6a87e;
     position: relative;
     top: 0;
 }
 
-#sign-up-1 section #veggie-fruit-bag .fieldrow {}
+body#sign-up-1 section #veggie-bag .fieldrow {
+	box-shadow: 0 0 4px #8dae7c;
+}
 
-#sign-up-1 section .four-col input[type="radio"] {
+body#sign-up-1 section #veggie-fruit-bag .fieldrow {
+	box-shadow: 0 0 4px #cc6633;
+}
+
+body#sign-up-1 section #fruit-bag .fieldrow {
+	box-shadow: 0 0 4px #f49956;
+}
+
+body#sign-up-1 section .four-col input[type="radio"] {
     top: -1px !important;
 }
 
-#sign-up-1 section .four-col label {
+body#sign-up-1 section .four-col label {
+    background: #F2F2E1;
     color: #392A21;
     cursor: pointer;
     font-size: 16px;
@@ -221,151 +245,203 @@ background-image: -webkit-gradient(
     width: 50%;
 }
 
-#sign-up-1 section .four-col label.selected,
-#sign-up-1 section .four-col label:hover {
+body#sign-up-1 section .four-col label:hover {
 	background: #ffffff;
 }
 
-#sign-up-1 section .four-col label:first-of-type {
+body#sign-up-1 section .four-col label:first-of-type {
     border-right: 1px solid #FFFFFF;
 }
 
-#sign-up-1 section .four-col label:last-of-type {
+body#sign-up-1 section .four-col label:last-of-type {
     border-left: 1px solid #FFFFFF;
 }
 
-#sign-up-1 section .four-col label.selected {
+body#sign-up-1 section .four-col label.completed {
 	background-color: #392A21;
 	color: #ffffff;
 }
 
-/*
-#sign-up-1 section #veggie-fruit-bag label.selected {
-	background-color: #CC6633;
-	border-color: #CC6633;
-	color: #ffffff;
+body#sign-up-1 section#never-send-list .wrap {
+	overflow: hidden;
 }
 
-#sign-up-1 section #fruit-bag label.selected {
-	background-color: #F49956;
-	border-color: #F49956;
-	color: #ffffff;
-}
-*/
-
-#sign-up-1 section#never-send-list .full-col {
+body#sign-up-1 section#never-send-list .full-col {
 	text-align: center;
 }
 
+body#sign-up-1 section#never-send-list .genbox {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
 
-/* SIGN-UP: DELIVERY INFORMATION
+body#sign-up-1 section#never-send-list fieldset {
+    margin-top: 28px;
+}
+
+
+
+/* PAGE: SIGN-UP » DELIVERY INFORMATION
 -------------------------------------------------------------- */
 
-#sign-up-2 section#delivery-schedule {
+body#sign-up-2 section#delivery-schedule {
     padding-bottom: 0;
 }
 
-#sign-up-2 section#delivery-schedule .fieldrow {
+body#sign-up-2 section#delivery-schedule .fieldrow {
     background: none repeat scroll 0 0 transparent;
     border: medium none;
     border-radius: 0 0 0 0;
-    margin: 26px 28.5714% 0;
+    margin: 28px 27.5714% 0;
+    padding: 6px 1% 0;
     top: 0;
 }
 
-#sign-up-2 section#delivery-schedule label {
+body#sign-up-2 section#delivery-schedule label {
     background: none repeat scroll 0 0 transparent;
     border-radius: 8px 8px 0 0;
     color: #392A21;
     font-size: 18px;
     font-weight: 500;
-    height: 52px;
-    padding-top: 13px !important;
+    height: 70px;
+    padding-top: 23px !important;
     text-align: center;
     width: 50%;
     cursor: pointer;
 }
 
-#sign-up-2 section#delivery-schedule label.selected {
-	background: #fff;
+body#sign-up-2 section#delivery-schedule label.completed {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 0 6px #E3DDD9;
 }
 
-#sign-up-2 section#delivery-schedule input[type="radio"] {
+body#sign-up-2 section#delivery-schedule input[type="radio"] {
     top: -1px !important;
 }
 
-#sign-up-2 section#delivery-info {
-	padding-top: 1em;
+body#sign-up-2 section#delivery-info {
+	padding-top: 2em;
 }
 
-#sign-up-2 section#delivery-info .four-col,
-#sign-up-2 section#delivery-info .five-col,
-#sign-up-2 section#delivery-info .six-col {
+body#sign-up-2 section#delivery-info .four-col,
+body#sign-up-2 section#delivery-info .five-col,
+body#sign-up-2 section#delivery-info .six-col {
     float: none;
     margin: 0 auto 0.625em;
 }
 
-#sign-up-2 section#delivery-info .text-row label,
-#sign-up-2 section#delivery-info .select-row label {
-    width: 25%;
+body#sign-up-2 section#delivery-info .text-row label,
+body#sign-up-2 section#delivery-info .select-row label {
 }
 
-#sign-up-2 section#delivery-info .wrap {
-	position: relative;
+body#sign-up-2 section#delivery-info .wrap {
+    overflow: visible;
+    position: relative;
 }
 
-#sign-up-2 section#delivery-info .note.right {
-    left: 17%;
+body#sign-up-2 section#delivery-info .note {
+    left: 10%;
     position: absolute;
-    top: 35px;
-    width: 20%;
+    top: 47px;
+    width: 27%;
     z-index: 10;
 }
 
-#sign-up-2 section#delivery-info .text-row input[type="text"],
-#sign-up-2 section#delivery-info .select-row select {
+body#sign-up-2 .fieldrow.four-col label {
+    width: 25%;
+}
+
+body#sign-up-2 .fieldrow.four-col input[type="text"] {
     width: 75%;
 }
 
-
-#sign-up-2 section#delivery-info #delivered-to-row {
+body#sign-up-2 section#delivery-info #delivered-to-row {
     background: url("assets/BG-LRG-dashed.gif") repeat-x scroll 0 11px #FFFFFF;
     top: 0;
 }
 
-#sign-up-2 section#delivery-info #delivered-to-row label {
+body#sign-up-2 section#delivery-info #delivered-to-row label {
     font-size: 18px;
     height: 44px;
     line-height: 44px;
     width: 33.3333%;
 }
 
-#sign-up-2 section#delivery-info #delivered-to-row label.for-boxes {
+body#sign-up-2 section#delivery-info #delivered-to-row label.for-boxes {
     line-height: 38px;
     margin-right: 0 !important;
 }
 
-#sign-up-2 section#delivery-info #delivery-postal-row {}
+body#sign-up-2 section#delivery-info #delivery-postal-row {
+    margin-bottom: 18px;
+}
 
-#sign-up-2 section#delivery-info #delivery-postal-row a.btn {
+body#sign-up-2 section#delivery-info #delivery-postal-row a.btn {
     left: auto;
     position: absolute;
     right: 3px;
     top: 3px;
+    z-index: 5;
 }
 
-#sign-up-2 section#delivery-info .delivery-info-row {
+body#sign-up-2 section#delivery-info #residence-type-row {
     background: none repeat scroll 0 0 transparent;
     border: medium none;
     border-radius: 0 0 0 0;
-    margin-top: 18px !important;
+    margin-top: 0 !important;
     padding: 4px 0 2px !important;
     text-align: center;
 }
 
-#sign-up-2 section#delivery-info .delivery-info-row label.for-boxes {}
+body#sign-up-2 section#delivery-info #pick-up-location-row {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin-top: 16px;
+}
 
-#sign-up-2 section#delivery-info .delivery-info-row input[type="radio"] {}
+body#sign-up-2 section#delivery-info #pick-up-type .fieldrow {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin-bottom: 14px;
+    margin-top: 10px;
+}
+
+body#sign-up-2 section#delivery-info #pick-up-type .fieldrow img {
+    float: right;
+    height: 120px;
+    margin: 0 0 0 16px;
+    width: auto;
+}
+
+body#sign-up-2 section#delivery-info #pick-up-type .fieldrow label.for-boxes {
+    display: block;
+    height: auto;
+    left: 0;
+    line-height: 24px;
+    margin-right: 0 !important;
+    overflow: hidden;
+    padding: 9px 9px 9px 1.9em !important;
+    text-indent: 0 !important;
+    top: 0;
+    width: 100%;
+}
+
+body#sign-up-2 section#delivery-info #pick-up-type .fieldrow input {
+    left: 0.5em;
+    position: absolute;
+    top: 14px !important;
+}
+
+body#sign-up-2 section#delivery-info #pick-up-type .fieldrow small {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 4px !important;
+    text-indent: 0 !important;
+    top: 0;
+}
+
+body#sign-up-2 section#delivery-info #pick-up-type p {
+	text-align: center;
+}
 
 
 /* MED
