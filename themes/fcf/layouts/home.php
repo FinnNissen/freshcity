@@ -8,7 +8,7 @@
 	<?= $this->render_partial('layout:head') ?>
 </head>
 <? $active_page = isset($active_page) ? $active_page : 'home' ?>
-<body class="body" id="<?= $active_page ?>">
+<body class="body" id="<?php echo $active_page; ?>">
 <?= $this->render_partial('layout:grid') ?>
 	<div class="content">
 		<?= $this->render_partial('layout:header') ?>

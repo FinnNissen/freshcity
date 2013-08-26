@@ -98,7 +98,7 @@ $j(document).ready(function(){
 		},
 		change: function() {
 			$fieldRow = $j(this).parents('.fieldrow').removeClass('focus');
-			if ($j(this).val() != "- select one -") { $fieldRow.removeClass('error').addClass('completed'); } else { $fieldRow.removeClass('completed'); }
+			if ($j(this).val() != "- - - -") { $fieldRow.removeClass('error').addClass('completed'); } else { $fieldRow.removeClass('completed'); }
 		}
 	});
 	

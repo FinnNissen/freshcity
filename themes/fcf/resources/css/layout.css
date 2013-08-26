@@ -44,7 +44,7 @@ body.sign-up .status-bar ol.inline li:before {
 }
 
 body.sign-up .status-bar ol.inline li.active {
-    color: #f2f2e1;
+    color: #ffffff;
 }
 
 body.sign-up .status-bar ol.inline li.active {
@@ -706,7 +706,7 @@ body#sign-up-4 section#overview-type-size #basket-overview {
 }
 
 body#sign-up-4 section#overview-type-size #basket-overview h2.tk-league-gothic {
-    color: #1C1510;
+    color: #392A21;
 }
 
 body#sign-up-4 section#overview-type-size #totals-overview {

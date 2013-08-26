@@ -39,21 +39,19 @@ body {
 
 header {
     background-color: #d6a87e;
-	background-image: linear-gradient(left , rgb(214,168,126) 0%, rgb(222,185,152) 50%, rgb(214,168,126) 100%);
-	background-image: -o-linear-gradient(left , rgb(214,168,126) 0%, rgb(222,185,152) 50%, rgb(214,168,126) 100%);
-	background-image: -moz-linear-gradient(left , rgb(214,168,126) 0%, rgb(222,185,152) 50%, rgb(214,168,126) 100%);
-	background-image: -webkit-linear-gradient(left , rgb(214,168,126) 0%, rgb(222,185,152) 50%, rgb(214,168,126) 100%);
-	background-image: -ms-linear-gradient(left , rgb(214,168,126) 0%, rgb(222,185,152) 50%, rgb(214,168,126) 100%);
+	background-image: linear-gradient(left , rgb(222,185,152) 0%, rgb(214,168,126) 100%);
+	background-image: -o-linear-gradient(left , rgb(222,185,152) 0%, rgb(214,168,126) 100%);
+	background-image: -moz-linear-gradient(left , rgb(222,185,152) 0%, rgb(214,168,126) 100%);
+	background-image: -webkit-linear-gradient(left , rgb(222,185,152) 0%, rgb(214,168,126) 100%);
+	background-image: -ms-linear-gradient(left , rgb(222,185,152) 0%, rgb(214,168,126) 100%);
 	background-image: -webkit-gradient(
 		linear,
 		left top,
 		right top,
-		color-stop(0, rgb(214,168,126)),
-		color-stop(0.5, rgb(222,185,152)),
+		color-stop(0, rgb(222,185,152)),
 		color-stop(1, rgb(214,168,126))
 	);
     display: block;
-    height: 4.625em; /* 74px */
     overflow: hidden;
     margin-bottom: 3px;
 }
@@ -68,56 +66,84 @@ header:before {
     width: 100%;
 }
 
-#logo {
-    color: black;
-    display: block;
-    font-size: 1.75em;
-    line-height: 1em;
-    margin: 0 auto;
-    min-width: 140px;
-    padding: 0.3em 0;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    top: 0.6em;
-    vertical-align: middle;
-    width: 21.7%;
+nav.wrap {
+    position: relative;
+    height: 4.625em; /* 74px */
 }
 
-nav.wrap {
+a#logo {
+    background: url(assets/LOGO-fcf.png) no-repeat scroll center center transparent;
+    background-size: 216px 172px;
+    height: 4.625em;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 18.75%;
+}
+
+nav ul#secondary-nav {
 	display: none;
 }
 
 nav ul {
-    margin: 0 auto;
+    left: auto;
+    margin: 0 -10px 0 0;
+    position: absolute;
+    right: 6.25%;
     text-align: center;
-    min-width: 269px;
-}
-
-nav ul li {
-    border-top:1px solid black;
-    border-left:1px solid black;
+    top: 29px;
 }
 
 nav ul li a {
-    background:#eeeeee none repeat scroll 0 0;
-    border-bottom:1px solid black;
-    float:left;
-    padding:0.5em 1em 0.5em; /* 8px 16px 8px */
+    color: #715341;
+    float: left;
+    font-size: 28px;
+    line-height: 24px;
+    padding: 5px 10px 4px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #E6CBB2;
+    text-transform: uppercase;
+}
+
+nav ul li a:visited {
+    color: #715341;
+    text-shadow: 0 1px 0 #E6CBB2;
 }
 
 nav ul li a:hover {
-    background: white;
+	color: #392A21;
 }
 
-nav ul #current-tab {
-    background: white;
-    border-bottom:1px solid white;
+nav ul li a:active,
+nav ul li#active a {
+    color: #ffffff;
+    text-shadow: 0 1px 0 #715341;
 }
 
-nav ul li:last-child {
-    border-right:1px solid black;
+nav ul li a.sign-up {
+    margin-left: 8px;
 }
+
+nav ul li a.sign-up {
+    background: none repeat scroll 0 0 #715341;
+    border-radius: 4px 4px 4px 4px;
+    color: #D6A87E;
+    text-shadow: 0 1px 0 #392A21;
+}
+
+nav ul li a.sign-up:hover {
+	background: #392A21;
+    color: #D6A87E;
+    text-shadow: 0 1px 0 #392A21;
+}
+
+nav ul li a.sign-up:active,
+nav ul li#active a.sign-up {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #715341;
+    text-shadow: none;
+}
+
 
 .status-bar {
     background: #715341;
@@ -155,7 +181,7 @@ nav ul li:last-child {
 .status-bar .inline li.active a,
 .status-bar .inline li:hover a,
 .status-bar .inline li a:hover {
-    color: #f2f2e1;
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -571,7 +597,7 @@ section.payment #credit-card-set {
 }
 
 section.payment #credit-card-set:before {
-    background: url("/136-fcf/themes/fcf/resources/css/assets/BG-payment.svg") no-repeat scroll center center transparent;
+    background: url("assets/BG-payment.svg") no-repeat scroll center center transparent;
     content: "";
     height: 134px;
     left: auto;

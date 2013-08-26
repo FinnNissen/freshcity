@@ -389,12 +389,7 @@ nav ol { /* Corrects list images handled incorrectly in IE7 */
     list-style: none;
     list-style-image: none;
     padding-left: 0;
-}
-
-nav li, #wp_page_numbers li {
-    display: inline;
-    float: left;
-    padding: 0;
+    padding-bottom: 0;
 }
 
 blockquote {
