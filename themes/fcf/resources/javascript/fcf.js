@@ -150,9 +150,6 @@ $j(document).ready(function(){
 	});
 	
 	$j('body#sign-up-2 #delivered-to-row input[type=radio]').on( "click", function(){
-		$deliveredTo = $j(this).attr('id');
-		$deliveryPostal = $j('body#sign-up-2 #delivery-postal-row input[type=text]').val();
-
 		$j('section#delivery-info .note').fadeOut('fast', function() {
 			$j(this).remove();
 		});
@@ -177,7 +174,7 @@ $j(document).ready(function(){
 				}
 			});
 			$j('fieldset.delivered-to-type').fadeOut('fast');
-			$j('fieldset.delivered-to-type').filter("[id=" + $deliveredTo + "-type]").fadeIn('fast');
+			$j('fieldset.delivered-to-type').filter("[id=" + $deliveredTo + "-type-set]").fadeIn('fast');
 		} else {
 			$j('section#delivery-info .note').fadeOut('fast', function() {
 				$j(this).remove();
@@ -199,13 +196,24 @@ $j(document).ready(function(){
 		}
 	});
 	
-	$j("body#sign-up-2 #pick-up-type input:radio").on('click', function() {
+	$j("body#sign-up-2 #pick-up-type-set input:radio").on('click', function() {
 		if ($j('#delivery-schedule-row').hasClass('completed') &&
 			$j('#delivered-to-row').hasClass('completed') &&
 			$j('#delivery-postal-row').hasClass('completed')) {
 			$nextStep();
 		}
 	});
-		
+
+
+/* SIGN-UP: ACCOUNT & PAYMENT
+-------------------------------------------------------------- */
+	
+	$j('body#sign-up-3 #payment-type-row input[type=radio]').on( "click", function(){
+		$paymentType = $j(this).attr('id');
+		$j('fieldset.payment-type').hide().filter("[id=" + $paymentType + "-set]").show();
+		$resetNextStep();
+	});
+
+
 });
 

@@ -1,7 +1,7 @@
 <section id="type-and-size">
 	<div class="wrap">
 		<div class="genbox full-col">
-			<p class="p-heading">Please select your Bag Type & Size</p>
+			<p class="p-heading">Please select your bag type & size</p>
 			<a href="<?= root_url() ?>delivery-info" class="btn medium next disabled"><span>Next Step &#187;</span></a>
 		</div>
 		<div class="genbox four-col" id="veggie-bag">

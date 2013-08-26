@@ -875,34 +875,40 @@ fieldset.submit .btn {
 
 .fieldrow.focus,
 .fieldrow:hover {
-    border-color: #EAEADC;
+    border-color: #E2E0CD;
 }
 
 .fieldrow.focus label,
 .fieldrow.focus:before,
 .fieldrow:hover:before,
 .fieldrow:hover label {
-    background: #EAEADC;
+    background: #E2E0CD;
 }
 
-.fieldrow.completed {
+.fieldrow.completed,
+section#payment .fieldrow.completed {
 	background-color: #8DAE7C;
-    border-color: #8DAE7C; /* 4px */
+    border-color: #8DAE7C;
 }
 
 .fieldrow.completed label,
-.fieldrow.textarea-row.completed:before {
+.fieldrow.textarea-row.completed:before,
+section#payment .fieldrow.completed label,
+section#payment .fieldrow.textarea-row.completed:before {
     background-color: #8DAE7C;
     color: #FFFFFF;
 }
 
-.fieldrow.error {
+.fieldrow.error,
+section#payment .fieldrow.error {
 	background-color: #f49956;
 	border-color: #f49956;
 }
 
 .fieldrow.error label,
-.fieldrow.textarea-row.error:before {
+.fieldrow.textarea-row.error:before,
+section#payment .fieldrow.error label,
+section#payment .fieldrow.textarea-row.error:before {
     background-color: #f49956;
     color: #ffffff;
 }
