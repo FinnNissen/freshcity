@@ -224,7 +224,6 @@ $j(document).ready(function(){
 		$paymentType = $j(this).attr('id');
 		$j('fieldset.payment-type').hide().filter("[id=" + $paymentType + "-set]").show();
 		$resetNextStep();
-		e.preventDefault();
 	});
 
 });
