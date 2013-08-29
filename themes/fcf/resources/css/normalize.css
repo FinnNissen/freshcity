@@ -1,3 +1,5 @@
+html.wf-active h1, html.wf-active h2, html.wf-active h3, html.wf-active h4, html.wf-active p, html.wf-active li, html.wf-active a, html.wf-active span, html.wf-active label, html.wf-active td, html.wf-active th, html.wf-active input, html.wf-active select, html.wf-active textarea, html.wf-active small {visibility: visible;}
+
 * {
 	-webkit-box-sizing: border-box;
 	 -khtml-box-sizing: border-box;
@@ -122,6 +124,11 @@ abbr[title] { /* Addresses styling not present in IE7/8/9, S5, Chrome */
 b,
 strong { /* Addresses style set to 'bolder' in FF3+, S4/5, Chrome */
     font-weight: bold;
+}
+
+p > b,
+p > strong {
+	color: #553E31;
 }
 
 blockquote {

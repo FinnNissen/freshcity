@@ -5,16 +5,17 @@
 	<!--[if IE 8]>			<html lang="en" xmlns="http://www.w3.org/1999/xhtml" class="lt-ie9 no-js wf-inactive"> <![endif]-->
 	<!--[if gt IE 8]><!-->	<html lang="en" xmlns="http://www.w3.org/1999/xhtml" class="no-js wf-inactive"> <!--<![endif]-->
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-	<title><?= h($this->page->title) ?> | Fresh City Farms</title>
+	<title>MY ACCOUNT &#187; <?= h($this->page->navigation_label()) ?> | Fresh City Farms</title>
 	<?= $this->render_partial('layout:head') ?>
 </head>
 <?php $pages = $this->page->navigation_root_pages();
-if(!isset($active_page)) $active_page = 'home'; ?>
+if(!isset($active_page)) $active_page = '';
+$active_section = 'account'; ?>
 
-<body class="body" id="<?php echo $active_page; ?>">
+<body class="body <?php echo $active_section; ?>" id="<?php echo $active_page; ?>">
 <?= $this->render_partial('layout:grid') ?>
 	<div class="content">
-		<?= $this->render_partial('layout:header', array('pages'=>$pages, 'active_page'=>$active_page)) ?>
+		<?= $this->render_partial('layout:header', array('pages'=>$pages, 'active_page'=>$active_page, 'active_section'=>$active_section)) ?>
 		<?= $this->render_page() ?>
 	</div>
 	<?= $this->render_partial('layout:footer') ?>

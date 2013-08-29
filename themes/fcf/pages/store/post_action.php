@@ -1,5 +1,5 @@
 <?
-$this->data['active_page'] = 'shop';
+$this->data['active_page'] = 'store';
 
 /*
  * Prepare the products variable. The Shop page displays all enabled products

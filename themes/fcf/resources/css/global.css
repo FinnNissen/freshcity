@@ -67,39 +67,70 @@ header:before {
 }
 
 nav.wrap {
+    overflow: hidden;
     position: relative;
     height: 4.625em; /* 74px */
 }
 
+nav.wrap:before {
+    background: none repeat scroll 0 0 #FFFFFF;
+    -webkit-border-radius: 50% 50% 50% 50%;
+     -khtml-border-radius: 50% 50% 50% 50%;
+      -icab-border-radius: 50% 50% 50% 50%;
+       -moz-border-radius: 50% 50% 50% 50%;
+         -o-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+    -webkit-box-shadow: 0 0 20px #F2F2E1;
+     -khtml-box-shadow: 0 0 20px #F2F2E1;
+      -icab-box-shadow: 0 0 20px #F2F2E1;
+       -moz-box-shadow: 0 0 20px #F2F2E1;
+         -o-box-shadow: 0 0 20px #F2F2E1;
+    box-shadow: 0 0 20px #F2F2E1;
+    content: "";
+    height: 160px;
+    left: 12.45%;
+    margin: -74px 0 0 -80px;
+    position: absolute;
+    top: 50%;
+    width: 160px;
+}
+
 a#logo {
-    background: url(assets/LOGO-fcf.png) no-repeat scroll center center transparent;
-    background-size: 216px 172px;
+    background: url(assets/LOGO-fcf.png) no-repeat scroll center bottom transparent;
+    -webkit-background-size: auto 100%;
+     -khtml-background-size: auto 100%;
+      -icab-background-size: auto 100%;
+       -moz-background-size: auto 100%;
+         -o-background-size: auto 100%;
+    background-size: auto 100%;
     height: 4.625em;
-    left: 0;
+    left: 3.125%;
     position: absolute;
     top: 0;
     width: 18.75%;
-}
-
-nav ul#secondary-nav {
-	display: none;
+    z-index: 2;
 }
 
 nav ul {
     left: auto;
-    margin: 0 -10px 0 0;
     position: absolute;
     right: 6.25%;
     text-align: center;
     top: 29px;
 }
 
+
+nav ul#main-nav,
+nav ul#main-nav li {
+	overflow: visible
+}
+
 nav ul li a {
     color: #715341;
     float: left;
-    font-size: 28px;
+    font-size: 26px;
     line-height: 24px;
-    padding: 5px 10px 4px;
+    padding: 6px 10px 4px;
     text-decoration: none;
     text-shadow: 0 1px 0 #E6CBB2;
     text-transform: uppercase;
@@ -117,7 +148,7 @@ nav ul li a:hover {
 nav ul li a:active,
 nav ul li#active a {
     color: #ffffff;
-    text-shadow: 0 1px 0 #715341;
+    text-shadow: 0 1px 0 #A17E5F;
 }
 
 nav ul li a.sign-up {
@@ -126,7 +157,18 @@ nav ul li a.sign-up {
 
 nav ul li a.sign-up {
     background: none repeat scroll 0 0 #715341;
+    -webkit-border-radius: 4px 4px 4px 4px;
+     -khtml-border-radius: 4px 4px 4px 4px;
+      -icab-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+         -o-border-radius: 4px 4px 4px 4px;
     border-radius: 4px 4px 4px 4px;
+    -webkit-box-shadow: 0 1px 0 #553E31 inset;
+     -khtml-box-shadow: 0 1px 0 #553E31 inset;
+      -icab-box-shadow: 0 1px 0 #553E31 inset;
+       -moz-box-shadow: 0 1px 0 #553E31 inset;
+         -o-box-shadow: 0 1px 0 #553E31 inset;
+    box-shadow: 0 1px 0 #553E31 inset;
     color: #D6A87E;
     text-shadow: 0 1px 0 #392A21;
 }
@@ -140,10 +182,81 @@ nav ul li a.sign-up:hover {
 nav ul li a.sign-up:active,
 nav ul li#active a.sign-up {
     background: none repeat scroll 0 0 #FFFFFF;
+    -webkit-box-shadow: 0 0 4px #F2F2E1;
+     -khtml-box-shadow: 0 0 4px #F2F2E1;
+      -icab-box-shadow: 0 0 4px #F2F2E1;
+       -moz-box-shadow: 0 0 4px #F2F2E1;
+         -o-box-shadow: 0 0 4px #F2F2E1;
+    box-shadow: 0 0 4px #F2F2E1;
     color: #715341;
     text-shadow: none;
 }
 
+nav ul#secondary-nav {
+    margin-right: -8px;
+    top: 8px;
+}
+
+nav ul#secondary-nav li {
+    border-left: 1px dotted #8D7567;
+}
+
+nav ul#secondary-nav li:first-child {
+    border-left: none;
+}
+
+nav ul#secondary-nav li a {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+    padding: 0 8px 1px 7px;
+    text-transform: capitalize;
+}
+
+nav ul#secondary-nav li a.account {
+    padding-left: 20px;
+    position: relative;
+}
+
+nav ul#secondary-nav li a.account:before {
+	background: url(assets/ICON-account.svg) no-repeat center center #715341;
+    -webkit-border-radius: 2px 2px 2px 2px;
+     -khtml-border-radius: 2px 2px 2px 2px;
+      -icab-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+         -o-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+    bottom: auto;
+    box-shadow: 0 1px 0 #E6CBB2;
+    content: "";
+    height: 16px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: auto;
+    width: 16px;
+}
+
+nav ul#secondary-nav li a:visited {
+}
+
+nav ul#secondary-nav li a:hover {
+}
+
+nav ul#secondary-nav li a.account:hover:before {
+	background-color: #392A21;
+}
+
+nav ul#secondary-nav li a.account:active:before,
+nav ul#secondary-nav li#active a.account:before {
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 0 #A17E5F;
+}
+
+nav ul#secondary-nav li a:active,
+nav ul#secondary-nav li#active a {
+	color: #ffffff;
+}
 
 .status-bar {
     background: #715341;

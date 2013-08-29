@@ -1,7 +1,7 @@
 <section id="delivery-schedule">
 	<div class="wrap">
 		<div class="genbox full-col">
-			<p class="p-heading">Please set your delivery information</p>
+			<p class="p-heading">Please set your delivery information&hellip;</p>
 			<a href="<?= root_url() ?>type-and-size" class="btn medium white back"><span>&#171; Go Back</span></a>
 			<a href="<?= root_url() ?>account-and-payment" class="btn medium next disabled"><span>Next Step &#187;</span></a>
 		</div>

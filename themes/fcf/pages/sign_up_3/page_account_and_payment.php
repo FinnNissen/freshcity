@@ -1,7 +1,7 @@
 <section id="account">
 	<div class="wrap">
 		<div class="genbox full-col">
-			<p class="p-heading">Please create account & enter payment information</p>
+			<p class="p-heading">Please create account & enter payment information&hellip;</p>
 			<a href="<?= root_url() ?>delivery-info" class="btn medium white back"><span>&#171; Go Back</span></a>
 			<a href="<?= root_url() ?>review" class="btn medium next disabled"><span>Next Step &#187;</span></a>
 		</div>

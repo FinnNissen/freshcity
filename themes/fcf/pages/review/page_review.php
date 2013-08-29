@@ -1,12 +1,12 @@
 <section id="overview-type-size">
 	<div class="wrap">
 		<div class="genbox full-col">
-			<p class="p-heading">{Customer}, please review your order&hellip;</p>
+			<p class="p-heading">Please review your order before purchasing&hellip;</p>
 			<a href="<?= root_url() ?>account-and-payment" class="btn medium white back"><span>&#171; Go Back</span></a>
 			<a href="#" class="btn medium black next"><span>BUY NOW</span></a>
 		</div>
 		<div class="genbox nine-col" id="basket-overview">
-			<h2 class="tk-league-gothic p-name all-caps">Basket Type & Size</h2>
+			<h2 class="tk-league-gothic p-name all-caps">Veggie & Fruit Bag (Small)</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</div>
 		<table class="genbox five-col totals" id="totals-overview" cellspacing="0" cellpadding="0" border="0">
@@ -36,7 +36,7 @@
 <section id="overview-delivery-info">
 	<div class="wrap">
 		<h3 class="genbox eight-col tk-museo-sans p-heading">Delivered WEEKLY / BI-WEEKLY to</h3>
-		<p class="genbox eight-col" id="address">Address 1<br />Address 2<br />Toronto M0M 0M0 Ontario<br />Canada</p>
+		<p class="genbox eight-col" id="address"><strong>Firstname Lastname</strong><br />Address 1<br />Address 2<br />Toronto M0M 0M0 Ontario</p>
 		<p class="genbox eight-col" id="instructions"><strong>Leave at front-door</strong><br />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 	</div>
 </section>
